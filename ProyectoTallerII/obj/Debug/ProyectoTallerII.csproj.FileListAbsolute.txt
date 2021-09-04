@@ -1,0 +1,10 @@
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\bin\Debug\ProyectoTallerII.exe.config
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\bin\Debug\ProyectoTallerII.exe
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\bin\Debug\ProyectoTallerII.pdb
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.AssemblyReference.cache
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form1.resources
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.Properties.Resources.resources
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.GenerateResource.cache
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.CoreCompileInputs.cache
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
