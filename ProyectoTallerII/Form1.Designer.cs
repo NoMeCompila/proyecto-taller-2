@@ -31,9 +31,7 @@ namespace ProyectoTallerII
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.sidebar = new System.Windows.Forms.Panel();
-            this.pb_login = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.chk_show_pass = new System.Windows.Forms.Panel();
             this.btn_entrar = new System.Windows.Forms.Button();
             this.txt_pass = new System.Windows.Forms.TextBox();
@@ -41,12 +39,14 @@ namespace ProyectoTallerII
             this.lbl_bienvenida = new System.Windows.Forms.Label();
             this.lbl_foot_login = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pb_login = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_login)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.chk_show_pass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_login)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -58,16 +58,6 @@ namespace ProyectoTallerII
             this.sidebar.Size = new System.Drawing.Size(500, 550);
             this.sidebar.TabIndex = 1;
             // 
-            // pb_login
-            // 
-            this.pb_login.Image = global::ProyectoTallerII.Properties.Resources.login_fondo;
-            this.pb_login.Location = new System.Drawing.Point(0, 0);
-            this.pb_login.Name = "pb_login";
-            this.pb_login.Size = new System.Drawing.Size(500, 550);
-            this.pb_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_login.TabIndex = 0;
-            this.pb_login.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pictureBox1);
@@ -78,16 +68,6 @@ namespace ProyectoTallerII
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(500, 550);
             this.panel1.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(448, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // chk_show_pass
             // 
@@ -106,12 +86,13 @@ namespace ProyectoTallerII
             this.btn_entrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(66)))), ((int)(((byte)(93)))));
             this.btn_entrar.Font = new System.Drawing.Font("Segoe UI", 10.25F);
             this.btn_entrar.ForeColor = System.Drawing.Color.White;
-            this.btn_entrar.Location = new System.Drawing.Point(86, 350);
+            this.btn_entrar.Location = new System.Drawing.Point(94, 358);
             this.btn_entrar.Name = "btn_entrar";
             this.btn_entrar.Size = new System.Drawing.Size(85, 37);
             this.btn_entrar.TabIndex = 6;
             this.btn_entrar.Text = "Entrar";
             this.btn_entrar.UseVisualStyleBackColor = false;
+            this.btn_entrar.Click += new System.EventHandler(this.btn_entrar_Click);
             // 
             // txt_pass
             // 
@@ -171,6 +152,26 @@ namespace ProyectoTallerII
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
+            // pb_login
+            // 
+            this.pb_login.Image = global::ProyectoTallerII.Properties.Resources.login_fondo;
+            this.pb_login.Location = new System.Drawing.Point(0, 0);
+            this.pb_login.Name = "pb_login";
+            this.pb_login.Size = new System.Drawing.Size(500, 550);
+            this.pb_login.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_login.TabIndex = 0;
+            this.pb_login.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(448, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(49, 49);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,13 +186,13 @@ namespace ProyectoTallerII
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.sidebar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_login)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.chk_show_pass.ResumeLayout(false);
             this.chk_show_pass.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_login)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -206,8 +207,8 @@ namespace ProyectoTallerII
         private System.Windows.Forms.Button btn_entrar;
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.TextBox txt_user;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

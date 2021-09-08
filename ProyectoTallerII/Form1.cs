@@ -104,5 +104,12 @@ namespace ProyectoTallerII
         {
          
         }
+
+        private void btn_entrar_Click(object sender, EventArgs e)
+        {
+            Form form_inicio = new form_inicio();
+            this.Hide();
+            form_inicio.Show();
+        }
     }
 }
