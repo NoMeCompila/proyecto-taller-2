@@ -71,12 +71,12 @@ namespace ProyectoTallerII
         {
 
         }
-
+        /*
         private void timer1_Tick(object sender, EventArgs e)
         {
             lbl_reloj.Text = DateTime.Now.ToLongTimeString();
-        }
-
+        }*/
+        /*
         private void form_inicio_Load(object sender, EventArgs e)
         {
             string[] series = {"Alianzas","Collares","Pulseras","Pendientes"};
@@ -89,9 +89,37 @@ namespace ProyectoTallerII
                 serie.Label = cantidad[i].ToString();
                 serie.Points.Add(cantidad[i]);
             }
-        }
+        }*/
 
         private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void open_child_form(object child_form)
+        {
+            if (this.pnl_contenido.Controls.Count > 0)
+                this.pnl_contenido.Controls.RemoveAt(0);
+            Form frm = child_form as Form;
+            frm.TopLevel = false;
+            frm.Dock = DockStyle.Fill;
+            this.pnl_contenido.Controls.Add(frm);
+            this.pnl_contenido.Tag = frm;
+            frm.Show();
+            
+        }
+
+        private void btn_inicio_Click(object sender, EventArgs e)
+        {
+            open_child_form(new Form_inicio());
+        }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            open_child_form(new Form_usuarios());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

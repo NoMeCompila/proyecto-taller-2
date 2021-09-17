@@ -77,3 +77,4 @@ C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\bin\Debug\Bunifu.UI.
 C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.form_inicio.resources
 C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe.licenses
 C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.CopyComplete
+C:\Users\Fer\source\repos\ProyectoTallerII\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_usuarios.resources

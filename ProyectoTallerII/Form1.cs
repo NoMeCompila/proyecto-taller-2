@@ -107,9 +107,22 @@ namespace ProyectoTallerII
 
         private void btn_entrar_Click(object sender, EventArgs e)
         {
-            Form form_inicio = new form_inicio();
-            this.Hide();
-            form_inicio.Show();
+            if(txt_user.Text != "fer" || txt_pass.Text != "123")
+            {
+                MessageBox.Show("Usuario/contraseña incorrecta(s)", "ERROR!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information
+                );
+                txt_pass.Clear();
+                txt_user.Clear();
+            }
+            else
+            {
+                Form form_inicio = new form_inicio();
+                this.Hide();
+                form_inicio.Show();
+            }
+
         }
     }
 }
