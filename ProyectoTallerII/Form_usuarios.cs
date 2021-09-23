@@ -22,15 +22,31 @@ namespace ProyectoTallerII
         void limpiar()
         {
             btn_modificar.Enabled = false;
-            txt_user_nombre.Clear(); txt_user_apellido.Clear();
-            txt_user_usuario.Clear(); txt_user_contraseña.Clear();
-            txt_user_email.Clear(); txt_user_perfil.Clear();
-            txt_user_estado.Clear(); txt_user_descripcion.Clear();
+
+            txt_user_nombre.Clear();  txt_user_apellido.Clear();   txt_user_dni.Clear();
+            txt_user_usuario.Clear(); txt_user_contraseña.Clear(); txt_user_email.Clear();
+            drd_user_perfil.SelectedIndex = 0;
+            txt_user_tel.Clear(); txt_user_adress.Clear();
+
+            
             btn_user_agregar.Enabled = true;
+
+            /*
+ nombre
+ apellido
+ dni
+ usuario
+ contraseña
+ email
+ perfil
+ tel
+ direccion
+*/
         }
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;//MUY IMPORTANTE
             Eliminar.Text = "Eliminar";
 
             try
@@ -53,12 +69,6 @@ namespace ProyectoTallerII
                                 MessageBoxIcon.Information
                 );
             }
-
-            
-
-
-            
-
         }
 
         private void bunifuLabel1_Click(object sender, EventArgs e)
@@ -73,6 +83,10 @@ namespace ProyectoTallerII
 
         private void btn_user_limpiar_Click(object sender, EventArgs e)
         {
+            limpiar();
+            // PREGUNTAR SI HAY QUE LIMPIAR CON O SIND ATOS
+
+            /*
             if (txt_user_nombre.Text  == "" || txt_user_apellido.Text    == "" ||
                 txt_user_usuario.Text == "" || txt_user_contraseña.Text  == "" ||
                 txt_user_email.Text   == "" || txt_user_perfil.Text      == "" ||
@@ -86,15 +100,15 @@ namespace ProyectoTallerII
             else
             {
                 limpiar();
-            }
+            }*/
         }
 
+        
         private void btn_user_agregar_Click(object sender, EventArgs e)
         {
-            if (txt_user_nombre.Text  == "" || txt_user_apellido.Text    == "" ||
-                txt_user_usuario.Text == "" || txt_user_contraseña.Text  == "" ||
-                txt_user_email.Text   == "" || txt_user_perfil.Text      == "" ||
-                txt_user_estado.Text  == "" || txt_user_descripcion.Text == "")
+            if (txt_user_nombre.Text  == "" || txt_user_apellido.Text    == ""    || txt_user_dni.Text     == "" ||
+                txt_user_usuario.Text == "" || txt_user_contraseña.Text  == ""    || txt_user_email.Text   == "" || 
+                drd_user_perfil.Text  == "" || txt_user_tel.Text         == ""    || txt_user_adress.Text  == ""  )
             {
                 MessageBox.Show("Debe completar todos los campos!", "ERROR!",
                                 MessageBoxButtons.OK,
@@ -103,38 +117,53 @@ namespace ProyectoTallerII
             }
             else
             {
-                int writeRow = dtg_usuarios.Rows.Count;
-                dtg_usuarios.Rows.Add(1);
-                
-                dtg_usuarios.Rows[writeRow].Cells[0].Value = txt_user_nombre.Text;
-                dtg_usuarios.Rows[writeRow].Cells[1].Value = txt_user_apellido.Text;
-                dtg_usuarios.Rows[writeRow].Cells[2].Value = txt_user_usuario.Text;
-                dtg_usuarios.Rows[writeRow].Cells[3].Value = txt_user_contraseña.Text;
-                dtg_usuarios.Rows[writeRow].Cells[4].Value = txt_user_email.Text;
-                dtg_usuarios.Rows[writeRow].Cells[5].Value = txt_user_perfil.Text;
-                dtg_usuarios.Rows[writeRow].Cells[6].Value = txt_user_descripcion.Text;
-                dtg_usuarios.Rows[writeRow].Cells[7].Value = txt_user_estado.Text;
+                if (MessageBox.Show("Seguro que desea guardar?",
+                              "Guardar Datos!",
+                              MessageBoxButtons.YesNo,
+                              MessageBoxIcon.Question,
+                              MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                {
+                    int writeRow = dtg_usuarios.Rows.Count;
+                    dtg_usuarios.Rows.Add(1);
+
+                    dtg_usuarios.Rows[writeRow].Cells[0].Value = txt_user_nombre.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[1].Value = txt_user_apellido.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[2].Value = txt_user_dni.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[3].Value = txt_user_usuario.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[4].Value = txt_user_contraseña.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[5].Value = txt_user_email.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[6].Value = drd_user_perfil.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[7].Value = txt_user_tel.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[8].Value = txt_user_adress.Text;
 
 
-                limpiar();
+                    limpiar();
+                }
+                else
+                {
+                    limpiar();
+                }
             }
         }
 
         private void dtg_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             try
             {
                 fila = dtg_usuarios.CurrentRow.Index;
 
+                
+
                 txt_user_nombre.Text = dtg_usuarios[0, fila].Value.ToString();
                 txt_user_apellido.Text = dtg_usuarios[1, fila].Value.ToString();
-                txt_user_usuario.Text = dtg_usuarios[2, fila].Value.ToString();
-                txt_user_contraseña.Text = dtg_usuarios[3, fila].Value.ToString();
-                txt_user_email.Text = dtg_usuarios[4, fila].Value.ToString();
-                txt_user_perfil.Text = dtg_usuarios[5, fila].Value.ToString();
-                txt_user_descripcion.Text = dtg_usuarios[6, fila].Value.ToString();
-                txt_user_estado.Text = dtg_usuarios[7, fila].Value.ToString();
-                //MessageBox.Show(position+""); System.NullReferenceException
+                txt_user_dni.Text = dtg_usuarios[2, fila].Value.ToString();
+                txt_user_usuario.Text = dtg_usuarios[3, fila].Value.ToString();
+                txt_user_contraseña.Text = dtg_usuarios[4, fila].Value.ToString();
+                txt_user_email.Text = dtg_usuarios[5, fila].Value.ToString();
+                drd_user_perfil.Text = dtg_usuarios[6, fila].Value.ToString();
+                txt_user_tel.Text = dtg_usuarios[7, fila].Value.ToString();
+                txt_user_adress.Text = dtg_usuarios[8, fila].Value.ToString();
 
                 btn_user_agregar.Enabled = false;
                 btn_modificar.Enabled = true;
@@ -153,29 +182,44 @@ namespace ProyectoTallerII
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            
-            string name, surname, user, pass, email, perfil, desc, status;
-            name = txt_user_nombre.Text;
-            surname = txt_user_apellido.Text;
-            user = txt_user_usuario.Text;
-            pass = txt_user_contraseña.Text;
-            email = txt_user_email.Text;
-            perfil = txt_user_perfil.Text;
-            desc = txt_user_descripcion.Text;
-            status = txt_user_estado.Text;
 
-            dtg_usuarios[0, fila].Value = txt_user_nombre.Text;
-            dtg_usuarios[1, fila].Value = txt_user_apellido.Text;
-            dtg_usuarios[2, fila].Value = txt_user_usuario.Text;
-            dtg_usuarios[3, fila].Value = txt_user_contraseña.Text;
-            dtg_usuarios[4, fila].Value = txt_user_email.Text;
-            dtg_usuarios[5, fila].Value = txt_user_perfil.Text;
-            dtg_usuarios[6, fila].Value = txt_user_descripcion.Text;
-            dtg_usuarios[7, fila].Value = txt_user_estado.Text;
+            if (txt_user_nombre.Text == "" || txt_user_apellido.Text == "" || txt_user_dni.Text == "" ||
+                txt_user_usuario.Text == "" || txt_user_contraseña.Text == "" || txt_user_email.Text == "" ||
+                drd_user_perfil.Text == "" || txt_user_tel.Text == "" || txt_user_adress.Text == "")
+            {
+                MessageBox.Show("Debe completar todos los campos!", "ERROR!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error
+                );
+            }
+            else
+            {
 
+                string name, surname, dni, user, pass, email, perfil, tel, adress;
+                
+                name = txt_user_nombre.Text;
+                surname = txt_user_apellido.Text;
+                dni = txt_user_dni.Text;
+                user = txt_user_usuario.Text;
+                pass = txt_user_contraseña.Text;
+                email = txt_user_email.Text;
+                perfil = drd_user_perfil.Text;
+                tel = txt_user_tel.Text;
+                adress = txt_user_adress.Text;
+                
+                dtg_usuarios[0, fila].Value = txt_user_nombre.Text;
+                dtg_usuarios[1, fila].Value = txt_user_apellido.Text;
+                dtg_usuarios[2, fila].Value = txt_user_dni.Text;
+                dtg_usuarios[3, fila].Value = txt_user_usuario.Text;
+                dtg_usuarios[4, fila].Value = txt_user_contraseña.Text;
+                dtg_usuarios[5, fila].Value = txt_user_email.Text;
+                dtg_usuarios[6, fila].Value = drd_user_perfil.Text;
+                dtg_usuarios[7, fila].Value = txt_user_tel.Text;
+                dtg_usuarios[8, fila].Value = txt_user_adress.Text;
 
+                limpiar();
 
-            limpiar();
+            }
         }
     }
 }
