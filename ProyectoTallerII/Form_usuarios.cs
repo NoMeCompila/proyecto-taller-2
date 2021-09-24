@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace ProyectoTallerII
 {
@@ -19,6 +20,8 @@ namespace ProyectoTallerII
             limpiar();
         }
 
+        //limpiar es una funcion que pone a todos los valores por defecto, es decir vacia todos los textBox
+        // pone al dropdown en su pirmer valor "Administrador" y setea el datetimepicker en la fecha actual
         void limpiar()
         {
             btn_modificar.Enabled = false;
@@ -27,22 +30,27 @@ namespace ProyectoTallerII
             txt_user_usuario.Clear(); txt_user_contraseña.Clear(); txt_user_email.Clear();
             drd_user_perfil.SelectedIndex = 0;
             txt_user_tel.Clear(); txt_user_adress.Clear();
-
+            dtp_user_date_birth.Value = DateTime.Now;
             
             btn_user_agregar.Enabled = true;
-
-            /*
- nombre
- apellido
- dni
- usuario
- contraseña
- email
- perfil
- tel
- direccion
-*/
         }
+
+        private bool ValidateEmail()
+        {
+            string email = txt_user_email.Text;
+            Regex regex = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            Match match = regex.Match(email);
+            if (match.Success)
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
+
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -60,6 +68,10 @@ namespace ProyectoTallerII
                         dtg_usuarios.Rows.RemoveAt(posicion);
                         limpiar();
                     }
+                    else
+                    {
+                        limpiar();
+                    }
                 }
             }
             catch(NullReferenceException ex)
@@ -71,6 +83,7 @@ namespace ProyectoTallerII
             }
         }
 
+        
         private void bunifuLabel1_Click(object sender, EventArgs e)
         {
 
@@ -84,23 +97,6 @@ namespace ProyectoTallerII
         private void btn_user_limpiar_Click(object sender, EventArgs e)
         {
             limpiar();
-            // PREGUNTAR SI HAY QUE LIMPIAR CON O SIND ATOS
-
-            /*
-            if (txt_user_nombre.Text  == "" || txt_user_apellido.Text    == "" ||
-                txt_user_usuario.Text == "" || txt_user_contraseña.Text  == "" ||
-                txt_user_email.Text   == "" || txt_user_perfil.Text      == "" ||
-                txt_user_estado.Text  == "" || txt_user_descripcion.Text == ""  )
-            {
-                MessageBox.Show("Campos vacíos no se puede limpiar!", "ERROR!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                );
-            }
-            else
-            {
-                limpiar();
-            }*/
         }
 
         
@@ -114,6 +110,118 @@ namespace ProyectoTallerII
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error
                 );
+
+
+            }
+            //variable para guardar el texto ingresado por eltextbox
+            var contraseña = txt_user_contraseña.Text;
+            var dni = txt_user_dni.Text;
+            var usuario1 = txt_user_usuario.Text;
+            var email1 = txt_user_email.Text;
+            //variable para generar una nueva expresion regular quye verifica que elñ texto ingresado contenga al menos un numero
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasUpperCase = new Regex(@"[A-Z]+");
+            var hasLowerCase = new Regex(@"[a-z]+");
+            //\|!#$%&/()=?»«@£§€{}.-;'<>_,
+            var hasSymbols = new Regex(@"[\|!#$%&/()=?»«@£§€{}.;'<>_,]+");
+            //var emailFormat = new Regex(@"[^[^@\s] +@[^@\s] +\.[^@\s]+$]+");
+            //@"(@)(.+)$"
+
+            if (!hasNumber.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos 1 número",
+                                "Error!", 
+                                MessageBoxButtons.OK, 
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+
+            }else if (!hasUpperCase.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos una letra mayúscula",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (!hasLowerCase.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos una letra minúscula",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (!hasSymbols.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos un símbnolo",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (contraseña.Length < 8)
+            {
+                MessageBox.Show("La contraseña debe tener por lo menos 8 caracteres",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (contraseña.Length > 16)
+            {
+                MessageBox.Show("La contraseña debe tener un máximo de 15 caractere",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (dni.Length < 7)
+            {
+                MessageBox.Show("El DNI debe tener un mínimo de 7 caractere",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+
+                txt_user_contraseña.Focus();
+                txt_user_dni.Clear();
+                return;
+            }
+            else if (usuario1.Length < 3)
+            {
+                MessageBox.Show("El nombre de usuario debe tener un mínimo de 3 caracteres",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+
+                txt_user_usuario.Focus();
+                txt_user_usuario.Clear();
+                return;
+            }else if (!ValidateEmail())
+            {
+                MessageBox.Show("Ingrese un correo válido",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                txt_user_email.Focus();
+                txt_user_email.Clear();
             }
             else
             {
@@ -135,6 +243,7 @@ namespace ProyectoTallerII
                     dtg_usuarios.Rows[writeRow].Cells[6].Value = drd_user_perfil.Text;
                     dtg_usuarios.Rows[writeRow].Cells[7].Value = txt_user_tel.Text;
                     dtg_usuarios.Rows[writeRow].Cells[8].Value = txt_user_adress.Text;
+                    dtg_usuarios.Rows[writeRow].Cells[9].Value = dtp_user_date_birth.Text;
 
 
                     limpiar();
@@ -164,6 +273,7 @@ namespace ProyectoTallerII
                 drd_user_perfil.Text = dtg_usuarios[6, fila].Value.ToString();
                 txt_user_tel.Text = dtg_usuarios[7, fila].Value.ToString();
                 txt_user_adress.Text = dtg_usuarios[8, fila].Value.ToString();
+                dtp_user_date_birth.Text = dtg_usuarios[9, fila].Value.ToString();
 
                 btn_user_agregar.Enabled = false;
                 btn_modificar.Enabled = true;
@@ -192,11 +302,113 @@ namespace ProyectoTallerII
                                 MessageBoxIcon.Error
                 );
             }
+
+            var contraseña = txt_user_contraseña.Text;
+            var dni_usuario = txt_user_dni.Text;
+            var usuario1 = txt_user_usuario.Text;
+
+            //variable para generar una nueva expresion regular quye verifica que elñ texto ingresado contenga al menos un numero
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasUpperCase = new Regex(@"[A-Z]+");
+            var hasLowerCase = new Regex(@"[a-z]+");
+            var hasSymbols = new Regex(@"[\|!#$%&/()=?»«@£§€{}.;'<>_,]+");
+            
+            if (!hasNumber.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos 1 número",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }else if (!hasUpperCase.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos una letra mayúscula",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                
+                txt_user_contraseña.Focus();
+                return;
+            }
+            else if (!hasLowerCase.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos una letra minúscula",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (!hasSymbols.IsMatch(contraseña))
+            {
+                MessageBox.Show("La contraseña debe incluir por lo menos un símbolo",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (contraseña.Length < 8)
+            {
+                MessageBox.Show("La contraseña debe incluir como mínimo 8 caracteres",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (contraseña.Length > 16)
+            {
+                MessageBox.Show("La contraseña debe tener un máximo de 15 caractere",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                txt_user_contraseña.Focus();
+                txt_user_contraseña.Clear();
+                return;
+            }
+            else if (dni_usuario.Length < 7)
+            {
+                MessageBox.Show("El DNI debe tener un mínimo de 7 caractere",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+
+                txt_user_dni.Focus();
+                txt_user_dni.Clear();
+                return;
+            }
+            else if (usuario1.Length < 3)
+            {
+                MessageBox.Show("El nombre de usuario debe tener un mínimo de 3 caracteres",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+
+                txt_user_usuario.Focus();
+                txt_user_usuario.Clear();
+                return;
+            }
+            else if (!ValidateEmail())
+            {
+                MessageBox.Show("Ingrese un correo válido",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                txt_user_email.Focus();
+                txt_user_email.Clear();
+            }
             else
             {
 
-                string name, surname, dni, user, pass, email, perfil, tel, adress;
-                
+                string name, surname, dni, user, pass, email, perfil, tel, adress, birth;
+
                 name = txt_user_nombre.Text;
                 surname = txt_user_apellido.Text;
                 dni = txt_user_dni.Text;
@@ -206,7 +418,8 @@ namespace ProyectoTallerII
                 perfil = drd_user_perfil.Text;
                 tel = txt_user_tel.Text;
                 adress = txt_user_adress.Text;
-                
+                birth = dtp_user_date_birth.Text;
+
                 dtg_usuarios[0, fila].Value = txt_user_nombre.Text;
                 dtg_usuarios[1, fila].Value = txt_user_apellido.Text;
                 dtg_usuarios[2, fila].Value = txt_user_dni.Text;
@@ -216,9 +429,121 @@ namespace ProyectoTallerII
                 dtg_usuarios[6, fila].Value = drd_user_perfil.Text;
                 dtg_usuarios[7, fila].Value = txt_user_tel.Text;
                 dtg_usuarios[8, fila].Value = txt_user_adress.Text;
+                dtg_usuarios[9, fila].Value = dtp_user_date_birth.Text;
 
                 limpiar();
 
+            }
+        }
+
+        private void txt_user_nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_apellido.Focus();
+            }
+
+        }
+
+        private void txt_user_nombre_TextChanged(object sender, EventArgs e)
+        {
+            txt_user_nombre.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txt_user_nombre.Text);
+            txt_user_nombre.SelectionStart = txt_user_nombre.Text.Length;
+        }
+
+        private void txt_user_apellido_TextChanged(object sender, EventArgs e)
+        {
+            txt_user_apellido.Text = System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(txt_user_apellido.Text);
+            txt_user_apellido.SelectionStart = txt_user_apellido.Text.Length;
+        }
+
+        private void txt_user_apellido_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_dni.Focus();
+            }
+
+        }
+
+        private void txt_user_dni_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_user_dni_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_usuario.Focus();
+            }
+        }
+
+        private void txt_user_usuario_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_contraseña.Focus();
+            }
+            
+        }
+
+        private void txt_user_contraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_email.Focus();
+            }
+        }
+
+        private void txt_user_email_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_tel.Focus();
+            }
+        }
+
+        private void txt_user_tel_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                txt_user_adress.Focus();
+            }
+        }
+
+        private void txt_user_adress_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }
