@@ -111,7 +111,7 @@ namespace ProyectoTallerII
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_inicio());
+            open_child_form(new Form_home());
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
