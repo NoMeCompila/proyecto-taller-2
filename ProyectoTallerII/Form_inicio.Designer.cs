@@ -30,62 +30,20 @@ namespace ProyectoTallerII
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_inicio));
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.card_users = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pb_restaurar = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel5 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuCircleProgress1 = new Bunifu.UI.WinForms.BunifuCircleProgress();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pb_restaurar = new Bunifu.Framework.UI.BunifuCards();
+            this.card_users = new Bunifu.Framework.UI.BunifuCards();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pb_restaurar.SuspendLayout();
             this.card_users.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.pb_restaurar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(352, 403);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(142, 20);
-            this.bunifuLabel1.TabIndex = 22;
-            this.bunifuLabel1.Text = "Inversión Recuperada";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.users_alt_3;
-            this.pictureBox1.Location = new System.Drawing.Point(14, 37);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // card_users
-            // 
-            this.card_users.BackColor = System.Drawing.Color.White;
-            this.card_users.BorderRadius = 5;
-            this.card_users.BottomSahddow = true;
-            this.card_users.color = System.Drawing.Color.BlueViolet;
-            this.card_users.Controls.Add(this.pictureBox1);
-            this.card_users.LeftSahddow = false;
-            this.card_users.Location = new System.Drawing.Point(118, 54);
-            this.card_users.Name = "card_users";
-            this.card_users.RightSahddow = true;
-            this.card_users.ShadowDepth = 20;
-            this.card_users.Size = new System.Drawing.Size(200, 114);
-            this.card_users.TabIndex = 19;
             // 
             // bunifuLabel3
             // 
@@ -102,31 +60,6 @@ namespace ProyectoTallerII
             this.bunifuLabel3.Text = "Administrar Usuarios";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::ProyectoTallerII.Properties.Resources.card;
-            this.pictureBox2.Location = new System.Drawing.Point(16, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(75, 49);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pb_restaurar
-            // 
-            this.pb_restaurar.BackColor = System.Drawing.Color.White;
-            this.pb_restaurar.BorderRadius = 5;
-            this.pb_restaurar.BottomSahddow = true;
-            this.pb_restaurar.color = System.Drawing.Color.BlueViolet;
-            this.pb_restaurar.Controls.Add(this.pictureBox2);
-            this.pb_restaurar.LeftSahddow = false;
-            this.pb_restaurar.Location = new System.Drawing.Point(518, 54);
-            this.pb_restaurar.Name = "pb_restaurar";
-            this.pb_restaurar.RightSahddow = true;
-            this.pb_restaurar.ShadowDepth = 20;
-            this.pb_restaurar.Size = new System.Drawing.Size(200, 114);
-            this.pb_restaurar.TabIndex = 20;
             // 
             // bunifuLabel4
             // 
@@ -196,6 +129,73 @@ namespace ProyectoTallerII
             this.bunifuCircleProgress1.ValueByTransition = 30;
             this.bunifuCircleProgress1.ValueMargin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             // 
+            // pb_restaurar
+            // 
+            this.pb_restaurar.BackColor = System.Drawing.Color.White;
+            this.pb_restaurar.BorderRadius = 5;
+            this.pb_restaurar.BottomSahddow = true;
+            this.pb_restaurar.color = System.Drawing.Color.BlueViolet;
+            this.pb_restaurar.Controls.Add(this.pictureBox2);
+            this.pb_restaurar.LeftSahddow = false;
+            this.pb_restaurar.Location = new System.Drawing.Point(518, 54);
+            this.pb_restaurar.Name = "pb_restaurar";
+            this.pb_restaurar.RightSahddow = true;
+            this.pb_restaurar.ShadowDepth = 20;
+            this.pb_restaurar.Size = new System.Drawing.Size(200, 114);
+            this.pb_restaurar.TabIndex = 20;
+            // 
+            // card_users
+            // 
+            this.card_users.BackColor = System.Drawing.Color.White;
+            this.card_users.BorderRadius = 5;
+            this.card_users.BottomSahddow = true;
+            this.card_users.color = System.Drawing.Color.BlueViolet;
+            this.card_users.Controls.Add(this.pictureBox1);
+            this.card_users.LeftSahddow = false;
+            this.card_users.Location = new System.Drawing.Point(118, 54);
+            this.card_users.Name = "card_users";
+            this.card_users.RightSahddow = true;
+            this.card_users.ShadowDepth = 20;
+            this.card_users.Size = new System.Drawing.Size(200, 114);
+            this.card_users.TabIndex = 19;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::ProyectoTallerII.Properties.Resources.card;
+            this.pictureBox2.Location = new System.Drawing.Point(16, 37);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 49);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.users_alt_3;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(352, 403);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(142, 20);
+            this.bunifuLabel1.TabIndex = 22;
+            this.bunifuLabel1.Text = "Inversión Recuperada";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // Form_inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -208,25 +208,24 @@ namespace ProyectoTallerII
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_inicio";
             this.Text = "Form_inicio";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pb_restaurar.ResumeLayout(false);
             this.card_users.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.pb_restaurar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private Bunifu.Framework.UI.BunifuCards card_users;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.Framework.UI.BunifuCards pb_restaurar;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel5;
         private Bunifu.UI.WinForms.BunifuCircleProgress bunifuCircleProgress1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Bunifu.Framework.UI.BunifuCards pb_restaurar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuCards card_users;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
     }
 }

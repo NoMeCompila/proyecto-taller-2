@@ -181,9 +181,6 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_inicio.resx">
-      <DependentUpon>Form_inicio.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form_usuarios.resx">
       <DependentUpon>Form_usuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +307,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eraser %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image_icon_diamond_pic_512x512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

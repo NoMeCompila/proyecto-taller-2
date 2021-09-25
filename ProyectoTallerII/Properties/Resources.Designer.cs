@@ -143,6 +143,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap diamond {
+            get {
+                object obj = ResourceManager.GetObject("diamond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eraser__1_ {
             get {
                 object obj = ResourceManager.GetObject("eraser (1)", resourceCulture);
@@ -216,6 +226,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap id_card__1_ {
             get {
                 object obj = ResourceManager.GetObject("id-card (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap image_icon_diamond_pic_512x512 {
+            get {
+                object obj = ResourceManager.GetObject("image_icon_diamond_pic_512x512", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
