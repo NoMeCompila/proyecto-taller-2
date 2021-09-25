@@ -29,7 +29,6 @@ namespace ProyectoTallerII
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(form_inicio));
             this.pnl_sidevar = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -43,7 +42,6 @@ namespace ProyectoTallerII
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_inicio = new System.Windows.Forms.Button();
             this.pnl_contenido = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_cabecera = new System.Windows.Forms.Panel();
             this.pb_restaurado = new System.Windows.Forms.PictureBox();
             this.pb_maximizar = new System.Windows.Forms.PictureBox();
@@ -51,14 +49,8 @@ namespace ProyectoTallerII
             this.pb_cerrar = new System.Windows.Forms.PictureBox();
             this.lbl_username = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_bienvenida = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_hora = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_fecha = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
-            this.timer_hora = new System.Windows.Forms.Timer(this.components);
             this.pnl_sidevar.SuspendLayout();
             this.pnl_contenido.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_cabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).BeginInit();
@@ -230,27 +222,12 @@ namespace ProyectoTallerII
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_contenido.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnl_contenido.Controls.Add(this.bunifuSeparator2);
-            this.pnl_contenido.Controls.Add(this.lbl_fecha);
-            this.pnl_contenido.Controls.Add(this.lbl_hora);
-            this.pnl_contenido.Controls.Add(this.bunifuLabel1);
             this.pnl_contenido.Controls.Add(this.lbl_bienvenida);
-            this.pnl_contenido.Controls.Add(this.pictureBox1);
             this.pnl_contenido.Location = new System.Drawing.Point(184, 0);
             this.pnl_contenido.Name = "pnl_contenido";
             this.pnl_contenido.Size = new System.Drawing.Size(741, 561);
             this.pnl_contenido.TabIndex = 2;
             this.pnl_contenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_contenido_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.LOGOPERLE;
-            this.pictureBox1.Location = new System.Drawing.Point(133, 203);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(492, 228);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // pnl_cabecera
             // 
@@ -336,81 +313,17 @@ namespace ProyectoTallerII
             // 
             this.lbl_bienvenida.AllowParentOverrides = false;
             this.lbl_bienvenida.AutoEllipsis = false;
+            this.lbl_bienvenida.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_bienvenida.Location = new System.Drawing.Point(293, 59);
+            this.lbl_bienvenida.Location = new System.Drawing.Point(71, 153);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
             this.lbl_bienvenida.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_bienvenida.Size = new System.Drawing.Size(173, 45);
-            this.lbl_bienvenida.TabIndex = 1;
-            this.lbl_bienvenida.Text = "Bienvenido";
-            this.lbl_bienvenida.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_bienvenida.Size = new System.Drawing.Size(631, 111);
+            this.lbl_bienvenida.TabIndex = 11;
+            this.lbl_bienvenida.Text = "Bienvenido al Sistema de Administración\r\n                           Perle Joyas";
+            this.lbl_bienvenida.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_bienvenida.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = null;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.Location = new System.Drawing.Point(174, 125);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(413, 45);
-            this.bunifuLabel1.TabIndex = 2;
-            this.bunifuLabel1.Text = "Sistema de Administración";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.AllowParentOverrides = false;
-            this.lbl_hora.AutoEllipsis = false;
-            this.lbl_hora.CursorType = null;
-            this.lbl_hora.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_hora.Location = new System.Drawing.Point(321, 437);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_hora.Size = new System.Drawing.Size(132, 45);
-            this.lbl_hora.TabIndex = 3;
-            this.lbl_hora.Text = "00:00:00";
-            this.lbl_hora.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_hora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbl_fecha
-            // 
-            this.lbl_fecha.AllowParentOverrides = false;
-            this.lbl_fecha.AutoEllipsis = false;
-            this.lbl_fecha.CursorType = null;
-            this.lbl_fecha.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_fecha.Location = new System.Drawing.Point(133, 497);
-            this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_fecha.Size = new System.Drawing.Size(444, 45);
-            this.lbl_fecha.TabIndex = 4;
-            this.lbl_fecha.Text = "sabado 01 de enero del 3000";
-            this.lbl_fecha.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_fecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuSeparator2
-            // 
-            this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuSeparator2.BackgroundImage")));
-            this.bunifuSeparator2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuSeparator2.DashCap = Bunifu.UI.WinForms.BunifuSeparator.CapStyles.Flat;
-            this.bunifuSeparator2.LineColor = System.Drawing.Color.DimGray;
-            this.bunifuSeparator2.LineStyle = Bunifu.UI.WinForms.BunifuSeparator.LineStyles.Solid;
-            this.bunifuSeparator2.LineThickness = 2;
-            this.bunifuSeparator2.Location = new System.Drawing.Point(233, 477);
-            this.bunifuSeparator2.Name = "bunifuSeparator2";
-            this.bunifuSeparator2.Orientation = Bunifu.UI.WinForms.BunifuSeparator.LineOrientation.Horizontal;
-            this.bunifuSeparator2.Size = new System.Drawing.Size(300, 14);
-            this.bunifuSeparator2.TabIndex = 5;
-            // 
-            // timer_hora
-            // 
-            this.timer_hora.Enabled = true;
-            this.timer_hora.Tick += new System.EventHandler(this.timer_hora_Tick);
             // 
             // form_inicio
             // 
@@ -428,7 +341,6 @@ namespace ProyectoTallerII
             this.pnl_sidevar.PerformLayout();
             this.pnl_contenido.ResumeLayout(false);
             this.pnl_contenido.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_cabecera.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).EndInit();
@@ -457,13 +369,7 @@ namespace ProyectoTallerII
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel4;
         private Bunifu.UI.WinForms.BunifuLabel lbl_username;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btn_stock;
         private Bunifu.UI.WinForms.BunifuLabel lbl_bienvenida;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_hora;
-        private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_fecha;
-        private System.Windows.Forms.Timer timer_hora;
     }
 }

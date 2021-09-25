@@ -123,11 +123,12 @@ namespace ProyectoTallerII
         {
 
         }
+        
 
         private void timer_hora_Tick(object sender, EventArgs e)
         {
-            lbl_hora.Text = DateTime.Now.ToLongTimeString();
-            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+            //lbl_hora.Text = DateTime.Now.ToLongTimeString();
+           // lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
