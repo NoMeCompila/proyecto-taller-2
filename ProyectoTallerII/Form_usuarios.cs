@@ -51,6 +51,13 @@ namespace ProyectoTallerII
             }
         }
 
+        private int validateAge()
+        {
+            DateTime fechaHoy = DateTime.Today;
+            int edad = fechaHoy.Year - dtp_user_date_birth.Value.Year;
+            return edad;
+        }
+
 
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -99,12 +106,12 @@ namespace ProyectoTallerII
             limpiar();
         }
 
-        
+
         private void btn_user_agregar_Click(object sender, EventArgs e)
         {
-            if (txt_user_nombre.Text  == "" || txt_user_apellido.Text    == ""    || txt_user_dni.Text     == "" ||
-                txt_user_usuario.Text == "" || txt_user_contraseña.Text  == ""    || txt_user_email.Text   == "" || 
-                drd_user_perfil.Text  == "" || txt_user_tel.Text         == ""    || txt_user_adress.Text  == ""  )
+            if (txt_user_nombre.Text == "" || txt_user_apellido.Text == "" || txt_user_dni.Text == "" ||
+                txt_user_usuario.Text == "" || txt_user_contraseña.Text == "" || txt_user_email.Text == "" ||
+                drd_user_perfil.Text == "" || txt_user_tel.Text == "" || txt_user_adress.Text == "")
             {
                 MessageBox.Show("Debe completar todos los campos!", "ERROR!",
                                 MessageBoxButtons.OK,
@@ -130,21 +137,21 @@ namespace ProyectoTallerII
             if (!hasNumber.IsMatch(contraseña))
             {
                 MessageBox.Show("La contraseña debe incluir por lo menos 1 número",
-                                "Error!", 
-                                MessageBoxButtons.OK, 
+                                "Error!",
+                                MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
-                
+
                 txt_user_contraseña.Focus();
                 txt_user_contraseña.Clear();
                 return;
 
-            }else if (!hasUpperCase.IsMatch(contraseña))
+            } else if (!hasUpperCase.IsMatch(contraseña))
             {
                 MessageBox.Show("La contraseña debe incluir por lo menos una letra mayúscula",
                                 "Error!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
-                
+
                 txt_user_contraseña.Focus();
                 txt_user_contraseña.Clear();
                 return;
@@ -155,7 +162,7 @@ namespace ProyectoTallerII
                                 "Error!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
-                
+
                 txt_user_contraseña.Focus();
                 txt_user_contraseña.Clear();
                 return;
@@ -166,7 +173,7 @@ namespace ProyectoTallerII
                                 "Error!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
-                
+
                 txt_user_contraseña.Focus();
                 txt_user_contraseña.Clear();
                 return;
@@ -177,7 +184,7 @@ namespace ProyectoTallerII
                                 "Error!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
-                
+
                 txt_user_contraseña.Focus();
                 txt_user_contraseña.Clear();
                 return;
@@ -188,7 +195,7 @@ namespace ProyectoTallerII
                                 "Error!",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Exclamation);
-                
+
                 txt_user_contraseña.Focus();
                 txt_user_contraseña.Clear();
                 return;
@@ -214,7 +221,7 @@ namespace ProyectoTallerII
                 txt_user_usuario.Focus();
                 txt_user_usuario.Clear();
                 return;
-            }else if (!ValidateEmail())
+            } else if (!ValidateEmail())
             {
                 MessageBox.Show("Ingrese un correo válido",
                                 "Error!",
@@ -222,6 +229,14 @@ namespace ProyectoTallerII
                                 MessageBoxIcon.Exclamation);
                 txt_user_email.Focus();
                 txt_user_email.Clear();
+            }
+            else if (validateAge()<18)
+            {
+                MessageBox.Show("Usuario menor de edad, ingrese fecha válida",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                dtp_user_date_birth.Value = DateTime.Now;
             }
             else
             {
@@ -403,6 +418,14 @@ namespace ProyectoTallerII
                                 MessageBoxIcon.Exclamation);
                 txt_user_email.Focus();
                 txt_user_email.Clear();
+            }
+            else if (validateAge() < 18)
+            {
+                MessageBox.Show("Usuario menor de edad, ingrese fecha válida",
+                                "Error!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                dtp_user_date_birth.Value = DateTime.Now;
             }
             else
             {
