@@ -194,7 +194,7 @@ namespace ProyectoTallerII
             this.dtg_usuarios.EnableHeadersVisualStyles = false;
             this.dtg_usuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.dtg_usuarios.HeaderBackColor = System.Drawing.Color.Navy;
-            this.dtg_usuarios.HeaderBgColor = System.Drawing.Color.Empty;
+            //this.dtg_usuarios.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtg_usuarios.HeaderForeColor = System.Drawing.Color.White;
             this.dtg_usuarios.Location = new System.Drawing.Point(12, 360);
             this.dtg_usuarios.Name = "dtg_usuarios";

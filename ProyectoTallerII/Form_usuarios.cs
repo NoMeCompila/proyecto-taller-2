@@ -81,7 +81,7 @@ namespace ProyectoTallerII
                     }
                 }
             }
-            catch(NullReferenceException ex)
+            catch(NullReferenceException)
             {
                 MessageBox.Show("La tabla está vacía, inserte datos primero", "ERROR!",
                                 MessageBoxButtons.OK,
@@ -295,7 +295,7 @@ namespace ProyectoTallerII
 
 
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("La tabla está vacía, inserte datos primero", "ERROR!",
                                 MessageBoxButtons.OK,
