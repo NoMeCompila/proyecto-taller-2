@@ -18,10 +18,7 @@ namespace ProyectoTallerII
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void pnl_sidevar_Paint(object sender, PaintEventArgs e)
         {
@@ -121,9 +118,13 @@ namespace ProyectoTallerII
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            open_child_form(new Form_back());
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            open_child_form(new Form_stock());
+        }
 
         private void timer_hora_Tick(object sender, EventArgs e)
         {

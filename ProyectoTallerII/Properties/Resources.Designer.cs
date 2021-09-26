@@ -63,6 +63,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backupBG {
+            get {
+                object obj = ResourceManager.GetObject("backupBG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BDD {
             get {
                 object obj = ResourceManager.GetObject("BDD", resourceCulture);
@@ -236,6 +246,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap image_icon_diamond_pic_512x512 {
             get {
                 object obj = ResourceManager.GetObject("image_icon_diamond_pic_512x512", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap imagen_nuestra {
+            get {
+                object obj = ResourceManager.GetObject("imagen_nuestra", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

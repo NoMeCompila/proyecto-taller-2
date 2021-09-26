@@ -161,11 +161,23 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_back.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_back.Designer.cs">
+      <DependentUpon>Form_back.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_home.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_home.Designer.cs">
       <DependentUpon>Form_home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_stock.Designer.cs">
+      <DependentUpon>Form_stock.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_usuarios.cs">
       <SubType>Form</SubType>
@@ -181,8 +193,14 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_back.resx">
+      <DependentUpon>Form_back.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_home.resx">
       <DependentUpon>Form_home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_stock.resx">
+      <DependentUpon>Form_stock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_usuarios.resx">
       <DependentUpon>Form_usuarios.cs</DependentUpon>
@@ -316,6 +334,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backupBG.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imagen_nuestra.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
