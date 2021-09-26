@@ -17,34 +17,13 @@ namespace ProyectoTallerII
             InitializeComponent();
         }
 
-        
-
-        private void pb_menu_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void wrapper_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            /*if (!char.IsControl(e.KeyChar) &&  !char.IsLetter(e.KeyChar))  
-            {
-                e.Handled = true;
-            }*/
             
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
@@ -52,75 +31,34 @@ namespace ProyectoTallerII
             }
         }
 
-   
-
-        private void txt_user_Enter(object sender, EventArgs e)
-        {
-            if(txt_user.Text == "Usuario")
-            {
-                txt_user.Text = "";
-
-                txt_user.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_user_Leave(object sender, EventArgs e)
-        {
-
-
-            if (txt_user.Text == "")
-            {
-                txt_user.Text = "Usuario";
-
-                txt_user.ForeColor = Color.Silver;
-            }
-
-
-        }
-
-        private void txt_pass_Enter(object sender, EventArgs e)
-        {
-            if (txt_pass.Text == "Contraseña")
-            {
-                txt_pass.Text = "";
-
-                txt_pass.ForeColor = Color.Black;
-                txt_pass.UseSystemPasswordChar = true;
-            }
-        }
-        
-        private void txt_pass_Leave(object sender, EventArgs e)
-        {
-            if (txt_pass.Text == "" || txt_pass.Text == "●●●●●●●●●●")
-            {
-                txt_pass.Text = "Contraseña";
-
-                txt_pass.ForeColor = Color.Silver;
-                txt_pass.UseSystemPasswordChar = false;
-            }
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-         
-        }
-
         private void btn_entrar_Click(object sender, EventArgs e)
         {
-            if(txt_user.Text != "fer" || txt_pass.Text != "123")
+            if (txt_user.Text == "" && txt_pass.Text == "")
             {
-                MessageBox.Show("Usuario/contraseña incorrecta(s)", "ERROR!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                );
+                MessageBox.Show("Campos vacíos, por favor ingrese su cuenta", "ERROR!",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Information
+               );
                 txt_pass.Clear();
                 txt_user.Clear();
+                txt_user.Focus();
             }
-            else
+            else if(txt_user.Text == "Admin1" && txt_pass.Text == "Adm1n123!")
             {
                 Form form_inicio = new form_inicio();
                 this.Hide();
                 form_inicio.Show();
+
+            }
+            else
+            {
+                MessageBox.Show("Usuario y(o Contraseña incorrectas", "ERROR!",
+                               MessageBoxButtons.OK,
+                               MessageBoxIcon.Information
+               );
+                txt_pass.Clear();
+                txt_user.Clear();
+                txt_user.Focus();
             }
 
         }
