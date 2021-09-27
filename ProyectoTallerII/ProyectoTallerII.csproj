@@ -135,8 +135,15 @@
     <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.0.9.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.5.0.9\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.Compatibility" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -155,6 +162,24 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_auditoria_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_auditoria_gerente.Designer.cs">
+      <DependentUpon>Form_auditoria_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_clientes_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_clientes_gerente.Designer.cs">
+      <DependentUpon>Form_clientes_gerente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Gerente.Designer.cs">
+      <DependentUpon>Form_Gerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +191,18 @@
     </Compile>
     <Compile Include="Form_back.Designer.cs">
       <DependentUpon>Form_back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_gerente_reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_gerente_reportes.Designer.cs">
+      <DependentUpon>Form_gerente_reportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_home_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_home_gerente.Designer.cs">
+      <DependentUpon>Form_home_gerente.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_home.cs">
       <SubType>Form</SubType>
@@ -185,16 +222,37 @@
     <Compile Include="Form_usuarios.Designer.cs">
       <DependentUpon>Form_usuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ventas_gerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ventas_gerente.Designer.cs">
+      <DependentUpon>Form_ventas_gerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_auditoria_gerente.resx">
+      <DependentUpon>Form_auditoria_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_clientes_gerente.resx">
+      <DependentUpon>Form_clientes_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Gerente.resx">
+      <DependentUpon>Form_Gerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_back.resx">
       <DependentUpon>Form_back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_gerente_reportes.resx">
+      <DependentUpon>Form_gerente_reportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_home_gerente.resx">
+      <DependentUpon>Form_home_gerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_home.resx">
       <DependentUpon>Form_home.cs</DependentUpon>
@@ -204,6 +262,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_usuarios.resx">
       <DependentUpon>Form_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ventas_gerente.resx">
+      <DependentUpon>Form_ventas_gerente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -340,6 +401,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\imagen_nuestra.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\historial %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\audi %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

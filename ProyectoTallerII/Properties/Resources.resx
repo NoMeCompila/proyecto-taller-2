@@ -130,6 +130,9 @@
   <data name="BDD (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BDD (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ventas (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ventas (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="maxi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\maxi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -160,6 +163,9 @@
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="historial (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\historial (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="search-1 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-1 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -177,6 +183,9 @@
   </data>
   <data name="card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="imagen_nuestra" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\imagen_nuestra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="save (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,6 +211,9 @@
   <data name="remove-ico (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove-ico (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ventas (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ventas (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fullScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fullScreen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -226,7 +238,7 @@
   <data name="LOGOPERLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOPERLE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="imagen_nuestra" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\imagen_nuestra.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="audi (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audi (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

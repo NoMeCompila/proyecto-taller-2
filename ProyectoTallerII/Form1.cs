@@ -50,6 +50,13 @@ namespace ProyectoTallerII
                 form_inicio.Show();
 
             }
+            else if (txt_user.Text == "Gerente1" && txt_pass.Text == "Gerente123!")
+            {
+                Form form_gerente = new Form_Gerente();
+                this.Hide();
+                form_gerente.Show();
+
+            }
             else
             {
                 MessageBox.Show("Usuario y(o Contraseña incorrectas", "ERROR!",
@@ -60,7 +67,6 @@ namespace ProyectoTallerII
                 txt_user.Clear();
                 txt_user.Focus();
             }
-
         }
     }
 }
