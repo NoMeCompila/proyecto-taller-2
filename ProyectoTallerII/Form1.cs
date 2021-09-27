@@ -43,7 +43,7 @@ namespace ProyectoTallerII
                 txt_user.Clear();
                 txt_user.Focus();
             }
-            else if(txt_user.Text == "Admin1" && txt_pass.Text == "Adm1n123!")
+            else if(txt_user.Text == "Admin1" && txt_pass.Text == "Admin123!")
             {
                 Form form_inicio = new form_inicio();
                 this.Hide();
@@ -55,7 +55,12 @@ namespace ProyectoTallerII
                 Form form_gerente = new Form_Gerente();
                 this.Hide();
                 form_gerente.Show();
-
+            }
+            else if (txt_user.Text == "Vendedor1" && txt_pass.Text == "Vendedor123!")
+            {
+                Form form_vendedor = new Form_vendedor_init();
+                this.Hide();
+                form_vendedor.Show();  
             }
             else
             {

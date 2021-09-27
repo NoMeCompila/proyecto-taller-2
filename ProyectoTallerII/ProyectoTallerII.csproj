@@ -174,6 +174,36 @@
     <Compile Include="Form_clientes_gerente.Designer.cs">
       <DependentUpon>Form_clientes_gerente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_facturacion_vendedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_facturacion_vendedor.Designer.cs">
+      <DependentUpon>Form_facturacion_vendedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_home_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_home_empleado.Designer.cs">
+      <DependentUpon>Form_home_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_listar_productos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_listar_productos.Designer.cs">
+      <DependentUpon>Form_listar_productos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_vendedor_clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_vendedor_clientes.Designer.cs">
+      <DependentUpon>Form_vendedor_clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_vendedor_init.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_vendedor_init.Designer.cs">
+      <DependentUpon>Form_vendedor_init.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Gerente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +268,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_clientes_gerente.resx">
       <DependentUpon>Form_clientes_gerente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_facturacion_vendedor.resx">
+      <DependentUpon>Form_facturacion_vendedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_home_empleado.resx">
+      <DependentUpon>Form_home_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_listar_productos.resx">
+      <DependentUpon>Form_listar_productos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_vendedor_clientes.resx">
+      <DependentUpon>Form_vendedor_clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_vendedor_init.resx">
+      <DependentUpon>Form_vendedor_init.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Gerente.resx">
       <DependentUpon>Form_Gerente.cs</DependentUpon>
