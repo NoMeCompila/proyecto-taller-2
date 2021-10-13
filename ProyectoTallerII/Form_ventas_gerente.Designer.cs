@@ -30,32 +30,16 @@ namespace ProyectoTallerII
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ventas_gerente));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.lbl_ventas_historial = new Bunifu.UI.WinForms.BunifuLabel();
             this.dtg_ventas = new Bunifu.UI.WinForms.BunifuDataGridView();
-            this.nro_fac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Apellido_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preci = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.verfactura = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnl_gerente_auditoria = new Bunifu.UI.WinForms.BunifuPanel();
             this.lbl_gerente_csv = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_gerente_json = new Bunifu.UI.WinForms.BunifuLabel();
@@ -64,10 +48,22 @@ namespace ProyectoTallerII
             this.rb_gerente_csv = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.rb_gerente_json = new Bunifu.UI.WinForms.BunifuRadioButton();
             this.rb_gerente_excel = new Bunifu.UI.WinForms.BunifuRadioButton();
-            this.txt_gerente_buscarusuario = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbl_gerente_buscaru_apellido = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_gerente_buscardni = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbl_gerente_buscar_dni = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuDatePicker2 = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.Vendedor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido_Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo_pago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id_cabecera = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.verfactura = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_ventas)).BeginInit();
             this.pnl_gerente_auditoria.SuspendLayout();
             this.SuspendLayout();
@@ -92,11 +88,10 @@ namespace ProyectoTallerII
             // dtg_ventas
             // 
             this.dtg_ventas.AllowCustomTheming = false;
-            this.dtg_ventas.AllowUserToAddRows = false;
             this.dtg_ventas.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtg_ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            this.dtg_ventas.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dtg_ventas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtg_ventas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -104,27 +99,24 @@ namespace ProyectoTallerII
             this.dtg_ventas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtg_ventas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dtg_ventas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Navy;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(102)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtg_ventas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dtg_ventas.ColumnHeadersHeight = 40;
             this.dtg_ventas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nro_fac,
             this.Vendedor,
-            this.Fecha,
             this.Nombre_Cliente,
             this.Apellido_Cliente,
             this.DNI,
             this.tipo_pago,
-            this.cod,
-            this.preci,
-            this.cant,
+            this.Id_cabecera,
             this.subtotal,
+            this.Fecha,
             this.verfactura});
             this.dtg_ventas.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
             this.dtg_ventas.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
@@ -144,100 +136,29 @@ namespace ProyectoTallerII
             this.dtg_ventas.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.dtg_ventas.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
             this.dtg_ventas.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_ventas.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(229)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_ventas.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtg_ventas.EnableHeadersVisualStyles = false;
             this.dtg_ventas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.dtg_ventas.HeaderBackColor = System.Drawing.Color.Navy;
             this.dtg_ventas.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtg_ventas.HeaderForeColor = System.Drawing.Color.White;
-            this.dtg_ventas.Location = new System.Drawing.Point(12, 248);
+            this.dtg_ventas.Location = new System.Drawing.Point(12, 342);
             this.dtg_ventas.Name = "dtg_ventas";
             this.dtg_ventas.ReadOnly = true;
             this.dtg_ventas.RowHeadersVisible = false;
             this.dtg_ventas.RowTemplate.Height = 40;
             this.dtg_ventas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_ventas.Size = new System.Drawing.Size(778, 280);
+            this.dtg_ventas.Size = new System.Drawing.Size(778, 186);
             this.dtg_ventas.TabIndex = 26;
             this.dtg_ventas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Navy;
-            // 
-            // nro_fac
-            // 
-            this.nro_fac.HeaderText = "Nro. Factura";
-            this.nro_fac.Name = "nro_fac";
-            this.nro_fac.ReadOnly = true;
-            // 
-            // Vendedor
-            // 
-            this.Vendedor.HeaderText = "Vendedor";
-            this.Vendedor.Name = "Vendedor";
-            this.Vendedor.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Nombre_Cliente
-            // 
-            this.Nombre_Cliente.HeaderText = "Nombre Cliente";
-            this.Nombre_Cliente.Name = "Nombre_Cliente";
-            this.Nombre_Cliente.ReadOnly = true;
-            // 
-            // Apellido_Cliente
-            // 
-            this.Apellido_Cliente.HeaderText = "Apellido Cliente";
-            this.Apellido_Cliente.Name = "Apellido_Cliente";
-            this.Apellido_Cliente.ReadOnly = true;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            // 
-            // tipo_pago
-            // 
-            this.tipo_pago.HeaderText = "Tipo de Pago";
-            this.tipo_pago.Name = "tipo_pago";
-            this.tipo_pago.ReadOnly = true;
-            // 
-            // cod
-            // 
-            this.cod.HeaderText = "Código producto";
-            this.cod.Name = "cod";
-            this.cod.ReadOnly = true;
-            // 
-            // preci
-            // 
-            this.preci.HeaderText = "Precio";
-            this.preci.Name = "preci";
-            this.preci.ReadOnly = true;
-            // 
-            // cant
-            // 
-            this.cant.HeaderText = "Cantidad";
-            this.cant.Name = "cant";
-            this.cant.ReadOnly = true;
-            // 
-            // subtotal
-            // 
-            this.subtotal.HeaderText = "Sub Total";
-            this.subtotal.Name = "subtotal";
-            this.subtotal.ReadOnly = true;
-            // 
-            // verfactura
-            // 
-            this.verfactura.HeaderText = "ver factura";
-            this.verfactura.Name = "verfactura";
-            this.verfactura.ReadOnly = true;
+            this.dtg_ventas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_ventas_CellContentClick);
             // 
             // pnl_gerente_auditoria
             // 
@@ -248,22 +169,26 @@ namespace ProyectoTallerII
             this.pnl_gerente_auditoria.BorderColor = System.Drawing.Color.Transparent;
             this.pnl_gerente_auditoria.BorderRadius = 3;
             this.pnl_gerente_auditoria.BorderThickness = 1;
+            this.pnl_gerente_auditoria.Controls.Add(this.bunifuLabel1);
+            this.pnl_gerente_auditoria.Controls.Add(this.bunifuLabel2);
             this.pnl_gerente_auditoria.Controls.Add(this.lbl_gerente_csv);
             this.pnl_gerente_auditoria.Controls.Add(this.lbl_gerente_json);
+            this.pnl_gerente_auditoria.Controls.Add(this.bunifuDatePicker2);
+            this.pnl_gerente_auditoria.Controls.Add(this.bunifuDatePicker1);
             this.pnl_gerente_auditoria.Controls.Add(this.lbl_gerente_excel);
             this.pnl_gerente_auditoria.Controls.Add(this.btn_gerente_exportar);
             this.pnl_gerente_auditoria.Controls.Add(this.rb_gerente_csv);
             this.pnl_gerente_auditoria.Controls.Add(this.rb_gerente_json);
             this.pnl_gerente_auditoria.Controls.Add(this.rb_gerente_excel);
-            this.pnl_gerente_auditoria.Controls.Add(this.txt_gerente_buscarusuario);
             this.pnl_gerente_auditoria.Controls.Add(this.lbl_gerente_buscaru_apellido);
             this.pnl_gerente_auditoria.Controls.Add(this.txt_gerente_buscardni);
             this.pnl_gerente_auditoria.Controls.Add(this.lbl_gerente_buscar_dni);
             this.pnl_gerente_auditoria.Location = new System.Drawing.Point(36, 110);
             this.pnl_gerente_auditoria.Name = "pnl_gerente_auditoria";
             this.pnl_gerente_auditoria.ShowBorders = true;
-            this.pnl_gerente_auditoria.Size = new System.Drawing.Size(728, 132);
+            this.pnl_gerente_auditoria.Size = new System.Drawing.Size(728, 192);
             this.pnl_gerente_auditoria.TabIndex = 27;
+            this.pnl_gerente_auditoria.Click += new System.EventHandler(this.pnl_gerente_auditoria_Click);
             // 
             // lbl_gerente_csv
             // 
@@ -329,11 +254,11 @@ namespace ProyectoTallerII
             this.btn_gerente_exportar.ColorContrastOnClick = 45;
             this.btn_gerente_exportar.ColorContrastOnHover = 45;
             this.btn_gerente_exportar.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_gerente_exportar.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btn_gerente_exportar.CustomizableEdges = borderEdges3;
             this.btn_gerente_exportar.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_gerente_exportar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_gerente_exportar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -453,92 +378,18 @@ namespace ProyectoTallerII
             this.rb_gerente_excel.TabIndex = 5;
             this.rb_gerente_excel.Text = null;
             // 
-            // txt_gerente_buscarusuario
-            // 
-            this.txt_gerente_buscarusuario.AcceptsReturn = false;
-            this.txt_gerente_buscarusuario.AcceptsTab = false;
-            this.txt_gerente_buscarusuario.AnimationSpeed = 200;
-            this.txt_gerente_buscarusuario.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_gerente_buscarusuario.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_gerente_buscarusuario.BackColor = System.Drawing.Color.Transparent;
-            this.txt_gerente_buscarusuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_gerente_buscarusuario.BackgroundImage")));
-            this.txt_gerente_buscarusuario.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_gerente_buscarusuario.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_gerente_buscarusuario.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_gerente_buscarusuario.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_gerente_buscarusuario.BorderRadius = 1;
-            this.txt_gerente_buscarusuario.BorderThickness = 1;
-            this.txt_gerente_buscarusuario.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_gerente_buscarusuario.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_gerente_buscarusuario.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txt_gerente_buscarusuario.DefaultText = "";
-            this.txt_gerente_buscarusuario.FillColor = System.Drawing.Color.White;
-            this.txt_gerente_buscarusuario.HideSelection = true;
-            this.txt_gerente_buscarusuario.IconLeft = null;
-            this.txt_gerente_buscarusuario.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_gerente_buscarusuario.IconPadding = 10;
-            this.txt_gerente_buscarusuario.IconRight = null;
-            this.txt_gerente_buscarusuario.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_gerente_buscarusuario.Lines = new string[0];
-            this.txt_gerente_buscarusuario.Location = new System.Drawing.Point(181, 74);
-            this.txt_gerente_buscarusuario.MaxLength = 32767;
-            this.txt_gerente_buscarusuario.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_gerente_buscarusuario.Modified = false;
-            this.txt_gerente_buscarusuario.Multiline = false;
-            this.txt_gerente_buscarusuario.Name = "txt_gerente_buscarusuario";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_gerente_buscarusuario.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_gerente_buscarusuario.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_gerente_buscarusuario.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_gerente_buscarusuario.OnIdleState = stateProperties4;
-            this.txt_gerente_buscarusuario.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_gerente_buscarusuario.PasswordChar = '\0';
-            this.txt_gerente_buscarusuario.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_gerente_buscarusuario.PlaceholderText = "";
-            this.txt_gerente_buscarusuario.ReadOnly = false;
-            this.txt_gerente_buscarusuario.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_gerente_buscarusuario.SelectedText = "";
-            this.txt_gerente_buscarusuario.SelectionLength = 0;
-            this.txt_gerente_buscarusuario.SelectionStart = 0;
-            this.txt_gerente_buscarusuario.ShortcutsEnabled = true;
-            this.txt_gerente_buscarusuario.Size = new System.Drawing.Size(260, 37);
-            this.txt_gerente_buscarusuario.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_gerente_buscarusuario.TabIndex = 3;
-            this.txt_gerente_buscarusuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_gerente_buscarusuario.TextMarginBottom = 0;
-            this.txt_gerente_buscarusuario.TextMarginLeft = 3;
-            this.txt_gerente_buscarusuario.TextMarginTop = 0;
-            this.txt_gerente_buscarusuario.TextPlaceholder = "";
-            this.txt_gerente_buscarusuario.UseSystemPasswordChar = false;
-            this.txt_gerente_buscarusuario.WordWrap = true;
-            // 
             // lbl_gerente_buscaru_apellido
             // 
             this.lbl_gerente_buscaru_apellido.AllowParentOverrides = false;
             this.lbl_gerente_buscaru_apellido.AutoEllipsis = false;
             this.lbl_gerente_buscaru_apellido.CursorType = null;
             this.lbl_gerente_buscaru_apellido.Font = new System.Drawing.Font("Segoe UI Emoji", 12F);
-            this.lbl_gerente_buscaru_apellido.Location = new System.Drawing.Point(31, 90);
+            this.lbl_gerente_buscaru_apellido.Location = new System.Drawing.Point(12, 88);
             this.lbl_gerente_buscaru_apellido.Name = "lbl_gerente_buscaru_apellido";
             this.lbl_gerente_buscaru_apellido.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_gerente_buscaru_apellido.Size = new System.Drawing.Size(144, 21);
+            this.lbl_gerente_buscaru_apellido.Size = new System.Drawing.Size(179, 21);
             this.lbl_gerente_buscaru_apellido.TabIndex = 2;
-            this.lbl_gerente_buscaru_apellido.Text = "Buscar por Producto:";
+            this.lbl_gerente_buscaru_apellido.Text = "Filtrar por rango de fecha:";
             this.lbl_gerente_buscaru_apellido.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_gerente_buscaru_apellido.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -575,26 +426,26 @@ namespace ProyectoTallerII
             this.txt_gerente_buscardni.Modified = false;
             this.txt_gerente_buscardni.Multiline = false;
             this.txt_gerente_buscardni.Name = "txt_gerente_buscardni";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_gerente_buscardni.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_gerente_buscardni.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_gerente_buscardni.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_gerente_buscardni.OnIdleState = stateProperties8;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_gerente_buscardni.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_gerente_buscardni.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_gerente_buscardni.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_gerente_buscardni.OnIdleState = stateProperties12;
             this.txt_gerente_buscardni.Padding = new System.Windows.Forms.Padding(3);
             this.txt_gerente_buscardni.PasswordChar = '\0';
             this.txt_gerente_buscardni.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -632,6 +483,140 @@ namespace ProyectoTallerII
             this.lbl_gerente_buscar_dni.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_gerente_buscar_dni.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // bunifuDatePicker1
+            // 
+            this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker1.BorderRadius = 1;
+            this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.DisplayWeekNumbers = false;
+            this.bunifuDatePicker1.DPHeight = 0;
+            this.bunifuDatePicker1.FillDatePicker = false;
+            this.bunifuDatePicker1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
+            this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker1.LeftTextMargin = 5;
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(125, 139);
+            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
+            this.bunifuDatePicker1.Size = new System.Drawing.Size(113, 32);
+            this.bunifuDatePicker1.TabIndex = 12;
+            this.bunifuDatePicker1.Value = new System.DateTime(2021, 10, 1, 10, 24, 0, 0);
+            // 
+            // bunifuDatePicker2
+            // 
+            this.bunifuDatePicker2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDatePicker2.BorderRadius = 1;
+            this.bunifuDatePicker2.Color = System.Drawing.Color.Silver;
+            this.bunifuDatePicker2.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thin;
+            this.bunifuDatePicker2.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.bunifuDatePicker2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker2.DisplayWeekNumbers = false;
+            this.bunifuDatePicker2.DPHeight = 0;
+            this.bunifuDatePicker2.FillDatePicker = false;
+            this.bunifuDatePicker2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bunifuDatePicker2.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDatePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.bunifuDatePicker2.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker2.Icon")));
+            this.bunifuDatePicker2.IconColor = System.Drawing.Color.Gray;
+            this.bunifuDatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.bunifuDatePicker2.LeftTextMargin = 5;
+            this.bunifuDatePicker2.Location = new System.Drawing.Point(328, 139);
+            this.bunifuDatePicker2.MinimumSize = new System.Drawing.Size(0, 32);
+            this.bunifuDatePicker2.Name = "bunifuDatePicker2";
+            this.bunifuDatePicker2.Size = new System.Drawing.Size(113, 32);
+            this.bunifuDatePicker2.TabIndex = 28;
+            this.bunifuDatePicker2.Value = new System.DateTime(2021, 10, 1, 10, 24, 0, 0);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.CursorType = null;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 13F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(51, 149);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(51, 22);
+            this.bunifuLabel1.TabIndex = 12;
+            this.bunifuLabel1.Text = "Desde:";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI Emoji", 13F);
+            this.bunifuLabel2.Location = new System.Drawing.Point(261, 149);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(47, 22);
+            this.bunifuLabel2.TabIndex = 29;
+            this.bunifuLabel2.Text = "Hasta:";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // Vendedor
+            // 
+            this.Vendedor.HeaderText = "Vendedor";
+            this.Vendedor.Name = "Vendedor";
+            this.Vendedor.ReadOnly = true;
+            // 
+            // Nombre_Cliente
+            // 
+            this.Nombre_Cliente.HeaderText = "Nombre Cliente";
+            this.Nombre_Cliente.Name = "Nombre_Cliente";
+            this.Nombre_Cliente.ReadOnly = true;
+            // 
+            // Apellido_Cliente
+            // 
+            this.Apellido_Cliente.HeaderText = "Apellido Cliente";
+            this.Apellido_Cliente.Name = "Apellido_Cliente";
+            this.Apellido_Cliente.ReadOnly = true;
+            // 
+            // DNI
+            // 
+            this.DNI.HeaderText = "DNI";
+            this.DNI.Name = "DNI";
+            this.DNI.ReadOnly = true;
+            // 
+            // tipo_pago
+            // 
+            this.tipo_pago.HeaderText = "Tipo de Pago";
+            this.tipo_pago.Name = "tipo_pago";
+            this.tipo_pago.ReadOnly = true;
+            // 
+            // Id_cabecera
+            // 
+            this.Id_cabecera.HeaderText = "ID Cabecera";
+            this.Id_cabecera.Name = "Id_cabecera";
+            this.Id_cabecera.ReadOnly = true;
+            // 
+            // subtotal
+            // 
+            this.subtotal.HeaderText = "Sub Total";
+            this.subtotal.Name = "subtotal";
+            this.subtotal.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // verfactura
+            // 
+            this.verfactura.HeaderText = "Ver Factura";
+            this.verfactura.Name = "verfactura";
+            this.verfactura.ReadOnly = true;
+            // 
             // Form_ventas_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -655,18 +640,6 @@ namespace ProyectoTallerII
 
         private Bunifu.UI.WinForms.BunifuLabel lbl_ventas_historial;
         private Bunifu.UI.WinForms.BunifuDataGridView dtg_ventas;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nro_fac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Vendedor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Cliente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_pago;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cod;
-        private System.Windows.Forms.DataGridViewTextBoxColumn preci;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
-        private System.Windows.Forms.DataGridViewButtonColumn verfactura;
         private Bunifu.UI.WinForms.BunifuPanel pnl_gerente_auditoria;
         private Bunifu.UI.WinForms.BunifuLabel lbl_gerente_csv;
         private Bunifu.UI.WinForms.BunifuLabel lbl_gerente_json;
@@ -675,9 +648,21 @@ namespace ProyectoTallerII
         private Bunifu.UI.WinForms.BunifuRadioButton rb_gerente_csv;
         private Bunifu.UI.WinForms.BunifuRadioButton rb_gerente_json;
         private Bunifu.UI.WinForms.BunifuRadioButton rb_gerente_excel;
-        private Bunifu.UI.WinForms.BunifuTextBox txt_gerente_buscarusuario;
         private Bunifu.UI.WinForms.BunifuLabel lbl_gerente_buscaru_apellido;
         private Bunifu.UI.WinForms.BunifuTextBox txt_gerente_buscardni;
         private Bunifu.UI.WinForms.BunifuLabel lbl_gerente_buscar_dni;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
+        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Vendedor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre_Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido_Cliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipo_pago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id_cabecera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewButtonColumn verfactura;
     }
 }

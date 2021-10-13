@@ -16,5 +16,15 @@ namespace ProyectoTallerII
         {
             InitializeComponent();
         }
+
+        private void dtg_ventas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pnl_gerente_auditoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

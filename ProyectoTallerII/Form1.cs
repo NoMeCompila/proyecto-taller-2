@@ -56,11 +56,11 @@ namespace ProyectoTallerII
                 this.Hide();
                 form_gerente.Show();
             }
-            else if (txt_user.Text == "Vendedor1" && txt_pass.Text == "Vendedor123!")
+            else if (txt_user.Text == "fer" && txt_pass.Text == "123")
             {
                 Form form_vendedor = new Form_vendedor_init();
                 this.Hide();
-                form_vendedor.Show();  
+                form_vendedor.Show();
             }
             else
             {
