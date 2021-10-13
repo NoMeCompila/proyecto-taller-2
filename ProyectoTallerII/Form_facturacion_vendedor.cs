@@ -21,5 +21,10 @@ namespace ProyectoTallerII
         {
 
         }
+
+        private void bunifuLabel2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
