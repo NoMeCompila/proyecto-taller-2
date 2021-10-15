@@ -32,7 +32,11 @@ namespace ProyectoTallerII
 
         private void pb_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            //this.Close();
+            Application.Exit();
+            //Environment.Exit(1);
+            Form form_login = new Form1();
+            form_login.Visible = true;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -130,6 +134,11 @@ namespace ProyectoTallerII
         {
             //lbl_hora.Text = DateTime.Now.ToLongTimeString();
            // lbl_fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void form_inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

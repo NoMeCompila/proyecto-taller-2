@@ -223,9 +223,9 @@ namespace ProyectoTallerII
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_contenido.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnl_contenido.Controls.Add(this.lbl_bienvenida);
-            this.pnl_contenido.Location = new System.Drawing.Point(184, 0);
+            this.pnl_contenido.Location = new System.Drawing.Point(182, 0);
             this.pnl_contenido.Name = "pnl_contenido";
-            this.pnl_contenido.Size = new System.Drawing.Size(741, 561);
+            this.pnl_contenido.Size = new System.Drawing.Size(743, 561);
             this.pnl_contenido.TabIndex = 2;
             this.pnl_contenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_contenido_Paint);
             // 
@@ -237,7 +237,7 @@ namespace ProyectoTallerII
             this.lbl_bienvenida.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_bienvenida.Location = new System.Drawing.Point(76, 216);
+            this.lbl_bienvenida.Location = new System.Drawing.Point(77, 216);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
             this.lbl_bienvenida.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_bienvenida.Size = new System.Drawing.Size(631, 121);
@@ -338,6 +338,7 @@ namespace ProyectoTallerII
             this.Name = "form_inicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario 2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.form_inicio_FormClosed);
             this.pnl_sidevar.ResumeLayout(false);
             this.pnl_sidevar.PerformLayout();
             this.pnl_contenido.ResumeLayout(false);

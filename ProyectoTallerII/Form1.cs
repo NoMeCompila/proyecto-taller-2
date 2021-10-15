@@ -59,7 +59,8 @@ namespace ProyectoTallerII
             else if (txt_user.Text == "fer" && txt_pass.Text == "123")
             {
                 Form form_vendedor = new Form_vendedor_init();
-                this.Hide();
+                //this.Hide();
+                this.Visible = false;
                 form_vendedor.Show();
             }
             else
