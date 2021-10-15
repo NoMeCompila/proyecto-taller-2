@@ -35,8 +35,7 @@ namespace ProyectoTallerII
             //this.Close();
             Application.Exit();
             //Environment.Exit(1);
-            Form form_login = new Form1();
-            form_login.Visible = true;
+            
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

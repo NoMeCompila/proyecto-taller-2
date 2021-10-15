@@ -32,7 +32,7 @@ namespace ProyectoTallerII
 
         private void pb_exit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
             
         }
 
