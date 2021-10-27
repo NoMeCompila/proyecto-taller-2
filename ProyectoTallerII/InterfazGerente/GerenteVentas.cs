@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoTallerII
 {
-    public partial class Form_ventas_gerente : Form
+    public partial class GerenteVentas : Form
     {
-        public Form_ventas_gerente()
+        public GerenteVentas()
         {
             InitializeComponent();
         }

@@ -156,160 +156,160 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Home\LoginPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Home\LoginPrincipal.Designer.cs">
+      <DependentUpon>LoginPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_auditoria_gerente.cs">
+    <Compile Include="InterfazGerente\GerenteAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_auditoria_gerente.Designer.cs">
-      <DependentUpon>Form_auditoria_gerente.cs</DependentUpon>
+    <Compile Include="InterfazGerente\GerenteAuditoria.Designer.cs">
+      <DependentUpon>GerenteAuditoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_clientes_gerente.cs">
+    <Compile Include="InterfazGerente\GerenteClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_clientes_gerente.Designer.cs">
-      <DependentUpon>Form_clientes_gerente.cs</DependentUpon>
+    <Compile Include="InterfazGerente\GerenteClientes.Designer.cs">
+      <DependentUpon>GerenteClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_facturacion_vendedor.cs">
+    <Compile Include="InterfazVendedor\VendedorFacturacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_facturacion_vendedor.Designer.cs">
-      <DependentUpon>Form_facturacion_vendedor.cs</DependentUpon>
+    <Compile Include="InterfazVendedor\VendedorFacturacion.Designer.cs">
+      <DependentUpon>VendedorFacturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_home_empleado.cs">
+    <Compile Include="InterfazVendedor\VendedorInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_home_empleado.Designer.cs">
-      <DependentUpon>Form_home_empleado.cs</DependentUpon>
+    <Compile Include="InterfazVendedor\VendedorInicio.Designer.cs">
+      <DependentUpon>VendedorInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_listar_productos.cs">
+    <Compile Include="InterfazVendedor\VendedorProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_listar_productos.Designer.cs">
-      <DependentUpon>Form_listar_productos.cs</DependentUpon>
+    <Compile Include="InterfazVendedor\VendedorProductos.Designer.cs">
+      <DependentUpon>VendedorProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_vendedor_clientes.cs">
+    <Compile Include="InterfazVendedor\VendedorClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_vendedor_clientes.Designer.cs">
-      <DependentUpon>Form_vendedor_clientes.cs</DependentUpon>
+    <Compile Include="InterfazVendedor\VendedorClientes.Designer.cs">
+      <DependentUpon>VendedorClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_vendedor_init.cs">
+    <Compile Include="Home\HomeVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_vendedor_init.Designer.cs">
-      <DependentUpon>Form_vendedor_init.cs</DependentUpon>
+    <Compile Include="Home\HomeVendedor.Designer.cs">
+      <DependentUpon>HomeVendedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Gerente.cs">
+    <Compile Include="Home\HomeGerente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Gerente.Designer.cs">
-      <DependentUpon>Form_Gerente.cs</DependentUpon>
+    <Compile Include="Home\HomeGerente.Designer.cs">
+      <DependentUpon>HomeGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form2.cs">
+    <Compile Include="Home\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form2.Designer.cs">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <Compile Include="Home\HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_back.cs">
+    <Compile Include="InterfazAdmin\AdminBackU.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_back.Designer.cs">
-      <DependentUpon>Form_back.cs</DependentUpon>
+    <Compile Include="InterfazAdmin\AdminBackU.Designer.cs">
+      <DependentUpon>AdminBackU.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_gerente_reportes.cs">
+    <Compile Include="InterfazGerente\GerenteReportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_gerente_reportes.Designer.cs">
-      <DependentUpon>Form_gerente_reportes.cs</DependentUpon>
+    <Compile Include="InterfazGerente\GerenteReportes.Designer.cs">
+      <DependentUpon>GerenteReportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_home_gerente.cs">
+    <Compile Include="InterfazGerente\GerenteInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_home_gerente.Designer.cs">
-      <DependentUpon>Form_home_gerente.cs</DependentUpon>
+    <Compile Include="InterfazGerente\GerenteInicio.Designer.cs">
+      <DependentUpon>GerenteInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_home.cs">
+    <Compile Include="InterfazAdmin\AdminInicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_home.Designer.cs">
-      <DependentUpon>Form_home.cs</DependentUpon>
+    <Compile Include="InterfazAdmin\AdminInicio.Designer.cs">
+      <DependentUpon>AdminInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_stock.cs">
+    <Compile Include="InterfazAdmin\AdminStock.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_stock.Designer.cs">
-      <DependentUpon>Form_stock.cs</DependentUpon>
+    <Compile Include="InterfazAdmin\AdminStock.Designer.cs">
+      <DependentUpon>AdminStock.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_usuarios.cs">
+    <Compile Include="InterfazAdmin\AdminUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_usuarios.Designer.cs">
-      <DependentUpon>Form_usuarios.cs</DependentUpon>
+    <Compile Include="InterfazAdmin\AdminUsuario.Designer.cs">
+      <DependentUpon>AdminUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ventas_gerente.cs">
+    <Compile Include="InterfazGerente\GerenteVentas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ventas_gerente.Designer.cs">
-      <DependentUpon>Form_ventas_gerente.cs</DependentUpon>
+    <Compile Include="InterfazGerente\GerenteVentas.Designer.cs">
+      <DependentUpon>GerenteVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Home\LoginPrincipal.resx">
+      <DependentUpon>LoginPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_auditoria_gerente.resx">
-      <DependentUpon>Form_auditoria_gerente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazGerente\GerenteAuditoria.resx">
+      <DependentUpon>GerenteAuditoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_clientes_gerente.resx">
-      <DependentUpon>Form_clientes_gerente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazGerente\GerenteClientes.resx">
+      <DependentUpon>GerenteClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_facturacion_vendedor.resx">
-      <DependentUpon>Form_facturacion_vendedor.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazVendedor\VendedorFacturacion.resx">
+      <DependentUpon>VendedorFacturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_home_empleado.resx">
-      <DependentUpon>Form_home_empleado.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazVendedor\VendedorInicio.resx">
+      <DependentUpon>VendedorInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_listar_productos.resx">
-      <DependentUpon>Form_listar_productos.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazVendedor\VendedorProductos.resx">
+      <DependentUpon>VendedorProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_vendedor_clientes.resx">
-      <DependentUpon>Form_vendedor_clientes.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazVendedor\VendedorClientes.resx">
+      <DependentUpon>VendedorClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_vendedor_init.resx">
-      <DependentUpon>Form_vendedor_init.cs</DependentUpon>
+    <EmbeddedResource Include="Home\HomeVendedor.resx">
+      <DependentUpon>HomeVendedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Gerente.resx">
-      <DependentUpon>Form_Gerente.cs</DependentUpon>
+    <EmbeddedResource Include="Home\HomeGerente.resx">
+      <DependentUpon>HomeGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form2.resx">
-      <DependentUpon>Form2.cs</DependentUpon>
+    <EmbeddedResource Include="Home\HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_back.resx">
-      <DependentUpon>Form_back.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazAdmin\AdminBackU.resx">
+      <DependentUpon>AdminBackU.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_gerente_reportes.resx">
-      <DependentUpon>Form_gerente_reportes.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazGerente\GerenteReportes.resx">
+      <DependentUpon>GerenteReportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_home_gerente.resx">
-      <DependentUpon>Form_home_gerente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazGerente\GerenteInicio.resx">
+      <DependentUpon>GerenteInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_home.resx">
-      <DependentUpon>Form_home.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazAdmin\AdminInicio.resx">
+      <DependentUpon>AdminInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_stock.resx">
-      <DependentUpon>Form_stock.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazAdmin\AdminStock.resx">
+      <DependentUpon>AdminStock.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_usuarios.resx">
-      <DependentUpon>Form_usuarios.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazAdmin\AdminUsuario.resx">
+      <DependentUpon>AdminUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ventas_gerente.resx">
-      <DependentUpon>Form_ventas_gerente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazGerente\GerenteVentas.resx">
+      <DependentUpon>GerenteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -459,8 +459,6 @@
   <ItemGroup>
     <None Include="Resources\audi %281%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Admin\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

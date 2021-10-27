@@ -50,7 +50,6 @@ namespace ProyectoTallerII
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btn_inicio_gerente = new System.Windows.Forms.Button();
             this.lbl_titulo = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pnl_contenido.SuspendLayout();
             this.pnl_cabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
@@ -58,7 +57,6 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).BeginInit();
             this.pnl_sidevar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_contenido
@@ -67,7 +65,6 @@ namespace ProyectoTallerII
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_contenido.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.pnl_contenido.Controls.Add(this.pictureBox2);
             this.pnl_contenido.Controls.Add(this.lbl_bienvenida);
             this.pnl_contenido.Location = new System.Drawing.Point(184, 0);
             this.pnl_contenido.Name = "pnl_contenido";
@@ -83,10 +80,10 @@ namespace ProyectoTallerII
             this.lbl_bienvenida.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_bienvenida.Location = new System.Drawing.Point(173, 93);
+            this.lbl_bienvenida.Location = new System.Drawing.Point(70, 236);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
             this.lbl_bienvenida.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_bienvenida.Size = new System.Drawing.Size(347, 25);
+            this.lbl_bienvenida.Size = new System.Drawing.Size(604, 60);
             this.lbl_bienvenida.TabIndex = 12;
             this.lbl_bienvenida.Text = "Bienvenido al Sistema- Perfil Vendedor";
             this.lbl_bienvenida.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -227,7 +224,7 @@ namespace ProyectoTallerII
             this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(98, 25);
+            this.bunifuLabel1.Size = new System.Drawing.Size(173, 60);
             this.bunifuLabel1.TabIndex = 14;
             this.bunifuLabel1.Text = "Perle Joyas";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -340,21 +337,11 @@ namespace ProyectoTallerII
             this.lbl_titulo.Location = new System.Drawing.Point(3, 3);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_titulo.Size = new System.Drawing.Size(98, 25);
+            this.lbl_titulo.Size = new System.Drawing.Size(173, 60);
             this.lbl_titulo.TabIndex = 7;
             this.lbl_titulo.Text = "Perle Joyas";
             this.lbl_titulo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_titulo.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(151, 142);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(413, 242);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
             // 
             // Form_vendedor_init
             // 
@@ -377,7 +364,6 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).EndInit();
             this.pnl_sidevar.ResumeLayout(false);
             this.pnl_sidevar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -403,6 +389,5 @@ namespace ProyectoTallerII
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

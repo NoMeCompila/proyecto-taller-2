@@ -11,9 +11,9 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace ProyectoTallerII
 {
-    public partial class Form_vendedor_init : Form
+    public partial class Form_Gerente : Form
     {
-        public Form_vendedor_init()
+        public Form_Gerente()
         {
             InitializeComponent();
         }
@@ -109,22 +109,22 @@ namespace ProyectoTallerII
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_home_empleado());
+            open_child_form(new Form_home_gerente());
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_auditoria_gerente());
+            open_child_form(new GerenteAuditoria());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_facturacion_vendedor());
+            open_child_form(new GerenteVentas());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_gerente_reportes());
+            open_child_form(new GerenteReportes());
         }
 
         private void timer_hora_Tick(object sender, EventArgs e)
@@ -135,12 +135,7 @@ namespace ProyectoTallerII
 
         private void btn_clientes_gerente_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_vendedor_clientes());
-        }
-
-        private void button1_Click_1(object sender, EventArgs e)
-        {
-            open_child_form(new Form_listar_productos()); 
+            open_child_form(new GerenteClientes()); 
         }
     }
 }

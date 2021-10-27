@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace ProyectoTallerII
 {
-    public partial class Form_home_empleado : Form
+    public partial class GerenteAuditoria : Form
     {
-        public Form_home_empleado()
+        public GerenteAuditoria()
         {
             InitializeComponent();
-        }
-
-        private void bunifuCards1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuLabel3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

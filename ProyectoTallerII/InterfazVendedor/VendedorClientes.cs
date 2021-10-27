@@ -322,5 +322,10 @@ namespace ProyectoTallerII
                 }
             }
         }
+
+        private void Form_vendedor_clientes_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

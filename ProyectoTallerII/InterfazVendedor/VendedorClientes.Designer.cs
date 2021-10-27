@@ -1192,6 +1192,7 @@ namespace ProyectoTallerII
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form_vendedor_clientes";
             this.Text = "Form_vendedor_clientes";
+            this.Load += new System.EventHandler(this.Form_vendedor_clientes_Load);
             this.pnl_buscador.ResumeLayout(false);
             this.pnl_buscador.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).EndInit();

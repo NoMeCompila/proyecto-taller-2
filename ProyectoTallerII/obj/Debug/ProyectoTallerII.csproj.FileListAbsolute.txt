@@ -67,7 +67,6 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\B
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form1.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.form_inicio.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_usuarios.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Properties.Resources.resources
@@ -82,12 +81,7 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_stock.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_Gerente.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_home_gerente.resources
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_auditoria_gerente.resources
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_clientes_gerente.resources
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_ventas_gerente.resources
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_gerente_reportes.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_vendedor_init.resources
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_home_empleado.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_vendedor_clientes.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_facturacion_vendedor.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_listar_productos.resources
@@ -185,3 +179,9 @@ C:\Users\Su\Source\Repos\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTa
 C:\Users\Su\Source\Repos\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.CopyComplete
 C:\Users\Su\Source\Repos\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe
 C:\Users\Su\Source\Repos\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.LoginPrincipal.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteAuditoria.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteClientes.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.VendedorInicio.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteReportes.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteVentas.resources

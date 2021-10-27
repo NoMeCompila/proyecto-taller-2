@@ -33,34 +33,34 @@ namespace ProyectoTallerII
             this.card_inicio = new Bunifu.Framework.UI.BunifuCards();
             this.card_textoinicio = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_card_inicio = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pb_inicio = new System.Windows.Forms.PictureBox();
             this.card_usuarios = new Bunifu.Framework.UI.BunifuCards();
             this.card_textousuarios = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pb_usuarios = new System.Windows.Forms.PictureBox();
             this.lbl_card_usuarios = new Bunifu.UI.WinForms.BunifuLabel();
             this.card_backup = new Bunifu.Framework.UI.BunifuCards();
             this.card_textobackup = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_card_backup = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pb_backup = new System.Windows.Forms.PictureBox();
             this.lbl_inicio = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pb_backup = new System.Windows.Forms.PictureBox();
-            this.pb_usuarios = new System.Windows.Forms.PictureBox();
-            this.pb_inicio = new System.Windows.Forms.PictureBox();
             this.card_inicio.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_inicio)).BeginInit();
             this.card_usuarios.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_usuarios)).BeginInit();
             this.card_backup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).BeginInit();
             this.bunifuCards1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.bunifuCards2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_usuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_inicio)).BeginInit();
             this.SuspendLayout();
             // 
             // card_inicio
@@ -113,6 +113,16 @@ namespace ProyectoTallerII
             this.lbl_card_inicio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_card_inicio.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // pb_inicio
+            // 
+            this.pb_inicio.Image = global::ProyectoTallerII.Properties.Resources.casa__1_1;
+            this.pb_inicio.Location = new System.Drawing.Point(16, 18);
+            this.pb_inicio.Name = "pb_inicio";
+            this.pb_inicio.Size = new System.Drawing.Size(77, 44);
+            this.pb_inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_inicio.TabIndex = 1;
+            this.pb_inicio.TabStop = false;
+            // 
             // card_usuarios
             // 
             this.card_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -146,6 +156,16 @@ namespace ProyectoTallerII
     "alizó\r\ny cuando dinero gastó en el negocio";
             this.card_textousuarios.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.card_textousuarios.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // pb_usuarios
+            // 
+            this.pb_usuarios.Image = global::ProyectoTallerII.Properties.Resources.user__1_;
+            this.pb_usuarios.Location = new System.Drawing.Point(15, 18);
+            this.pb_usuarios.Name = "pb_usuarios";
+            this.pb_usuarios.Size = new System.Drawing.Size(77, 44);
+            this.pb_usuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_usuarios.TabIndex = 4;
+            this.pb_usuarios.TabStop = false;
             // 
             // lbl_card_usuarios
             // 
@@ -211,6 +231,16 @@ namespace ProyectoTallerII
             this.lbl_card_backup.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_card_backup.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // pb_backup
+            // 
+            this.pb_backup.Image = global::ProyectoTallerII.Properties.Resources.ventas__2_;
+            this.pb_backup.Location = new System.Drawing.Point(15, 25);
+            this.pb_backup.Name = "pb_backup";
+            this.pb_backup.Size = new System.Drawing.Size(77, 44);
+            this.pb_backup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_backup.TabIndex = 5;
+            this.pb_backup.TabStop = false;
+            // 
             // lbl_inicio
             // 
             this.lbl_inicio.AllowParentOverrides = false;
@@ -219,12 +249,12 @@ namespace ProyectoTallerII
             this.lbl_inicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_inicio.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_inicio.Font = new System.Drawing.Font("Segoe UI Emoji", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_inicio.Location = new System.Drawing.Point(324, 55);
+            this.lbl_inicio.Location = new System.Drawing.Point(270, 46);
             this.lbl_inicio.Name = "lbl_inicio";
             this.lbl_inicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_inicio.Size = new System.Drawing.Size(103, 44);
+            this.lbl_inicio.Size = new System.Drawing.Size(256, 44);
             this.lbl_inicio.TabIndex = 2;
-            this.lbl_inicio.Text = "INICIO";
+            this.lbl_inicio.Text = "INICIO GERENTE";
             this.lbl_inicio.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_inicio.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -277,6 +307,16 @@ namespace ProyectoTallerII
             this.bunifuLabel2.Text = "AUDITORIA";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.audi__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(77, 44);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // bunifuCards2
             // 
@@ -338,46 +378,6 @@ namespace ProyectoTallerII
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.audi__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(16, 18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(77, 44);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pb_backup
-            // 
-            this.pb_backup.Image = global::ProyectoTallerII.Properties.Resources.ventas__2_;
-            this.pb_backup.Location = new System.Drawing.Point(15, 25);
-            this.pb_backup.Name = "pb_backup";
-            this.pb_backup.Size = new System.Drawing.Size(77, 44);
-            this.pb_backup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_backup.TabIndex = 5;
-            this.pb_backup.TabStop = false;
-            // 
-            // pb_usuarios
-            // 
-            this.pb_usuarios.Image = global::ProyectoTallerII.Properties.Resources.user__1_;
-            this.pb_usuarios.Location = new System.Drawing.Point(15, 18);
-            this.pb_usuarios.Name = "pb_usuarios";
-            this.pb_usuarios.Size = new System.Drawing.Size(77, 44);
-            this.pb_usuarios.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_usuarios.TabIndex = 4;
-            this.pb_usuarios.TabStop = false;
-            // 
-            // pb_inicio
-            // 
-            this.pb_inicio.Image = global::ProyectoTallerII.Properties.Resources.casa__1_1;
-            this.pb_inicio.Location = new System.Drawing.Point(16, 18);
-            this.pb_inicio.Name = "pb_inicio";
-            this.pb_inicio.Size = new System.Drawing.Size(77, 44);
-            this.pb_inicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_inicio.TabIndex = 1;
-            this.pb_inicio.TabStop = false;
-            // 
             // Form_home_gerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -394,19 +394,19 @@ namespace ProyectoTallerII
             this.Text = "Form_home";
             this.card_inicio.ResumeLayout(false);
             this.card_inicio.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_inicio)).EndInit();
             this.card_usuarios.ResumeLayout(false);
             this.card_usuarios.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_usuarios)).EndInit();
             this.card_backup.ResumeLayout(false);
             this.card_backup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).EndInit();
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_usuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_inicio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

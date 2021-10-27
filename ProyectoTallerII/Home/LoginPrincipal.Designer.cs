@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoTallerII
 {
-    partial class Form1
+    partial class LoginPrincipal
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -37,7 +37,7 @@ namespace ProyectoTallerII
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginPrincipal));
             this.sidebar = new System.Windows.Forms.Panel();
             this.pb_login = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();

@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoTallerII
 {
-    partial class Form_home_empleado
+    partial class VendedorInicio
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProyectoTallerII
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_home_empleado));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendedorInicio));
             this.card_inicio = new Bunifu.Framework.UI.BunifuCards();
             this.card_textoinicio = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_card_inicio = new Bunifu.UI.WinForms.BunifuLabel();
