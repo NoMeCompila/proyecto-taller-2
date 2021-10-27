@@ -58,6 +58,11 @@ create table Producto(
 	constraint fk_categoria foreign key (fk_id_categoria) references Categoria(id_categoria)
 );
 
+
+
+
+
+
 create table TipoPago(
 	id_t_pago int primary key identity,
 	descripcion varchar(100) not null,
@@ -84,3 +89,10 @@ create table Venta(
 	fecha_venta date not null,
 	total_venta money not null
 );
+
+
+select * from Cliente;
+
+INSERT INTO Cliente(nombre, apellido, dni, email, telefono, direccion, fecha_nac) 
+VALUES('Fernando', 'Caballero', '40982473', 'cabafer1@gmail.com', '3794002323', 'Pje Florida 228', '1998-01-24');
+

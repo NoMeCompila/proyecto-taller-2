@@ -459,5 +459,8 @@
   <ItemGroup>
     <None Include="Resources\audi %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Admin\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

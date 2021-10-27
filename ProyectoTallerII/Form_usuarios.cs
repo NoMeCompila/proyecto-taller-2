@@ -22,6 +22,8 @@ namespace ProyectoTallerII
 
         //limpiar es una funcion que pone a todos los valores por defecto, es decir vacia todos los textBox
         // pone al dropdown en su pirmer valor "Administrador" y setea el datetimepicker en la fecha actual
+
+
         void limpiar()
         {
             btn_modificar.Enabled = false;

@@ -74,7 +74,6 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.GenerateResource.cache
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe.licenses
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.CoreCompileInputs.cache
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.CopyComplete
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.AssemblyReference.cache
