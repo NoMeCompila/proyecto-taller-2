@@ -75,7 +75,6 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.CoreCompileInputs.cache
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
-C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.AssemblyReference.cache
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_home.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_back.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_stock.resources
