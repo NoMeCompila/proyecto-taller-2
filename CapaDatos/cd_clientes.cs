@@ -31,5 +31,22 @@ namespace CapaDatos
             connection.cerrar_conexion(); //  se cierra la conexion
             return tabla_cliente; // retorno del objeto que contiene el resultado de la consulta
         }
+
+        //funcion para agregrar un nuevo cliente
+        public void insertar_cliente(string nombre, string apellido, string dni, string email, string tel, string direccion, DateTime fecha_nac)
+        {
+            comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
+            comando_clientes.CommandText = "sp_guardar_cliente"; // se ejecuta el procedimiento almacenado para insertar
+            comando_clientes.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato SP
+            comando_clientes.Parameters.AddWithValue("@nombre", nombre);
+            comando_clientes.Parameters.AddWithValue("@apellido", apellido);
+            comando_clientes.Parameters.AddWithValue("@dni", dni);
+            comando_clientes.Parameters.AddWithValue("@email", email);
+            comando_clientes.Parameters.AddWithValue("@tel", tel);
+            comando_clientes.Parameters.AddWithValue("@direccion", direccion);
+            comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+        }
+
     }
 }

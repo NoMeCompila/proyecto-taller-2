@@ -26,5 +26,20 @@ namespace CapaNegocio
             tabla_clientes = objetoCD.mostrar_clientes(); // variable donde se guarda el resultado de la consulta 
             return tabla_clientes;
         }
+
+        //funcion para INSERTAR un nuevo cliente
+        public void insertar_cliete(string nombre,
+                                    string apellido,
+                                    string dni,
+                                    string email,
+                                    string tel,
+                                    string direccion,
+                                    string fecha_nac)
+        {
+            objetoCD.insertar_cliente(nombre, apellido, dni, email, tel, direccion, Convert.ToDateTime(fecha_nac));
+        }
+
+
+
     }
 }

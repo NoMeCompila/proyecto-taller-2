@@ -163,8 +163,28 @@ namespace ProyectoTallerII
                               MessageBoxIcon.Question,
                               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    
-                    
+
+                    try
+                    {
+                        objetoCN.insertar_cliete(txt_user_nombre.Text,
+                                             txt_user_apellido.Text,
+                                             txt_user_dni.Text,
+                                             txt_user_email.Text,
+                                             txt_user_tel.Text,
+                                             txt_user_adress.Text,
+                                             dtp_user_date_birth.Text);
+
+
+                        MessageBox.Show("Elemento insertado", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        mostrar_client(); //se actualioza la vista del DGV
+
+                        limpiar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo insertar: " + ex, "ERROR", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                    }
 
 
                     limpiar();
