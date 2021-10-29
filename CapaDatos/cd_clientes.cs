@@ -48,5 +48,22 @@ namespace CapaDatos
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
         }
 
+        //funcion para ACTUALIZAR un nuevo cliente
+        public void actualizar_cliente(string nombre, string apellido, string dni, string email, string tel, string direccion, DateTime fecha_nac, int id_cliente)
+        {
+            comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
+            comando_clientes.CommandText = "sp_actualizar_cliente"; // se ejecuta el procedimiento almacenado para insertar
+            comando_clientes.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato SP
+            comando_clientes.Parameters.AddWithValue("@nombre", nombre);
+            comando_clientes.Parameters.AddWithValue("@apellido", apellido);
+            comando_clientes.Parameters.AddWithValue("@dni", dni);
+            comando_clientes.Parameters.AddWithValue("@email", email);
+            comando_clientes.Parameters.AddWithValue("@tel", tel);
+            comando_clientes.Parameters.AddWithValue("@direccion", direccion);
+            comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+            comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
+            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+        }
+
     }
 }

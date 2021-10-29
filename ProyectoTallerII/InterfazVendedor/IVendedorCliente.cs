@@ -14,6 +14,7 @@ namespace ProyectoTallerII
 {
     public partial class IVendedorCliente : Form
     {
+        private string id = null;
         int fila;
         public IVendedorCliente()
 
@@ -279,9 +280,20 @@ namespace ProyectoTallerII
                              MessageBoxIcon.Question,
                              MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    objetoCN.actualizar_cliet(
+                            txt_user_nombre.Text,
+                            txt_user_apellido.Text,
+                            txt_user_dni.Text,
+                            txt_user_email.Text,
+                            txt_user_tel.Text,
+                            txt_user_adress.Text,
+                            dtp_user_date_birth.Text,
+                            Convert.ToInt32(id));
+
+                    mostrar_client();
+                    limpiar();
 
 
-            
 
                     limpiar();
                 }
@@ -311,7 +323,19 @@ namespace ProyectoTallerII
             mostrar_client();
         }
 
+        private void dataG_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_user_nombre.Text = dataG_usuarios.CurrentRow.Cells["nombre"].Value.ToString();
+            txt_user_apellido.Text = dataG_usuarios.CurrentRow.Cells["apellido"].Value.ToString();
+            txt_user_dni.Text = dataG_usuarios.CurrentRow.Cells["dni"].Value.ToString();
+            txt_user_email.Text = dataG_usuarios.CurrentRow.Cells["email"].Value.ToString();
+            txt_user_tel.Text = dataG_usuarios.CurrentRow.Cells["telefono"].Value.ToString();
+            txt_user_adress.Text = dataG_usuarios.CurrentRow.Cells["direccion"].Value.ToString();
+            dtp_user_date_birth.Text = dataG_usuarios.CurrentRow.Cells["fecha_nac"].Value.ToString();
+            id = dataG_usuarios.CurrentRow.Cells["id_cliente"].Value.ToString();
 
-
+            btn_user_agregar.Enabled = false;
+            btn_user_modificar.Enabled = true;
+        }
     }
 }

@@ -1052,6 +1052,7 @@ namespace ProyectoTallerII
             this.dataG_usuarios.Name = "dataG_usuarios";
             this.dataG_usuarios.Size = new System.Drawing.Size(741, 150);
             this.dataG_usuarios.TabIndex = 23;
+            this.dataG_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataG_usuarios_CellClick);
             // 
             // IVendedorCliente
             // 

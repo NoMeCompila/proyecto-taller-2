@@ -40,6 +40,17 @@ namespace CapaNegocio
         }
 
 
-
+        //funcion para ACTUALIZAR  un cliente
+        public void actualizar_cliet(string nombre,
+                                    string apellido,
+                                    string dni,
+                                    string email,
+                                    string tel,
+                                    string direccion,
+                                    string fecha_nac,
+                                    int id_cliente) // valor extra para saber a que cliente se quiere actualizar
+        {
+            objetoCD.actualizar_cliente(nombre, apellido, dni, email, tel, direccion, Convert.ToDateTime(fecha_nac), Convert.ToInt32(id_cliente));
+        }
     }
 }
