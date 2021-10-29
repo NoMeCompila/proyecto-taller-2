@@ -46,6 +46,7 @@ namespace CapaDatos
             comando_clientes.Parameters.AddWithValue("@direccion", direccion);
             comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
         }
 
         //funcion para ACTUALIZAR un nuevo cliente
@@ -63,6 +64,17 @@ namespace CapaDatos
             comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
             comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+        }
+
+        public void eliminar_cliente(int id_cliente)
+        {
+            comando_clientes.Connection = connection.abrir_conexion();
+            comando_clientes.CommandText = "sp_eliminar_cliente";
+            comando_clientes.CommandType = CommandType.StoredProcedure;
+            comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
+            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_clientes.Parameters.Clear(); //limpiar los aprametros de sql command
         }
 
     }

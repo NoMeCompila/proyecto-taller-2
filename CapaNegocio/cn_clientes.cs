@@ -52,5 +52,10 @@ namespace CapaNegocio
         {
             objetoCD.actualizar_cliente(nombre, apellido, dni, email, tel, direccion, Convert.ToDateTime(fecha_nac), Convert.ToInt32(id_cliente));
         }
+
+        public void eliminar_client(string id_cliente)
+        {
+            objetoCD.eliminar_cliente(Convert.ToInt32(id_cliente));
+        }
     }
 }

@@ -26,7 +26,9 @@ namespace ProyectoTallerII
 
         void limpiar()
         {
+            btn_user_elimiar.Enabled = false;
             btn_user_modificar.Enabled = false;
+            
 
             txt_user_nombre.Clear();
             txt_user_apellido.Clear();
@@ -37,6 +39,7 @@ namespace ProyectoTallerII
             dtp_user_date_birth.Value = DateTime.Now;
 
             btn_user_agregar.Enabled = true;
+            
 
         }
 
@@ -176,7 +179,7 @@ namespace ProyectoTallerII
                                              dtp_user_date_birth.Text);
 
 
-                        MessageBox.Show("Elemento insertado", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        MessageBox.Show("Elemento insertado", "Insertado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         mostrar_client(); //se actualioza la vista del DGV
 
                         limpiar();
@@ -231,7 +234,10 @@ namespace ProyectoTallerII
                 
 
                 btn_user_agregar.Enabled = false;
+                btn_user_elimiar.Enabled = true;
                 btn_user_modificar.Enabled = true;
+                
+                
 
 
             }
@@ -289,8 +295,9 @@ namespace ProyectoTallerII
                             txt_user_adress.Text,
                             dtp_user_date_birth.Text,
                             Convert.ToInt32(id));
+                    MessageBox.Show("Elemento Actualizado", "Actualizado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    mostrar_client(); //se actualioza la vista del DGV
 
-                    mostrar_client();
                     limpiar();
 
 
@@ -336,6 +343,28 @@ namespace ProyectoTallerII
 
             btn_user_agregar.Enabled = false;
             btn_user_modificar.Enabled = true;
+            btn_user_elimiar.Enabled = true;
+        }
+
+        private void btn_user_elimiar_Click(object sender, EventArgs e)
+        {
+            id = dataG_usuarios.CurrentRow.Cells["id_cliente"].Value.ToString();
+            if (MessageBox.Show("Seguro que desea eliminar?",
+                             "Eliminar Datos!",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question,
+                             MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                objetoCN.eliminar_client(id);
+                MessageBox.Show("Elemento Eliminado", "Eliminado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                mostrar_client(); //se actualioza la vista del DGV
+            }
+            else
+            {
+                limpiar();
+            }
+
+                
         }
     }
 }
