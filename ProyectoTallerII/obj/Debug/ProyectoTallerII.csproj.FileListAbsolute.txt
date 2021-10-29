@@ -184,3 +184,4 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.VendedorInicio.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteReportes.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteVentas.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.AssemblyReference.cache
