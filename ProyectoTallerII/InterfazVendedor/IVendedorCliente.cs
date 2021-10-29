@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using CapaNegocio;
 
 namespace ProyectoTallerII
 {
@@ -162,16 +163,7 @@ namespace ProyectoTallerII
                               MessageBoxIcon.Question,
                               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    int writeRow = dtg_usuarios.Rows.Count;
-                    dtg_usuarios.Rows.Add(1);
-
-                    dtg_usuarios.Rows[writeRow].Cells[0].Value = txt_user_nombre.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[1].Value = txt_user_apellido.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[2].Value = txt_user_dni.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[3].Value = txt_user_email.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[4].Value = txt_user_tel.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[5].Value = txt_user_adress.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[6].Value = dtp_user_date_birth.Text;
+                    
                     
 
 
@@ -187,33 +179,6 @@ namespace ProyectoTallerII
         private void dtg_usuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            Eliminar.Text = "Eliminar";
-            if (e.RowIndex == -1) return;//MUY IMPORTANTE
-            
-            try
-            {
-                int posicion = dtg_usuarios.CurrentRow.Index;
-
-                if (dtg_usuarios.Columns[e.ColumnIndex].Name == "Eliminar")
-                {
-                    if (MessageBox.Show("¿Seguro que quiere eliminar?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        dtg_usuarios.Rows.RemoveAt(posicion);
-                        limpiar();
-                    }
-                    else
-                    {
-                        limpiar();
-                    }
-                }
-            }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("La tabla está vacía, inserte datos primero", "ERROR!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                );
-            }
         }
 
         private void txt_user_nombre_TextChange(object sender, EventArgs e)
@@ -241,17 +206,7 @@ namespace ProyectoTallerII
             if (e.RowIndex == -1) return;
             try
             {
-                fila = dtg_usuarios.CurrentRow.Index;
-
-
-
-                txt_user_nombre.Text = dtg_usuarios[0, fila].Value.ToString();
-                txt_user_apellido.Text = dtg_usuarios[1, fila].Value.ToString();
-                txt_user_dni.Text = dtg_usuarios[2, fila].Value.ToString();
-                txt_user_email.Text = dtg_usuarios[3, fila].Value.ToString();
-                txt_user_tel.Text = dtg_usuarios[4, fila].Value.ToString();
-                txt_user_adress.Text = dtg_usuarios[5, fila].Value.ToString();
-                dtp_user_date_birth.Text = dtg_usuarios[6, fila].Value.ToString();
+                
                 
 
                 btn_user_agregar.Enabled = false;
@@ -306,13 +261,7 @@ namespace ProyectoTallerII
                 {
 
 
-                    dtg_usuarios[0, fila].Value = txt_user_nombre.Text;
-                    dtg_usuarios[1, fila].Value = txt_user_apellido.Text;
-                    dtg_usuarios[2, fila].Value = txt_user_dni.Text;
-                    dtg_usuarios[3, fila].Value = txt_user_email.Text;
-                    dtg_usuarios[4, fila].Value = txt_user_tel.Text;
-                    dtg_usuarios[5, fila].Value = txt_user_adress.Text;
-                    dtg_usuarios[6, fila].Value = dtp_user_date_birth.Text;
+            
 
                     limpiar();
                 }
@@ -323,9 +272,26 @@ namespace ProyectoTallerII
             }
         }
 
-        private void Form_vendedor_clientes_Load(object sender, EventArgs e)
+        //instancia de un objeto cliente
+        cn_clientes objetoCN = new cn_clientes();
+
+
+        //funcion para cargar el datagrid view del formulario
+        private void mostrar_client()
         {
+            //instancia de un objeto cliente
+            cn_clientes cliente_obj = new cn_clientes();
+            dataG_usuarios.DataSource = cliente_obj.mostrar_clientes();
 
         }
+
+
+        private void Form_vendedor_clientes_Load(object sender, EventArgs e)
+        {
+            mostrar_client();
+        }
+
+
+
     }
 }

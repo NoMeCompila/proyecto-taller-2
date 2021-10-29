@@ -61,9 +61,6 @@ namespace ProyectoTallerII
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_buscador = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lbl_pbuckup = new Bunifu.UI.WinForms.BunifuPictureBox();
@@ -82,19 +79,11 @@ namespace ProyectoTallerII
             this.txt_user_apellido = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txt_user_email = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_user_agregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.fecha_nac = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DNI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user_apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.user_nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtg_usuarios = new Bunifu.UI.WinForms.BunifuDataGridView();
+            this.dataG_usuarios = new System.Windows.Forms.DataGridView();
             this.pnl_buscador.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataG_usuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_buscador
@@ -1054,139 +1043,22 @@ namespace ProyectoTallerII
             this.btn_user_agregar.UseDefaultRadiusAndThickness = true;
             this.btn_user_agregar.Click += new System.EventHandler(this.btn_user_agregar_Click);
             // 
-            // Eliminar
+            // dataG_usuarios
             // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Name = "Eliminar";
-            this.Eliminar.ReadOnly = true;
-            this.Eliminar.Text = "Eliminar";
-            this.Eliminar.ToolTipText = "Eliminar";
-            this.Eliminar.UseColumnTextForButtonValue = true;
-            // 
-            // fecha_nac
-            // 
-            this.fecha_nac.HeaderText = "Fecha Nac.";
-            this.fecha_nac.Name = "fecha_nac";
-            this.fecha_nac.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.HeaderText = "Dirección";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // tel
-            // 
-            this.tel.HeaderText = "Tel.";
-            this.tel.Name = "tel";
-            this.tel.ReadOnly = true;
-            // 
-            // user_email
-            // 
-            this.user_email.HeaderText = "E-mail";
-            this.user_email.Name = "user_email";
-            this.user_email.ReadOnly = true;
-            // 
-            // DNI
-            // 
-            this.DNI.HeaderText = "DNI";
-            this.DNI.Name = "DNI";
-            this.DNI.ReadOnly = true;
-            // 
-            // user_apellido
-            // 
-            this.user_apellido.HeaderText = "Apellido";
-            this.user_apellido.Name = "user_apellido";
-            this.user_apellido.ReadOnly = true;
-            // 
-            // user_nombre
-            // 
-            this.user_nombre.HeaderText = "Nombre";
-            this.user_nombre.Name = "user_nombre";
-            this.user_nombre.ReadOnly = true;
-            // 
-            // dtg_usuarios
-            // 
-            this.dtg_usuarios.AllowCustomTheming = false;
-            this.dtg_usuarios.AllowUserToAddRows = false;
-            this.dtg_usuarios.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dtg_usuarios.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtg_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataG_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtg_usuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtg_usuarios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(66)))), ((int)(((byte)(93)))));
-            this.dtg_usuarios.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtg_usuarios.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dtg_usuarios.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Navy;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(102)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtg_usuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtg_usuarios.ColumnHeadersHeight = 40;
-            this.dtg_usuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.user_nombre,
-            this.user_apellido,
-            this.DNI,
-            this.user_email,
-            this.tel,
-            this.direccion,
-            this.fecha_nac,
-            this.Eliminar});
-            this.dtg_usuarios.CurrentTheme.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(223)))));
-            this.dtg_usuarios.CurrentTheme.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dtg_usuarios.CurrentTheme.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtg_usuarios.CurrentTheme.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
-            this.dtg_usuarios.CurrentTheme.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtg_usuarios.CurrentTheme.BackColor = System.Drawing.Color.Navy;
-            this.dtg_usuarios.CurrentTheme.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.dtg_usuarios.CurrentTheme.HeaderStyle.BackColor = System.Drawing.Color.Navy;
-            this.dtg_usuarios.CurrentTheme.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
-            this.dtg_usuarios.CurrentTheme.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dtg_usuarios.CurrentTheme.HeaderStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(102)))));
-            this.dtg_usuarios.CurrentTheme.HeaderStyle.SelectionForeColor = System.Drawing.Color.White;
-            this.dtg_usuarios.CurrentTheme.Name = null;
-            this.dtg_usuarios.CurrentTheme.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(229)))));
-            this.dtg_usuarios.CurrentTheme.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            this.dtg_usuarios.CurrentTheme.RowsStyle.ForeColor = System.Drawing.Color.Black;
-            this.dtg_usuarios.CurrentTheme.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
-            this.dtg_usuarios.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(229)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(178)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_usuarios.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dtg_usuarios.EnableHeadersVisualStyles = false;
-            this.dtg_usuarios.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
-            this.dtg_usuarios.HeaderBackColor = System.Drawing.Color.Navy;
-            this.dtg_usuarios.HeaderBgColor = System.Drawing.Color.Empty;
-            this.dtg_usuarios.HeaderForeColor = System.Drawing.Color.White;
-            this.dtg_usuarios.Location = new System.Drawing.Point(12, 377);
-            this.dtg_usuarios.Name = "dtg_usuarios";
-            this.dtg_usuarios.ReadOnly = true;
-            this.dtg_usuarios.RowHeadersVisible = false;
-            this.dtg_usuarios.RowTemplate.Height = 40;
-            this.dtg_usuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtg_usuarios.Size = new System.Drawing.Size(778, 152);
-            this.dtg_usuarios.TabIndex = 23;
-            this.dtg_usuarios.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Navy;
-            this.dtg_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_usuarios_CellClick);
-            this.dtg_usuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_usuarios_CellContentClick);
+            this.dataG_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataG_usuarios.Location = new System.Drawing.Point(32, 365);
+            this.dataG_usuarios.Name = "dataG_usuarios";
+            this.dataG_usuarios.Size = new System.Drawing.Size(741, 150);
+            this.dataG_usuarios.TabIndex = 23;
             // 
             // IVendedorCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(802, 527);
-            this.Controls.Add(this.dtg_usuarios);
+            this.Controls.Add(this.dataG_usuarios);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.pnl_buscador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -1198,7 +1070,7 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtg_usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataG_usuarios)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1223,14 +1095,6 @@ namespace ProyectoTallerII
         private Bunifu.UI.WinForms.BunifuTextBox txt_user_apellido;
         private Bunifu.UI.WinForms.BunifuTextBox txt_user_email;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_user_agregar;
-        private System.Windows.Forms.DataGridViewButtonColumn Eliminar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nac;
-        private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user_email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DNI;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user_apellido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn user_nombre;
-        private Bunifu.UI.WinForms.BunifuDataGridView dtg_usuarios;
+        private System.Windows.Forms.DataGridView dataG_usuarios;
     }
 }
