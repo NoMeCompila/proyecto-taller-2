@@ -36,7 +36,13 @@ namespace CapaNegocio
                                     string direccion,
                                     string fecha_nac)
         {
-            objetoCD.insertar_cliente(nombre, apellido, dni, email, tel, direccion, Convert.ToDateTime(fecha_nac));
+            objetoCD.insertar_cliente(nombre, 
+                                      apellido, 
+                                      dni, 
+                                      email, 
+                                      tel, 
+                                      direccion, 
+                                      Convert.ToDateTime(fecha_nac));
         }
 
 
