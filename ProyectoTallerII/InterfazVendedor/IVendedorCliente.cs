@@ -337,9 +337,9 @@ namespace ProyectoTallerII
             txt_user_dni.Text = dataG_usuarios.CurrentRow.Cells["dni"].Value.ToString();
             txt_user_email.Text = dataG_usuarios.CurrentRow.Cells["email"].Value.ToString();
             txt_user_tel.Text = dataG_usuarios.CurrentRow.Cells["telefono"].Value.ToString();
-            txt_user_adress.Text = dataG_usuarios.CurrentRow.Cells["direccion"].Value.ToString();
-            dtp_user_date_birth.Text = dataG_usuarios.CurrentRow.Cells["fecha_nac"].Value.ToString();
-            id = dataG_usuarios.CurrentRow.Cells["id_cliente"].Value.ToString();
+            txt_user_adress.Text = dataG_usuarios.CurrentRow.Cells["dirección"].Value.ToString();
+            dtp_user_date_birth.Text = dataG_usuarios.CurrentRow.Cells["fecha nacimiento"].Value.ToString();
+            id = dataG_usuarios.CurrentRow.Cells["id"].Value.ToString();
 
             btn_user_agregar.Enabled = false;
             btn_user_modificar.Enabled = true;

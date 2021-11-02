@@ -1,6 +1,7 @@
 --PROCEDIMIENTOS ALMACENADOS
 
 --PROCEDIMIENTO ALMACENADO PARA MOSTRAR DATOS 
+-- ! ESTE PROCEDIMIENTO ALMACENADO SOLO SE USARA PARA EL ADMINISTRADOR
 CREATE PROC sp_mostrar_clientes
 AS
 SELECT * FROM Cliente;
@@ -65,6 +66,30 @@ GO
 exec sp_eliminar_cliente 6
 EXEC sp_mostrar_clientes
 */
-select * from Cliente;
+
+/* TODO: 
 
 
+*/
+-- TODO: este procedimiento es para mostrar los datos en vendeddor
+-- todo:  ademas se muestra las columnas con alias para mejor visibilidad
+CREATE PROC sp_mostrar_clientes_activos
+AS
+	SELECT 
+		Cliente.id_cliente as ID,
+		Cliente.nombre AS NOMBRE,
+		Cliente.apellido AS APELLIDO,
+		Cliente.dni AS DNI,
+		Cliente.email AS EMAIL,
+		Cliente.telefono AS TELEFONO,
+		Cliente.direccion AS DIRECCIÓN,
+		Cliente.fecha_nac AS "FECHA NACIMIENTO"
+	FROM Cliente
+	WHERE Cliente.estado = 1
+GO
+
+-- * Probando el procedimiento almacenado para el datagridview de clientes en el perfil vendedor
+
+EXEC sp_mostrar_clientes_activos;
+
+DROP PROCEDURE sp_mostrar_clientes_activos;

@@ -24,7 +24,7 @@ namespace CapaDatos
         {
             //inicio TRANSACT SQL
             comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
-            comando_clientes.CommandText = "sp_mostrar_clientes"; // se genera la consulta
+            comando_clientes.CommandText = "sp_mostrar_clientes_activos"; // se genera la consulta
             comando_clientes.CommandType = CommandType.StoredProcedure;
             leer_clientes = comando_clientes.ExecuteReader(); // se lee la consulta
             tabla_cliente.Load(leer_clientes); //  se carga el resultado de la consulta en una tabla 
