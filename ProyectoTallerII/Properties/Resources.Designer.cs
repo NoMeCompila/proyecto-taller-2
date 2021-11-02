@@ -83,6 +83,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bank_2_48 {
+            get {
+                object obj = ResourceManager.GetObject("bank-2-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BDD {
             get {
                 object obj = ResourceManager.GetObject("BDD", resourceCulture);
@@ -106,6 +116,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap card {
             get {
                 object obj = ResourceManager.GetObject("card", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cart_black {
+            get {
+                object obj = ResourceManager.GetObject("cart_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,6 +163,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap close_window_black {
+            get {
+                object obj = ResourceManager.GetObject("close_window_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap database_add__1_ {
             get {
                 object obj = ResourceManager.GetObject("database-add (1)", resourceCulture);
@@ -166,6 +196,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap diamond {
             get {
                 object obj = ResourceManager.GetObject("diamond", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dollar_ico {
+            get {
+                object obj = ResourceManager.GetObject("dollar_ico", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,6 +293,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap home_Y {
+            get {
+                object obj = ResourceManager.GetObject("home_Y", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap id_card__1_ {
             get {
                 object obj = ResourceManager.GetObject("id-card (1)", resourceCulture);
@@ -313,6 +363,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap maximize_window_black {
+            get {
+                object obj = ResourceManager.GetObject("maximize_window_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap menu__1_ {
             get {
                 object obj = ResourceManager.GetObject("menu (1)", resourceCulture);
@@ -343,6 +403,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap minimize_window_black {
+            get {
+                object obj = ResourceManager.GetObject("minimize_window_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap remove_ico__1_ {
             get {
                 object obj = ResourceManager.GetObject("remove-ico (1)", resourceCulture);
@@ -356,6 +426,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap restaurar {
             get {
                 object obj = ResourceManager.GetObject("restaurar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap restore_window_black {
+            get {
+                object obj = ResourceManager.GetObject("restore_window_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -436,6 +516,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap user__1_ {
             get {
                 object obj = ResourceManager.GetObject("user (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_black {
+            get {
+                object obj = ResourceManager.GetObject("user_black", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

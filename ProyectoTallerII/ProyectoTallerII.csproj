@@ -477,5 +477,32 @@
       <Name>CapaNegocio</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_Y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar_ico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bank-2-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize_window_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restore_window_black.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

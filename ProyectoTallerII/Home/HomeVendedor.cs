@@ -8,11 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Runtime.InteropServices;
 
 namespace ProyectoTallerII
 {
     public partial class Form_vendedor_init : Form
     {
+        #region Dlls para poder hacer el movimiento del Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        Rectangle sizeGripRectangle;
+        bool inSizeDrag = false;
+        const int GRIP_SIZE = 15;
+
+        int w = 0;
+        int h = 0;
+        #endregion
         public Form_vendedor_init()
         {
             InitializeComponent();
@@ -141,6 +156,23 @@ namespace ProyectoTallerII
         private void button1_Click_1(object sender, EventArgs e)
         {
             open_child_form(new Form_listar_productos()); 
+        }
+
+        //EVENTO PARA QUE SE PUEDA MOVER EL FORMULARIO A PLACER
+        int ejeX; // variables para guardar las coordenadas del mouse
+        int ejeY;
+        private void pnl_cabecera_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pnl_cabecera_MouseDown(object sender, MouseEventArgs e)
+        {
+            //para poder arrastrar el formulario sin bordes
+
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+            w = this.Width;
+            h = this.Height;
         }
     }
 }

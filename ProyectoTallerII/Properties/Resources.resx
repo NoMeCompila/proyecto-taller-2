@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="audi (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audi (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maximize_window_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize_window_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="home" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -130,6 +136,9 @@
   <data name="BDD (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BDD (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="menu (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\menu (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ventas (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ventas (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,14 +148,20 @@
   <data name="eraser (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eraser (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cart_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cart_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="casa (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\casa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HOME-BLANCO (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HOME-BLANCO (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close_window_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close_window_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="id-card (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\id-card (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="casa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\casa (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="home (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\home (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,20 +169,26 @@
   <data name="users-alt-3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\users-alt-3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="dollar_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dollar_ico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BDD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\BDD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="casa (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\casa (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="historial (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\historial (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search-1 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-1 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bank-2-48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bank-2-48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="restaurar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\restaurar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,14 +211,14 @@
   <data name="save (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\save (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="diamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\diamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="database-add (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\database-add (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HOME-BLANCO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HOME-BLANCO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="user_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\user_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ui-user (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui-user (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,11 +226,11 @@
   <data name="mini" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mini.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="search-1 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\search-1 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="remove-ico (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove-ico (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ventas (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ventas (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,14 +241,20 @@
   <data name="ui-settings (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ui-settings (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="casa (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\casa (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="diamond" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\diamond.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="menu (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\menu (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="minimize_window_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\minimize_window_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="minimizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\minimizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="home_Y" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\home_Y.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="database-add (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\database-add (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-1 (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\search-1 (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="image_icon_diamond_pic_512x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\image_icon_diamond_pic_512x512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +265,7 @@
   <data name="LOGOPERLE" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LOGOPERLE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="audi (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\audi (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="restore_window_black" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\restore_window_black.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

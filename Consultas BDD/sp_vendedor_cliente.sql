@@ -78,7 +78,7 @@ AS
 		Cliente.apellido AS APELLIDO,
 		Cliente.dni AS DNI,
 		Cliente.email AS EMAIL,
-		Cliente.telefono AS TELEFONO,
+		Cliente.telefono AS TELÉFONO,
 		Cliente.direccion AS DIRECCIÓN,
 		Cliente.fecha_nac AS "FECHA NACIMIENTO"
 	FROM Cliente
@@ -86,12 +86,9 @@ AS
 GO
 
 -- * Probando el procedimiento almacenado para el datagridview de clientes en el perfil vendedor
-EXEC sp_mostrar_clientes_activos;
-
-
-select * from Cliente
-
-
+--EXEC sp_mostrar_clientes_activos;
+--DROP  PROCEDURE  sp_mostrar_clientes_activos
+--select * from Cliente
 
 CREATE PROC sp_cliente_inactivo
 @id_cliente INT
@@ -100,4 +97,4 @@ AS
 	WHERE id_cliente = @id_cliente
 GO
 
-EXEC  sp_cliente_inactivo 2005
+-- EXEC  sp_cliente_inactivo 2005
