@@ -348,7 +348,7 @@ namespace ProyectoTallerII
 
         private void btn_user_elimiar_Click(object sender, EventArgs e)
         {
-            id = dataG_usuarios.CurrentRow.Cells["id_cliente"].Value.ToString();
+            id = dataG_usuarios.CurrentRow.Cells["id"].Value.ToString();
             if (MessageBox.Show("Seguro que desea eliminar?",
                              "Eliminar Datos!",
                              MessageBoxButtons.YesNo,

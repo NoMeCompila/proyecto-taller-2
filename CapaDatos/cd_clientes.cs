@@ -70,7 +70,8 @@ namespace CapaDatos
         public void eliminar_cliente(int id_cliente)
         {
             comando_clientes.Connection = connection.abrir_conexion();
-            comando_clientes.CommandText = "sp_eliminar_cliente";
+            //comando_clientes.CommandText = "sp_eliminar_cliente"; 
+            comando_clientes.CommandText = "sp_cliente_inactivo";
             comando_clientes.CommandType = CommandType.StoredProcedure;
             comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
