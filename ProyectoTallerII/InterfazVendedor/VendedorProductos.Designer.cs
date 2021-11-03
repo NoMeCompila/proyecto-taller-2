@@ -32,6 +32,11 @@ namespace ProyectoTallerII
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_listar_productos));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -45,11 +50,6 @@ namespace ProyectoTallerII
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_listar_productos));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.dtg_stock = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.cod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,8 +60,11 @@ namespace ProyectoTallerII
             this.img = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.pnl_buscador = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lbl_pbuckup = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.lbl_username = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_stock_title = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel_stock = new Bunifu.UI.WinForms.BunifuPanel();
             this.txt_stock = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pb_producto_imagen = new System.Windows.Forms.PictureBox();
@@ -69,14 +72,11 @@ namespace ProyectoTallerII
             this.txt_producto_cod = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txt_producto_nombre = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_stock_agregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lbl_pbuckup = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_stock)).BeginInit();
             this.pnl_buscador.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).BeginInit();
             this.panel_stock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_producto_imagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).BeginInit();
             this.SuspendLayout();
             // 
             // dtg_stock
@@ -223,6 +223,37 @@ namespace ProyectoTallerII
             this.pnl_buscador.Size = new System.Drawing.Size(741, 63);
             this.pnl_buscador.TabIndex = 24;
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::ProyectoTallerII.Properties.Resources.search_1__2_;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(6, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 37);
+            this.button1.TabIndex = 8;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lbl_pbuckup
+            // 
+            this.lbl_pbuckup.AllowFocused = false;
+            this.lbl_pbuckup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_pbuckup.AutoSizeHeight = true;
+            this.lbl_pbuckup.BorderRadius = 24;
+            this.lbl_pbuckup.Image = ((System.Drawing.Image)(resources.GetObject("lbl_pbuckup.Image")));
+            this.lbl_pbuckup.IsCircle = true;
+            this.lbl_pbuckup.Location = new System.Drawing.Point(680, 7);
+            this.lbl_pbuckup.Name = "lbl_pbuckup";
+            this.lbl_pbuckup.Size = new System.Drawing.Size(49, 49);
+            this.lbl_pbuckup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.lbl_pbuckup.TabIndex = 3;
+            this.lbl_pbuckup.TabStop = false;
+            this.lbl_pbuckup.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
             // lbl_username
             // 
             this.lbl_username.AllowParentOverrides = false;
@@ -256,6 +287,80 @@ namespace ProyectoTallerII
             this.lbl_stock_title.Text = "LISTAR PRODUCTOS";
             this.lbl_stock_title.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_stock_title.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // txt_buscar
+            // 
+            this.txt_buscar.AcceptsReturn = false;
+            this.txt_buscar.AcceptsTab = false;
+            this.txt_buscar.AnimationSpeed = 200;
+            this.txt_buscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_buscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_buscar.BackColor = System.Drawing.Color.Transparent;
+            this.txt_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_buscar.BackgroundImage")));
+            this.txt_buscar.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_buscar.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_buscar.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_buscar.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txt_buscar.BorderRadius = 1;
+            this.txt_buscar.BorderThickness = 1;
+            this.txt_buscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_buscar.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_buscar.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
+            this.txt_buscar.DefaultText = "";
+            this.txt_buscar.FillColor = System.Drawing.Color.White;
+            this.txt_buscar.HideSelection = true;
+            this.txt_buscar.IconLeft = null;
+            this.txt_buscar.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_buscar.IconPadding = 10;
+            this.txt_buscar.IconRight = null;
+            this.txt_buscar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_buscar.Lines = new string[0];
+            this.txt_buscar.Location = new System.Drawing.Point(53, 12);
+            this.txt_buscar.MaxLength = 32767;
+            this.txt_buscar.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_buscar.Modified = false;
+            this.txt_buscar.Multiline = false;
+            this.txt_buscar.Name = "txt_buscar";
+            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_buscar.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_buscar.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_buscar.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.Silver;
+            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.ForeColor = System.Drawing.Color.Empty;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_buscar.OnIdleState = stateProperties4;
+            this.txt_buscar.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_buscar.PasswordChar = '\0';
+            this.txt_buscar.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_buscar.PlaceholderText = "Buscar...";
+            this.txt_buscar.ReadOnly = false;
+            this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_buscar.SelectedText = "";
+            this.txt_buscar.SelectionLength = 0;
+            this.txt_buscar.SelectionStart = 0;
+            this.txt_buscar.ShortcutsEnabled = true;
+            this.txt_buscar.Size = new System.Drawing.Size(248, 37);
+            this.txt_buscar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_buscar.TabIndex = 0;
+            this.txt_buscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_buscar.TextMarginBottom = 0;
+            this.txt_buscar.TextMarginLeft = 3;
+            this.txt_buscar.TextMarginTop = 0;
+            this.txt_buscar.TextPlaceholder = "Buscar...";
+            this.txt_buscar.UseSystemPasswordChar = false;
+            this.txt_buscar.WordWrap = true;
             // 
             // panel_stock
             // 
@@ -655,115 +760,11 @@ namespace ProyectoTallerII
             this.btn_stock_agregar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_stock_agregar.UseDefaultRadiusAndThickness = true;
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::ProyectoTallerII.Properties.Resources.search_1__2_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(6, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 37);
-            this.button1.TabIndex = 8;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lbl_pbuckup
-            // 
-            this.lbl_pbuckup.AllowFocused = false;
-            this.lbl_pbuckup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_pbuckup.AutoSizeHeight = true;
-            this.lbl_pbuckup.BorderRadius = 24;
-            this.lbl_pbuckup.Image = ((System.Drawing.Image)(resources.GetObject("lbl_pbuckup.Image")));
-            this.lbl_pbuckup.IsCircle = true;
-            this.lbl_pbuckup.Location = new System.Drawing.Point(680, 7);
-            this.lbl_pbuckup.Name = "lbl_pbuckup";
-            this.lbl_pbuckup.Size = new System.Drawing.Size(49, 49);
-            this.lbl_pbuckup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lbl_pbuckup.TabIndex = 3;
-            this.lbl_pbuckup.TabStop = false;
-            this.lbl_pbuckup.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // txt_buscar
-            // 
-            this.txt_buscar.AcceptsReturn = false;
-            this.txt_buscar.AcceptsTab = false;
-            this.txt_buscar.AnimationSpeed = 200;
-            this.txt_buscar.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_buscar.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_buscar.BackColor = System.Drawing.Color.Transparent;
-            this.txt_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_buscar.BackgroundImage")));
-            this.txt_buscar.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_buscar.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_buscar.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_buscar.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txt_buscar.BorderRadius = 1;
-            this.txt_buscar.BorderThickness = 1;
-            this.txt_buscar.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_buscar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_buscar.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
-            this.txt_buscar.DefaultText = "";
-            this.txt_buscar.FillColor = System.Drawing.Color.White;
-            this.txt_buscar.HideSelection = true;
-            this.txt_buscar.IconLeft = null;
-            this.txt_buscar.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_buscar.IconPadding = 10;
-            this.txt_buscar.IconRight = null;
-            this.txt_buscar.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_buscar.Lines = new string[0];
-            this.txt_buscar.Location = new System.Drawing.Point(53, 12);
-            this.txt_buscar.MaxLength = 32767;
-            this.txt_buscar.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_buscar.Modified = false;
-            this.txt_buscar.Multiline = false;
-            this.txt_buscar.Name = "txt_buscar";
-            stateProperties1.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_buscar.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_buscar.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_buscar.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.Empty;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_buscar.OnIdleState = stateProperties4;
-            this.txt_buscar.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txt_buscar.PlaceholderText = "Buscar...";
-            this.txt_buscar.ReadOnly = false;
-            this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_buscar.SelectedText = "";
-            this.txt_buscar.SelectionLength = 0;
-            this.txt_buscar.SelectionStart = 0;
-            this.txt_buscar.ShortcutsEnabled = true;
-            this.txt_buscar.Size = new System.Drawing.Size(248, 37);
-            this.txt_buscar.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_buscar.TabIndex = 0;
-            this.txt_buscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_buscar.TextMarginBottom = 0;
-            this.txt_buscar.TextMarginLeft = 3;
-            this.txt_buscar.TextMarginTop = 0;
-            this.txt_buscar.TextPlaceholder = "Buscar...";
-            this.txt_buscar.UseSystemPasswordChar = false;
-            this.txt_buscar.WordWrap = true;
-            // 
             // Form_listar_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(802, 527);
             this.Controls.Add(this.dtg_stock);
             this.Controls.Add(this.panel_stock);
@@ -774,9 +775,9 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.dtg_stock)).EndInit();
             this.pnl_buscador.ResumeLayout(false);
             this.pnl_buscador.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).EndInit();
             this.panel_stock.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pb_producto_imagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).EndInit();
             this.ResumeLayout(false);
 
         }

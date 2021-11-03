@@ -12,10 +12,10 @@ using System.Runtime.InteropServices;
 
 namespace ProyectoTallerII
 {
-    public partial class Form_vendedor_init : Form
+    public partial class IHomeAdmin : Form
     {
         
-        public Form_vendedor_init()
+        public IHomeAdmin()
         {
             InitializeComponent();
         }
@@ -111,7 +111,7 @@ namespace ProyectoTallerII
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-            open_child_form(new VendedorInicio());
+            open_child_form(new Form_home());
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
@@ -185,6 +185,11 @@ namespace ProyectoTallerII
         private void bunifuSeparator1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            open_child_form(new Form_back());
         }
     }
 }

@@ -159,6 +159,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home\IHomeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\IHomeAdmin.Designer.cs">
+      <DependentUpon>IHomeAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\LoginPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +275,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Home\IHomeAdmin.resx">
+      <DependentUpon>IHomeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\LoginPrincipal.resx">
       <DependentUpon>LoginPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -418,9 +427,6 @@
     <None Include="Resources\maxi.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\BDD.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\BDD %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -503,6 +509,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\restore_window_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\black_diamond.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\businessman.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data_backup.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

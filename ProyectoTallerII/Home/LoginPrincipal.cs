@@ -43,9 +43,9 @@ namespace ProyectoTallerII
                 txt_user.Clear();
                 txt_user.Focus();
             }
-            else if(txt_user.Text == "Admin1" && txt_pass.Text == "Admin123!")
+            else if(txt_user.Text == "123" && txt_pass.Text == "123")
             {
-                Form form_inicio = new form_inicio();
+                Form form_inicio = new IHomeAdmin();
                 this.Hide();
                 form_inicio.Show();
 
