@@ -4,9 +4,19 @@
 -- ! ESTE PROCEDIMIENTO ALMACENADO SOLO SE USARA PARA EL ADMINISTRADOR
 CREATE PROC sp_mostrar_clientes
 AS
-SELECT * FROM Cliente;
+	SELECT 
+		Cliente.id_cliente as ID,
+		Cliente.nombre AS NOMBRE,
+		Cliente.apellido AS APELLIDO,
+		Cliente.dni AS DNI,
+		Cliente.email AS EMAIL,
+		Cliente.telefono AS TELÉFONO,
+		Cliente.direccion AS DIRECCIÓN,
+		Cliente.fecha_nac AS "FECHA NACIMIENTO"
+	FROM Cliente
 GO
 -- prueba EXEC sp_mostrar_clientes;
+--DROP PROC sp_mostrar_clientes
 
 --PROCEDIMIENTO ALMACENADO PARA INSERTAR UN DATO
 CREATE PROC sp_guardar_cliente
@@ -58,13 +68,15 @@ EXEC sp_mostrar_clientes
 */
 
 --PROCEDIMIENTO ALMACENADO PARA ELIMINAR UN DATO
+-- ! ESTE PROCEDIMIENTO ALMACENADO SOLO PUEDE SER USADO POR UN ADMIN
 CREATE PROC sp_eliminar_cliente
 @id_cliente INT
 AS
 delete from Cliente WHERE id_cliente = @id_cliente
 GO
+
 /*probando procedimiento almacenado para ELIMINAR un cliente
-exec sp_eliminar_cliente 6
+exec sp_eliminar_cliente 3003
 EXEC sp_mostrar_clientes
 */
 

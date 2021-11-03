@@ -171,6 +171,12 @@
     <Compile Include="Home\LoginPrincipal.Designer.cs">
       <DependentUpon>LoginPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazAdmin\AdminCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAdmin\AdminCliente.Designer.cs">
+      <DependentUpon>AdminCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazGerente\GerenteAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Home\LoginPrincipal.resx">
       <DependentUpon>LoginPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAdmin\AdminCliente.resx">
+      <DependentUpon>AdminCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazGerente\GerenteAuditoria.resx">
       <DependentUpon>GerenteAuditoria.cs</DependentUpon>

@@ -32,6 +32,19 @@ namespace CapaDatos
             return tabla_cliente; // retorno del objeto que contiene el resultado de la consulta
         }
 
+        //funciopn para mostrar a todos los clientes (activos e inactivos) al administrador
+        public DataTable mostrar_clientes_admin()
+        {
+            //inicio TRANSACT SQL
+            comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
+            comando_clientes.CommandText = "sp_mostrar_clientes"; // se genera la consulta
+            comando_clientes.CommandType = CommandType.StoredProcedure;
+            leer_clientes = comando_clientes.ExecuteReader(); // se lee la consulta
+            tabla_cliente.Load(leer_clientes); //  se carga el resultado de la consulta en una tabla 
+            connection.cerrar_conexion(); //  se cierra la conexion
+            return tabla_cliente; // retorno del objeto que contiene el resultado de la consulta
+        }
+
         //funcion para agregrar un nuevo cliente
         public void insertar_cliente(string nombre, string apellido, string dni, string email, string tel, string direccion, DateTime fecha_nac)
         {
@@ -67,11 +80,24 @@ namespace CapaDatos
             comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
         }
 
+        //fincion para eliminar lógicamente a un usuario desde un perfil vendedor
         public void eliminar_cliente(int id_cliente)
         {
             comando_clientes.Connection = connection.abrir_conexion();
             //comando_clientes.CommandText = "sp_eliminar_cliente"; 
             comando_clientes.CommandText = "sp_cliente_inactivo";
+            comando_clientes.CommandType = CommandType.StoredProcedure;
+            comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
+            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_clientes.Parameters.Clear(); //limpiar los aprametros de sql command
+        }
+
+        //fincion para eliminar físicamente a un usuario desde un perfil administrador
+        public void eliminar_cliente_admin(int id_cliente)
+        {
+            comando_clientes.Connection = connection.abrir_conexion();
+            //comando_clientes.CommandText = "sp_eliminar_cliente"; 
+            comando_clientes.CommandText = "sp_eliminar_cliente";
             comando_clientes.CommandType = CommandType.StoredProcedure;
             comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta

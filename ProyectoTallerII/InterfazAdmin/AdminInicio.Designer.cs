@@ -71,7 +71,7 @@ namespace ProyectoTallerII
             // 
             // card_inicio
             // 
-            this.card_inicio.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.card_inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(172)))), ((int)(((byte)(249)))));
             this.card_inicio.BorderRadius = 30;
             this.card_inicio.BottomSahddow = true;
             this.card_inicio.color = System.Drawing.Color.DarkViolet;
@@ -133,7 +133,7 @@ namespace ProyectoTallerII
             // card_usuarios
             // 
             this.card_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.card_usuarios.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.card_usuarios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(172)))), ((int)(((byte)(249)))));
             this.card_usuarios.BorderRadius = 30;
             this.card_usuarios.BottomSahddow = true;
             this.card_usuarios.color = System.Drawing.Color.DarkViolet;
@@ -392,7 +392,7 @@ namespace ProyectoTallerII
             // bunifuCards2
             // 
             this.bunifuCards2.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.bunifuCards2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.bunifuCards2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(172)))), ((int)(((byte)(249)))));
             this.bunifuCards2.BorderRadius = 30;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.DarkViolet;

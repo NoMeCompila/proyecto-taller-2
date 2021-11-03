@@ -137,7 +137,7 @@ namespace ProyectoTallerII
 
         private void btn_clientes_gerente_Click(object sender, EventArgs e)
         {
-            open_child_form(new IVendedorCliente());
+            open_child_form(new AdminCliente());
         }
 
         private void button1_Click_1(object sender, EventArgs e)
