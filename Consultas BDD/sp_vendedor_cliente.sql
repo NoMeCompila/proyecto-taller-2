@@ -110,3 +110,5 @@ AS
 GO
 
 -- EXEC  sp_cliente_inactivo 2005
+
+select * from Cliente;

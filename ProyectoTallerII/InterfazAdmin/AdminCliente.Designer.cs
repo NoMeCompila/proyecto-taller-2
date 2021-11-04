@@ -189,7 +189,7 @@ namespace ProyectoTallerII
             this.txt_buscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_buscar.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_buscar.DefaultText = "";
-            this.txt_buscar.FillColor = System.Drawing.Color.White;
+            this.txt_buscar.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.txt_buscar.HideSelection = true;
             this.txt_buscar.IconLeft = null;
             this.txt_buscar.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -219,13 +219,13 @@ namespace ProyectoTallerII
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_buscar.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.SystemColors.ButtonFace;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_buscar.OnIdleState = stateProperties4;
             this.txt_buscar.Padding = new System.Windows.Forms.Padding(3);
             this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_buscar.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txt_buscar.PlaceholderText = "Buscar...";
             this.txt_buscar.ReadOnly = false;
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -243,6 +243,8 @@ namespace ProyectoTallerII
             this.txt_buscar.TextPlaceholder = "Buscar...";
             this.txt_buscar.UseSystemPasswordChar = false;
             this.txt_buscar.WordWrap = true;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
+            this.txt_buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyUp);
             // 
             // bunifuPanel1
             // 
@@ -1185,7 +1187,7 @@ namespace ProyectoTallerII
             this.dataG_usuarios.TabIndex = 23;
             this.dataG_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataG_usuarios_CellClick);
             // 
-            // IVendedorCliente
+            // AdminCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1195,7 +1197,7 @@ namespace ProyectoTallerII
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.pnl_buscador);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "IVendedorCliente";
+            this.Name = "AdminCliente";
             this.Text = "Form_vendedor_clientes";
             this.Load += new System.EventHandler(this.Form_vendedor_clientes_Load);
             this.pnl_buscador.ResumeLayout(false);
