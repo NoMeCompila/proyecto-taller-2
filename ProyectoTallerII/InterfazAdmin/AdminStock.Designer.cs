@@ -194,7 +194,7 @@ namespace ProyectoTallerII
             this.txt_buscar.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_buscar.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_buscar.DefaultText = "";
-            this.txt_buscar.FillColor = System.Drawing.Color.White;
+            this.txt_buscar.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.txt_buscar.HideSelection = true;
             this.txt_buscar.IconLeft = null;
             this.txt_buscar.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -224,13 +224,13 @@ namespace ProyectoTallerII
             stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_buscar.OnHoverState = stateProperties3;
             stateProperties4.BorderColor = System.Drawing.Color.Silver;
-            stateProperties4.FillColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.SystemColors.ButtonFace;
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_buscar.OnIdleState = stateProperties4;
             this.txt_buscar.Padding = new System.Windows.Forms.Padding(3);
             this.txt_buscar.PasswordChar = '\0';
-            this.txt_buscar.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txt_buscar.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txt_buscar.PlaceholderText = "Buscar...";
             this.txt_buscar.ReadOnly = false;
             this.txt_buscar.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -311,7 +311,7 @@ namespace ProyectoTallerII
             this.dtg_stock.EnableHeadersVisualStyles = false;
             this.dtg_stock.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(178)))), ((int)(((byte)(216)))));
             this.dtg_stock.HeaderBackColor = System.Drawing.Color.Navy;
-            //this.dtg_stock.HeaderBgColor = System.Drawing.Color.Empty;
+            this.dtg_stock.HeaderBgColor = System.Drawing.Color.Empty;
             this.dtg_stock.HeaderForeColor = System.Drawing.Color.White;
             this.dtg_stock.Location = new System.Drawing.Point(12, 363);
             this.dtg_stock.Name = "dtg_stock";
@@ -430,7 +430,7 @@ namespace ProyectoTallerII
             this.txt_stock.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_stock.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_stock.DefaultText = "";
-            this.txt_stock.FillColor = System.Drawing.Color.White;
+            this.txt_stock.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.txt_stock.HideSelection = true;
             this.txt_stock.IconLeft = null;
             this.txt_stock.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -460,7 +460,7 @@ namespace ProyectoTallerII
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_stock.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
-            stateProperties8.FillColor = System.Drawing.Color.White;
+            stateProperties8.FillColor = System.Drawing.SystemColors.ButtonFace;
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_stock.OnIdleState = stateProperties8;
@@ -476,7 +476,7 @@ namespace ProyectoTallerII
             this.txt_stock.ShortcutsEnabled = true;
             this.txt_stock.Size = new System.Drawing.Size(198, 38);
             this.txt_stock.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_stock.TabIndex = 26;
+            this.txt_stock.TabIndex = 3;
             this.txt_stock.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_stock.TextMarginBottom = 0;
             this.txt_stock.TextMarginLeft = 3;
@@ -500,13 +500,14 @@ namespace ProyectoTallerII
             // btn_producto_imagen
             // 
             this.btn_producto_imagen.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_producto_imagen.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_producto_imagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.btn_producto_imagen.Location = new System.Drawing.Point(281, 179);
             this.btn_producto_imagen.Name = "btn_producto_imagen";
             this.btn_producto_imagen.Size = new System.Drawing.Size(198, 38);
             this.btn_producto_imagen.TabIndex = 24;
             this.btn_producto_imagen.Text = "Cargar Imágen Local";
-            this.btn_producto_imagen.UseVisualStyleBackColor = true;
+            this.btn_producto_imagen.UseVisualStyleBackColor = false;
             this.btn_producto_imagen.Click += new System.EventHandler(this.btn_producto_imagen_Click);
             // 
             // lbl_producto_stock
@@ -530,7 +531,7 @@ namespace ProyectoTallerII
             // 
             this.drd_productos_categoria.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.drd_productos_categoria.BackColor = System.Drawing.Color.Transparent;
-            this.drd_productos_categoria.BackgroundColor = System.Drawing.Color.White;
+            this.drd_productos_categoria.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.drd_productos_categoria.BorderColor = System.Drawing.Color.Silver;
             this.drd_productos_categoria.BorderRadius = 1;
             this.drd_productos_categoria.Color = System.Drawing.Color.Silver;
@@ -569,7 +570,7 @@ namespace ProyectoTallerII
             this.drd_productos_categoria.Location = new System.Drawing.Point(281, 9);
             this.drd_productos_categoria.Name = "drd_productos_categoria";
             this.drd_productos_categoria.Size = new System.Drawing.Size(198, 32);
-            this.drd_productos_categoria.TabIndex = 19;
+            this.drd_productos_categoria.TabIndex = 6;
             this.drd_productos_categoria.Text = "Categoría";
             this.drd_productos_categoria.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.drd_productos_categoria.TextLeftMargin = 5;
@@ -777,7 +778,8 @@ namespace ProyectoTallerII
             this.txt_producto_cod.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_producto_cod.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_producto_cod.DefaultText = "";
-            this.txt_producto_cod.FillColor = System.Drawing.Color.White;
+            this.txt_producto_cod.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_producto_cod.ForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_producto_cod.HideSelection = true;
             this.txt_producto_cod.IconLeft = null;
             this.txt_producto_cod.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -807,8 +809,8 @@ namespace ProyectoTallerII
             stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_cod.OnHoverState = stateProperties11;
             stateProperties12.BorderColor = System.Drawing.Color.Silver;
-            stateProperties12.FillColor = System.Drawing.Color.White;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.FillColor = System.Drawing.SystemColors.ButtonFace;
+            stateProperties12.ForeColor = System.Drawing.SystemColors.ControlText;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_cod.OnIdleState = stateProperties12;
             this.txt_producto_cod.Padding = new System.Windows.Forms.Padding(3);
@@ -854,7 +856,7 @@ namespace ProyectoTallerII
             this.txt_producto_nombre.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_producto_nombre.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_producto_nombre.DefaultText = "";
-            this.txt_producto_nombre.FillColor = System.Drawing.Color.White;
+            this.txt_producto_nombre.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.txt_producto_nombre.HideSelection = true;
             this.txt_producto_nombre.IconLeft = null;
             this.txt_producto_nombre.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -884,7 +886,7 @@ namespace ProyectoTallerII
             stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_nombre.OnHoverState = stateProperties15;
             stateProperties16.BorderColor = System.Drawing.Color.Silver;
-            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.FillColor = System.Drawing.SystemColors.ButtonFace;
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_nombre.OnIdleState = stateProperties16;
@@ -930,7 +932,7 @@ namespace ProyectoTallerII
             this.txt_producto_costo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_producto_costo.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_producto_costo.DefaultText = "";
-            this.txt_producto_costo.FillColor = System.Drawing.Color.White;
+            this.txt_producto_costo.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.txt_producto_costo.HideSelection = true;
             this.txt_producto_costo.IconLeft = null;
             this.txt_producto_costo.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -960,7 +962,7 @@ namespace ProyectoTallerII
             stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_costo.OnHoverState = stateProperties19;
             stateProperties20.BorderColor = System.Drawing.Color.Silver;
-            stateProperties20.FillColor = System.Drawing.Color.White;
+            stateProperties20.FillColor = System.Drawing.SystemColors.ButtonFace;
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_costo.OnIdleState = stateProperties20;
@@ -976,7 +978,7 @@ namespace ProyectoTallerII
             this.txt_producto_costo.ShortcutsEnabled = true;
             this.txt_producto_costo.Size = new System.Drawing.Size(198, 38);
             this.txt_producto_costo.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_producto_costo.TabIndex = 3;
+            this.txt_producto_costo.TabIndex = 4;
             this.txt_producto_costo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_producto_costo.TextMarginBottom = 0;
             this.txt_producto_costo.TextMarginLeft = 3;
@@ -1098,7 +1100,7 @@ namespace ProyectoTallerII
             this.txt_producto_venta.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_producto_venta.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
             this.txt_producto_venta.DefaultText = "";
-            this.txt_producto_venta.FillColor = System.Drawing.Color.White;
+            this.txt_producto_venta.FillColor = System.Drawing.SystemColors.ButtonFace;
             this.txt_producto_venta.HideSelection = true;
             this.txt_producto_venta.IconLeft = null;
             this.txt_producto_venta.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
@@ -1128,7 +1130,7 @@ namespace ProyectoTallerII
             stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_venta.OnHoverState = stateProperties23;
             stateProperties24.BorderColor = System.Drawing.Color.Silver;
-            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.FillColor = System.Drawing.SystemColors.ButtonFace;
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_producto_venta.OnIdleState = stateProperties24;
@@ -1162,6 +1164,7 @@ namespace ProyectoTallerII
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(802, 527);
             this.Controls.Add(this.dtg_stock);
             this.Controls.Add(this.panel_stock);

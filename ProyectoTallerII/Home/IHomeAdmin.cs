@@ -142,7 +142,7 @@ namespace ProyectoTallerII
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            open_child_form(new Form_listar_productos()); 
+            open_child_form(new Form_stock());
         }
 
         //EVENTO PARA QUE SE PUEDA MOVER EL FORMULARIO A PLACER

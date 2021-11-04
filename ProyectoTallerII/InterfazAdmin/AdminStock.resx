@@ -196,10 +196,10 @@
   <data name="txt_buscar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAPgAAAAlCAYAAABvcST6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAClSURBVHhe7dOxCcQwAARB9V+VhMr4MlyAjUDJt7DMwCWX
-        7wDi9t6/OedrZo2dpm/eY5wD6DhN37wFDjUChzCBQ5jAIUzgECZwCBM4hAkcwgQOYQKHMIFDmMAhTOAQ
-        JnAIEziECRzCBA5hAocwgUOYwCFM4BAmcAgTOIQJHMIEDmEChzCBQ5jAIUzgECZwCBM4hAkcwv4CX2s9
-        5zCzxk7TN2+gaYwPSNZs98v5dy4AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACoSURBVHhe7dOxCQMxAARB9V+VXm24CYELeCNQ4haWOZjk
+        8h1mFt9a6zPnfIGG0/TNe4xz7L2BiNP0zVvgUCNwCBM4hAkcwgQOYQKHMIFDmMAhTOAQJnAIEziECRzC
+        BA5hAocwgUOYwCFM4BAmcAgTOIQJHMIEDmEChzCBQ5jAIUzgECZwCBM4hAkcwgQOYQKHMIFDmMAh7C/w
+        53m+5wAaTtM3bzNrbowf8HDlM+QLMMsAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="cod.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -253,10 +253,10 @@
   <data name="txt_stock.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAAAmCAYAAACf3+TfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dPBCcMwAARB9V+VhMtIGSnAQcF5GDYVeAbu
-        c/8dwB/HcbzmnKfZ07dbuLIYYx/A+Y3jykIY8CMMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAM
-        CMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAcAtjrfXeh9nTt1u4
-        sgDuxvgA6YGEMd3w+hMAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVHhe7dPBCcMwAARB9V+V5TbShCAFJAich2FTgedg
+        PvffYWZ/dp7n6ziODzzdbuHKYox9rLXg8XYLVxbCgB9hQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQ
+        BgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGhFsYc873PuDp
+        dgtXFmZ23xhfN4n8bE7F0tsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="lbl_producto_stock.BaseStylesheet" xml:space="preserve">
@@ -283,28 +283,28 @@
   <data name="txt_producto_cod.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAAAmCAYAAACf3+TfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dPBCcMwAARB9V+VhMtIGSnAQcF5GDYVeAbu
-        c/8dwB/HcbzmnKfZ07dbuLIYYx/A+Y3jykIY8CMMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAM
-        CMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAcAtjrfXeh9nTt1u4
-        sgDuxvgA6YGEMd3w+hMAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVHhe7dPBCcMwAARB9V+V5TbShCAFJAich2FTgedg
+        PvffYWZ/dp7n6ziODzzdbuHKYox9rLXg8XYLVxbCgB9hQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQ
+        BgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGhFsYc873PuDp
+        dgtXFmZ23xhfN4n8bE7F0tsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txt_producto_nombre.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAAAmCAYAAACf3+TfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dPBCcMwAARB9V+VhMtIGSnAQcF5GDYVeAbu
-        c/8dwB/HcbzmnKfZ07dbuLIYYx/A+Y3jykIY8CMMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAM
-        CMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAcAtjrfXeh9nTt1u4
-        sgDuxvgA6YGEMd3w+hMAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVHhe7dPBCcMwAARB9V+V5TbShCAFJAich2FTgedg
+        PvffYWZ/dp7n6ziODzzdbuHKYox9rLXg8XYLVxbCgB9hQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQ
+        BgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGhFsYc873PuDp
+        dgtXFmZ23xhfN4n8bE7F0tsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="txt_producto_costo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAAAmCAYAAACf3+TfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dPBCcMwAARB9V+VhMtIGSnAQcF5GDYVeAbu
-        c/8dwB/HcbzmnKfZ07dbuLIYYx/A+Y3jykIY8CMMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAM
-        CMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAcAtjrfXeh9nTt1u4
-        sgDuxvgA6YGEMd3w+hMAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVHhe7dPBCcMwAARB9V+V5TbShCAFJAich2FTgedg
+        PvffYWZ/dp7n6ziODzzdbuHKYox9rLXg8XYLVxbCgB9hQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQ
+        BgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGhFsYc873PuDp
+        dgtXFmZ23xhfN4n8bE7F0tsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btn_stock_agregar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -319,10 +319,10 @@
   <data name="txt_producto_venta.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAMYAAAAmCAYAAACf3+TfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACfSURBVHhe7dPBCcMwAARB9V+VhMtIGSnAQcF5GDYVeAbu
-        c/8dwB/HcbzmnKfZ07dbuLIYYx/A+Y3jykIY8CMMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAM
-        CMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAIAwIwoAgDAjCgCAMCMKAcAtjrfXeh9nTt1u4
-        sgDuxvgA6YGEMd3w+hMAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACiSURBVHhe7dPBCcMwAARB9V+V5TbShCAFJAich2FTgedg
+        PvffYWZ/dp7n6ziODzzdbuHKYox9rLXg8XYLVxbCgB9hQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQ
+        BgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGBGFAEAYEYUAQBgRhQBAGhFsYc873PuDp
+        dgtXFmZ23xhfN4n8bE7F0tsAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
