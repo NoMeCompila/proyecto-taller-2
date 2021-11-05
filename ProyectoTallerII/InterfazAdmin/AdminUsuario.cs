@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using CapaNegocio;
 
 namespace ProyectoTallerII
 {
@@ -30,7 +31,7 @@ namespace ProyectoTallerII
 
             txt_user_nombre.Clear();  txt_user_apellido.Clear();   txt_user_dni.Clear();
             txt_user_usuario.Clear(); txt_user_contraseña.Clear(); txt_user_email.Clear();
-            drd_user_perfil.SelectedIndex = 0;
+            //drd_user_perfil.SelectedIndex = 0;
             txt_user_tel.Clear(); txt_user_adress.Clear();
             dtp_user_date_birth.Value = DateTime.Now;
             
@@ -53,6 +54,7 @@ namespace ProyectoTallerII
             }
         }
 
+        // funcion que evalúa si el usuario es menor de eddad (se debe ser mayor para poder trabajar en el sistema)
         private int validateAge()
         {
             DateTime fechaHoy = DateTime.Today;
@@ -64,10 +66,11 @@ namespace ProyectoTallerII
         private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;//MUY IMPORTANTE
-            Eliminar.Text = "Eliminar";
+            //Eliminar.Text = "Eliminar";
 
             try
             {
+                /*
                 int posicion = dtg_usuarios.CurrentRow.Index;
 
                 if (dtg_usuarios.Columns[e.ColumnIndex].Name == "Eliminar")
@@ -81,7 +84,7 @@ namespace ProyectoTallerII
                     {
                         limpiar();
                     }
-                }
+                } */
             }
             catch(NullReferenceException)
             {
@@ -248,6 +251,7 @@ namespace ProyectoTallerII
                               MessageBoxIcon.Question,
                               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
+                    /*
                     int writeRow = dtg_usuarios.Rows.Count;
                     dtg_usuarios.Rows.Add(1);
 
@@ -261,7 +265,7 @@ namespace ProyectoTallerII
                     dtg_usuarios.Rows[writeRow].Cells[7].Value = txt_user_tel.Text;
                     dtg_usuarios.Rows[writeRow].Cells[8].Value = txt_user_adress.Text;
                     dtg_usuarios.Rows[writeRow].Cells[9].Value = dtp_user_date_birth.Text;
-
+                    */
 
                     limpiar();
                 }
@@ -277,10 +281,8 @@ namespace ProyectoTallerII
             if (e.RowIndex == -1) return;
             try
             {
+                /*
                 fila = dtg_usuarios.CurrentRow.Index;
-
-                
-
                 txt_user_nombre.Text = dtg_usuarios[0, fila].Value.ToString();
                 txt_user_apellido.Text = dtg_usuarios[1, fila].Value.ToString();
                 txt_user_dni.Text = dtg_usuarios[2, fila].Value.ToString();
@@ -291,6 +293,7 @@ namespace ProyectoTallerII
                 txt_user_tel.Text = dtg_usuarios[7, fila].Value.ToString();
                 txt_user_adress.Text = dtg_usuarios[8, fila].Value.ToString();
                 dtp_user_date_birth.Text = dtg_usuarios[9, fila].Value.ToString();
+                */
 
                 btn_user_agregar.Enabled = false;
                 btn_modificar.Enabled = true;
@@ -445,6 +448,7 @@ namespace ProyectoTallerII
                 adress = txt_user_adress.Text;
                 birth = dtp_user_date_birth.Text;
 
+                /*
                 dtg_usuarios[0, fila].Value = txt_user_nombre.Text;
                 dtg_usuarios[1, fila].Value = txt_user_apellido.Text;
                 dtg_usuarios[2, fila].Value = txt_user_dni.Text;
@@ -455,7 +459,7 @@ namespace ProyectoTallerII
                 dtg_usuarios[7, fila].Value = txt_user_tel.Text;
                 dtg_usuarios[8, fila].Value = txt_user_adress.Text;
                 dtg_usuarios[9, fila].Value = dtp_user_date_birth.Text;
-
+                */
                 limpiar();
 
             }
@@ -532,7 +536,6 @@ namespace ProyectoTallerII
             }
             
         }
-
         private void txt_user_contraseña_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
@@ -570,6 +573,28 @@ namespace ProyectoTallerII
             {
                 e.Handled = true;
             }
+        }
+
+        private void listar_perfiles()
+        {
+            cn_perfiles objPer = new cn_perfiles();
+            drd_user_perfil.DataSource = objPer.mostrar_perfiles();
+            drd_user_perfil.DisplayMember = "descripcion";
+            drd_user_perfil.ValueMember = "id_perfil";
+        }
+
+        private void mostrar_usuarios()
+        {
+            //instancia de un objeto cliente
+            cn_usuarios cliente_obj = new cn_usuarios();
+            dgv_usuarios.DataSource = cliente_obj.mostrar_usuarios();
+        }
+
+
+        private void Form_usuarios_Load(object sender, EventArgs e)
+        {
+            this.mostrar_usuarios();
+            this.listar_perfiles();
         }
     }
 }

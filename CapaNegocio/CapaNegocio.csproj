@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="cn_clientes.cs" />
+    <Compile Include="cn_perfiles.cs" />
+    <Compile Include="cn_usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

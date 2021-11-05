@@ -110,3 +110,9 @@ select * from Cliente;
 ALTER TABLE Cliente
 	ADD estado boolean default true;
 UPDATE Cliente set estado = 1;
+
+-- todo: modificaciones a la tabla Usuario
+ALTER TABLE Usuario
+	ADD estado BIT default 1;
+UPDATE Usuario SET estado = 1;
+

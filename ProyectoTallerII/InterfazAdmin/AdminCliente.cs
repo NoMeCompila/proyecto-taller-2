@@ -324,7 +324,6 @@ namespace ProyectoTallerII
             //instancia de un objeto cliente
             cn_clientes cliente_obj = new cn_clientes();
             dataG_usuarios.DataSource = cliente_obj.mostrar_clientes_admin();
-
         }
 
 
@@ -388,7 +387,6 @@ namespace ProyectoTallerII
             }
         }
 
-
         //codigo para el buscador dinámico
         //objeto donde se almacenan los resultados de la busqueda dinámica
         DataSet resultados = new DataSet();
@@ -437,6 +435,11 @@ namespace ProyectoTallerII
             }
 
             this.filtro.RowFilter = salida_datos;
+        }
+
+        private void txt_user_dni_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
