@@ -191,5 +191,10 @@ namespace ProyectoTallerII
         {
             open_child_form(new Form_back());
         }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            open_child_form(new Form_usuarios());
+        }
     }
 }
