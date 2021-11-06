@@ -255,6 +255,7 @@ namespace ProyectoTallerII
             this.txt_buscar.TextPlaceholder = "Buscar...";
             this.txt_buscar.UseSystemPasswordChar = false;
             this.txt_buscar.WordWrap = true;
+            this.txt_buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyUp);
             // 
             // bunifuPanel1
             // 

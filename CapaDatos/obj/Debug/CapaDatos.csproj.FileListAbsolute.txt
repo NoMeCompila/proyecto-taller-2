@@ -5,3 +5,4 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\bin\Debug\System.D
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete

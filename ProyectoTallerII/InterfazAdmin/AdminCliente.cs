@@ -337,17 +337,7 @@ namespace ProyectoTallerII
         }
 
 
-        public void mostrar_busqueda()
-        {
-            
-            //mostrar_client_admin();
-            this.leer_datos("SELECT Cliente.id_cliente as ID, Cliente.nombre AS NOMBRE, Cliente.apellido AS APELLIDO, Cliente.dni AS DNI, Cliente.email AS EMAIL, Cliente.telefono AS TELÉFONO, Cliente.direccion AS DIRECCIÓN, Cliente.fecha_nac AS 'FECHA NACIMIENTO' FROM Cliente", ref resultados, "Cliente");
-            //probando buscador
-            this.filtro = ((DataTable)resultados.Tables["Cliente"]).DefaultView;
 
-            //igualamos el datagridview al resultado del filtro
-            this.dataG_usuarios.DataSource = filtro;
-        }
 
         private void dataG_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -436,6 +426,29 @@ namespace ProyectoTallerII
 
             this.filtro.RowFilter = salida_datos;
         }
+
+        private void mostrar_busqueda()
+        {
+
+            //mostrar_client_admin();
+            this.leer_datos("SELECT " +
+                "Cliente.id_cliente as ID, " +
+                "Cliente.nombre AS NOMBRE, " +
+                "Cliente.apellido AS APELLIDO, " +
+                "Cliente.dni AS DNI, " +
+                "Cliente.email AS EMAIL, " +
+                "Cliente.telefono AS TELÉFONO, " +
+                "Cliente.direccion AS DIRECCIÓN, " +
+                "Cliente.fecha_nac AS " +
+                "'FECHA NACIMIENTO' " +
+                "FROM Cliente", ref resultados, "Cliente");
+            //probando buscador
+            this.filtro = ((DataTable)resultados.Tables["Cliente"]).DefaultView;
+
+            //igualamos el datagridview al resultado del filtro
+            this.dataG_usuarios.DataSource = filtro;
+        }
+
 
         private void txt_user_dni_TextChanged(object sender, EventArgs e)
         {
