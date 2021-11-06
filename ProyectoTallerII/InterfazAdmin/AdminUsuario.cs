@@ -14,6 +14,7 @@ namespace ProyectoTallerII
 {
     public partial class Form_usuarios : Form
     {
+        private string id = null;
         int fila;
         public Form_usuarios()
         {
@@ -24,14 +25,14 @@ namespace ProyectoTallerII
         //limpiar es una funcion que pone a todos los valores por defecto, es decir vacia todos los textBox
         // pone al dropdown en su pirmer valor "Administrador" y setea el datetimepicker en la fecha actual
 
-
+        cn_usuarios objetoCN = new cn_usuarios();
         void limpiar()
         {
             btn_modificar.Enabled = false;
+            btn_user_elimiar.Enabled = false;
 
             txt_user_nombre.Clear();  txt_user_apellido.Clear();   txt_user_dni.Clear();
             txt_user_usuario.Clear(); txt_user_contraseña.Clear(); txt_user_email.Clear();
-            //drd_user_perfil.SelectedIndex = 0;
             txt_user_tel.Clear(); txt_user_adress.Clear();
             dtp_user_date_birth.Value = DateTime.Now;
             
@@ -245,27 +246,38 @@ namespace ProyectoTallerII
             }
             else
             {
-                if (MessageBox.Show("Seguro que desea guardar?",
+                if (MessageBox.Show("Seguro que desea guardar al nuevo usuario?",
                               "Guardar Datos!",
                               MessageBoxButtons.YesNo,
                               MessageBoxIcon.Question,
                               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    /*
-                    int writeRow = dtg_usuarios.Rows.Count;
-                    dtg_usuarios.Rows.Add(1);
+                    try
+                    {
+                        objetoCN.guardar_usuario(
+                                             txt_user_nombre.Text,
+                                             txt_user_apellido.Text,
+                                             txt_user_dni.Text,
+                                             txt_user_usuario.Text,
+                                             txt_user_contraseña.Text,
+                                             txt_user_email.Text,
+                                             Convert.ToInt32(drd_user_perfil.SelectedValue),
+                                             txt_user_tel.Text,
+                                             txt_user_adress.Text,
+                                             dtp_user_date_birth.Text);
 
-                    dtg_usuarios.Rows[writeRow].Cells[0].Value = txt_user_nombre.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[1].Value = txt_user_apellido.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[2].Value = txt_user_dni.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[3].Value = txt_user_usuario.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[4].Value = txt_user_contraseña.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[5].Value = txt_user_email.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[6].Value = drd_user_perfil.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[7].Value = txt_user_tel.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[8].Value = txt_user_adress.Text;
-                    dtg_usuarios.Rows[writeRow].Cells[9].Value = dtp_user_date_birth.Text;
-                    */
+
+                        MessageBox.Show("Usuario guardado correctamente", "GUARDADO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //mostrar_client_admin(); //se actualioza la vista del DGV
+                        this.mostrar_usuarios();
+                        limpiar();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("No se pudo insertar: " + ex, "ERROR", MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                    }
+
 
                     limpiar();
                 }
@@ -313,156 +325,6 @@ namespace ProyectoTallerII
         private void btn_modificar_Click(object sender, EventArgs e)
         {
 
-            if (txt_user_nombre.Text == "" || txt_user_apellido.Text == "" || txt_user_dni.Text == "" ||
-                txt_user_usuario.Text == "" || txt_user_contraseña.Text == "" || txt_user_email.Text == "" ||
-                drd_user_perfil.Text == "" || txt_user_tel.Text == "" || txt_user_adress.Text == "")
-            {
-                MessageBox.Show("Debe completar todos los campos!", "ERROR!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                );
-            }
-
-            var contraseña = txt_user_contraseña.Text;
-            var dni_usuario = txt_user_dni.Text;
-            var usuario1 = txt_user_usuario.Text;
-
-            //variable para generar una nueva expresion regular quye verifica que elñ texto ingresado contenga al menos un numero
-            var hasNumber = new Regex(@"[0-9]+");
-            var hasUpperCase = new Regex(@"[A-Z]+");
-            var hasLowerCase = new Regex(@"[a-z]+");
-            var hasSymbols = new Regex(@"[\|!#$%&/()=?»«@£§€{}.;'<>_,]+");
-            
-            if (!hasNumber.IsMatch(contraseña))
-            {
-                MessageBox.Show("La contraseña debe incluir por lo menos 1 número",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                
-                txt_user_contraseña.Focus();
-                txt_user_contraseña.Clear();
-                return;
-            }else if (!hasUpperCase.IsMatch(contraseña))
-            {
-                MessageBox.Show("La contraseña debe incluir por lo menos una letra mayúscula",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                
-                txt_user_contraseña.Focus();
-                return;
-            }
-            else if (!hasLowerCase.IsMatch(contraseña))
-            {
-                MessageBox.Show("La contraseña debe incluir por lo menos una letra minúscula",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                txt_user_contraseña.Focus();
-                txt_user_contraseña.Clear();
-                return;
-            }
-            else if (!hasSymbols.IsMatch(contraseña))
-            {
-                MessageBox.Show("La contraseña debe incluir por lo menos un símbolo",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                txt_user_contraseña.Focus();
-                txt_user_contraseña.Clear();
-                return;
-            }
-            else if (contraseña.Length < 8)
-            {
-                MessageBox.Show("La contraseña debe incluir como mínimo 8 caracteres",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                txt_user_contraseña.Focus();
-                txt_user_contraseña.Clear();
-                return;
-            }
-            else if (contraseña.Length > 16)
-            {
-                MessageBox.Show("La contraseña debe tener un máximo de 15 caractere",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                txt_user_contraseña.Focus();
-                txt_user_contraseña.Clear();
-                return;
-            }
-            else if (dni_usuario.Length < 7)
-            {
-                MessageBox.Show("El DNI debe tener un mínimo de 7 caractere",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-
-                txt_user_dni.Focus();
-                txt_user_dni.Clear();
-                return;
-            }
-            else if (usuario1.Length < 3)
-            {
-                MessageBox.Show("El nombre de usuario debe tener un mínimo de 3 caracteres",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-
-                txt_user_usuario.Focus();
-                txt_user_usuario.Clear();
-                return;
-            }
-            else if (!ValidateEmail())
-            {
-                MessageBox.Show("Ingrese un correo válido",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                txt_user_email.Focus();
-                txt_user_email.Clear();
-            }
-            else if (validateAge() < 18)
-            {
-                MessageBox.Show("Usuario menor de edad, ingrese fecha válida",
-                                "Error!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                dtp_user_date_birth.Value = DateTime.Now;
-            }
-            else
-            {
-
-                string name, surname, dni, user, pass, email, perfil, tel, adress, birth;
-
-                name = txt_user_nombre.Text;
-                surname = txt_user_apellido.Text;
-                dni = txt_user_dni.Text;
-                user = txt_user_usuario.Text;
-                pass = txt_user_contraseña.Text;
-                email = txt_user_email.Text;
-                perfil = drd_user_perfil.Text;
-                tel = txt_user_tel.Text;
-                adress = txt_user_adress.Text;
-                birth = dtp_user_date_birth.Text;
-
-                /*
-                dtg_usuarios[0, fila].Value = txt_user_nombre.Text;
-                dtg_usuarios[1, fila].Value = txt_user_apellido.Text;
-                dtg_usuarios[2, fila].Value = txt_user_dni.Text;
-                dtg_usuarios[3, fila].Value = txt_user_usuario.Text;
-                dtg_usuarios[4, fila].Value = txt_user_contraseña.Text;
-                dtg_usuarios[5, fila].Value = txt_user_email.Text;
-                dtg_usuarios[6, fila].Value = drd_user_perfil.Text;
-                dtg_usuarios[7, fila].Value = txt_user_tel.Text;
-                dtg_usuarios[8, fila].Value = txt_user_adress.Text;
-                dtg_usuarios[9, fila].Value = dtp_user_date_birth.Text;
-                */
-                limpiar();
-
-            }
         }
 
         private void txt_user_nombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -595,6 +457,25 @@ namespace ProyectoTallerII
         {
             this.mostrar_usuarios();
             this.listar_perfiles();
+        }
+
+        private void dgv_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_user_nombre.Text = dgv_usuarios.CurrentRow.Cells["nombre"].Value.ToString();
+            txt_user_apellido.Text = dgv_usuarios.CurrentRow.Cells["apellido"].Value.ToString();
+            txt_user_dni.Text = dgv_usuarios.CurrentRow.Cells["dni"].Value.ToString();
+            txt_user_usuario.Text = dgv_usuarios.CurrentRow.Cells["usuario"].Value.ToString();
+            txt_user_contraseña.Text = dgv_usuarios.CurrentRow.Cells["contraseña"].Value.ToString();
+            txt_user_email.Text = dgv_usuarios.CurrentRow.Cells["email"].Value.ToString();
+            drd_user_perfil.Text = dgv_usuarios.CurrentRow.Cells["perfil"].Value.ToString();
+            txt_user_tel.Text = dgv_usuarios.CurrentRow.Cells["teléfono"].Value.ToString();
+            txt_user_adress.Text = dgv_usuarios.CurrentRow.Cells["dirección"].Value.ToString();
+            dtp_user_date_birth.Text = dgv_usuarios.CurrentRow.Cells["fecha nacimiento"].Value.ToString();
+            id = dgv_usuarios.CurrentRow.Cells["id"].Value.ToString();
+
+            btn_user_agregar.Enabled = false;
+            btn_modificar.Enabled = true;
+            btn_user_elimiar.Enabled = true;
         }
     }
 }

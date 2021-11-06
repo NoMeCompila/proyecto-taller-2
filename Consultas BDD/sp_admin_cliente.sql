@@ -54,4 +54,19 @@ AS
     ON us.id_perfil = per.id_perfil
 GO
 
-select * from Cliente;
+-- * Procedimiento almacenado para guardar a un nuevo usuario/empleado en el sistema como administrador
+CREATE PROC sp_guardar_usuario
+	@nombre VARCHAR(100),
+	@apellido VARCHAR(100),
+	@dni VARCHAR(8),
+    @usuario VARCHAR(100),
+    @contra VARCHAR(100),
+	@email VARCHAR(100),
+    @id_perfil int,
+	@tel VARCHAR(15),
+	@direccion VARCHAR(100),
+	@fecha_nac DATE
+AS
+	INSERT INTO Usuario(nombre, apellido, dni, usuario, [Password], email,  id_perfil, telefono, direccion, fecha_nac)
+	VALUES (@nombre, @apellido, @dni, @usuario, @contra, @email, @id_perfil, @tel, @direccion, @fecha_nac)
+GO

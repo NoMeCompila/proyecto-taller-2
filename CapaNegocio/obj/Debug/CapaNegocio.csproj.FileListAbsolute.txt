@@ -8,3 +8,4 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNe
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
