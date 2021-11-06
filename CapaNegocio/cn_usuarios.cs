@@ -27,5 +27,12 @@ namespace CapaNegocio
             objetoCD.guardar_usuario(nombre, apellido, dni, usuario,contraseña, email, id_perfil, tel, 
                 direccion, Convert.ToDateTime(fecha_nac));
         }
+
+        //funcion para ACTUALIZAR  un usuario
+        public void actualizar_usuario(string nombre, string apellido, string dni,string usuario, string contraseña, string email,int id_perfil, string tel,
+            string direccion, string fecha_nac, int id_usuario) // valor extra para saber a que usuario se quiere actualizar
+        {
+            objetoCD.actualizar_usuario(nombre, apellido, dni,usuario,contraseña, email,id_perfil, tel, direccion, Convert.ToDateTime(fecha_nac), Convert.ToInt32(id_usuario));
+        }
     }
 }

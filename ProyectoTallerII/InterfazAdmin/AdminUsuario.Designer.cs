@@ -787,6 +787,7 @@ namespace ProyectoTallerII
             this.btn_modificar.TextMarginLeft = 0;
             this.btn_modificar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_modificar.UseDefaultRadiusAndThickness = true;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_user_limpiar
             // 
