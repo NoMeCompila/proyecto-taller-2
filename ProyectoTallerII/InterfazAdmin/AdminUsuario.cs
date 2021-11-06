@@ -653,6 +653,25 @@ namespace ProyectoTallerII
             btn_user_elimiar.Enabled = true;
         }
 
-
+        private void btn_user_elimiar_Click(object sender, EventArgs e)
+        {
+            id = dgv_usuarios.CurrentRow.Cells["id"].Value.ToString(); //IMPORTATNE: darle valor al id para especificar que dato se quiere actualizar
+            if (MessageBox.Show("Seguro que desea eliminar al usuario?",
+                             "ELIMINAR!",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question,
+                             MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                objetoCN.eliminar_usuario(id);
+                MessageBox.Show("Usuario Eliminado correctamente", "ELIMINADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                //mostrar_client_admin(); //se actualioza la vista del DGV
+                mostrar_usuarios();
+                limpiar();
+            }
+            else
+            {
+                limpiar();
+            }
+        }
     }
 }

@@ -34,5 +34,12 @@ namespace CapaNegocio
         {
             objetoCD.actualizar_usuario(nombre, apellido, dni,usuario,contraseña, email,id_perfil, tel, direccion, Convert.ToDateTime(fecha_nac), Convert.ToInt32(id_usuario));
         }
+
+
+        //funcion para eliminar un usuario físicamente desde un perfil de administrador 
+        public void eliminar_usuario(string id_usuario)
+        {
+            objetoCD.eliminar_usuario(Convert.ToInt32(id_usuario));
+        }
     }
 }

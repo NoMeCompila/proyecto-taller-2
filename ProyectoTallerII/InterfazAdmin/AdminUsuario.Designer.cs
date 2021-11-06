@@ -379,6 +379,7 @@ namespace ProyectoTallerII
             this.btn_user_elimiar.TextMarginLeft = 0;
             this.btn_user_elimiar.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_user_elimiar.UseDefaultRadiusAndThickness = true;
+            this.btn_user_elimiar.Click += new System.EventHandler(this.btn_user_elimiar_Click);
             // 
             // dtp_user_date_birth
             // 

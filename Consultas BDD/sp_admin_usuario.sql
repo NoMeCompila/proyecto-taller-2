@@ -5,7 +5,7 @@
 CREATE PROC sp_eliminar_cliente
 @id_cliente INT
 AS
-delete from Cliente WHERE id_cliente = @id_cliente
+DELETE FROM Cliente WHERE id_cliente = @id_cliente
 GO
 
 -- * Procedimiento almacenado para listar los perfiles de usuario
@@ -77,4 +77,11 @@ SET
 	direccion = @direccion,
 	fecha_nac = @fecha_nac
 WHERE id_usuario= @id_usuario
+GO
+
+-- * Procedimiento almacenado para eliminar físicamente a un usuario desde el perfil de administrador
+CREATE PROC sp_eliminar_usuario
+    @id_usuario INT
+AS
+    DELETE FROM Usuario WHERE id_usuario = @id_usuario
 GO

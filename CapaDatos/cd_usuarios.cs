@@ -14,14 +14,14 @@ namespace CapaDatos
 
         SqlDataReader leer_usuasrios;
         DataTable tabla_usuasrios = new DataTable();
-        SqlCommand comando_usuasrios = new SqlCommand();
+        SqlCommand comando_usuarios = new SqlCommand();
 
         public DataTable mostrar_usuarios()
         {
-            comando_usuasrios.Connection = connection.abrir_conexion();
-            comando_usuasrios.CommandText = "sp_listar_usuarios";
-            comando_usuasrios.CommandType = CommandType.StoredProcedure;
-            leer_usuasrios = comando_usuasrios.ExecuteReader();
+            comando_usuarios.Connection = connection.abrir_conexion();
+            comando_usuarios.CommandText = "sp_listar_usuarios";
+            comando_usuarios.CommandType = CommandType.StoredProcedure;
+            leer_usuasrios = comando_usuarios.ExecuteReader();
             tabla_usuasrios.Load(leer_usuasrios);
             connection.cerrar_conexion();
             return tabla_usuasrios;
@@ -29,21 +29,21 @@ namespace CapaDatos
 
         public void guardar_usuario(string nombre, string apellido, string dni, string usuario, string contraseña, string email, int id_perfil, string tel, string direccion, DateTime fecha_nac)
         {
-            comando_usuasrios.Connection = connection.abrir_conexion();
-            comando_usuasrios.CommandText = "sp_guardar_usuario";
-            comando_usuasrios.CommandType = CommandType.StoredProcedure;
-            comando_usuasrios.Parameters.AddWithValue("@nombre", nombre);
-            comando_usuasrios.Parameters.AddWithValue("@apellido", apellido);
-            comando_usuasrios.Parameters.AddWithValue("@dni", dni);
-            comando_usuasrios.Parameters.AddWithValue("@usuario",usuario);
-            comando_usuasrios.Parameters.AddWithValue("@contra", contraseña);
-            comando_usuasrios.Parameters.AddWithValue("@email", email);
-            comando_usuasrios.Parameters.AddWithValue("@id_perfil", id_perfil);
-            comando_usuasrios.Parameters.AddWithValue("@tel", tel);
-            comando_usuasrios.Parameters.AddWithValue("@direccion", direccion);
-            comando_usuasrios.Parameters.AddWithValue("@fecha_nac", fecha_nac);
-            comando_usuasrios.ExecuteNonQuery();
-            comando_usuasrios.Parameters.Clear();
+            comando_usuarios.Connection = connection.abrir_conexion();
+            comando_usuarios.CommandText = "sp_guardar_usuario";
+            comando_usuarios.CommandType = CommandType.StoredProcedure;
+            comando_usuarios.Parameters.AddWithValue("@nombre", nombre);
+            comando_usuarios.Parameters.AddWithValue("@apellido", apellido);
+            comando_usuarios.Parameters.AddWithValue("@dni", dni);
+            comando_usuarios.Parameters.AddWithValue("@usuario",usuario);
+            comando_usuarios.Parameters.AddWithValue("@contra", contraseña);
+            comando_usuarios.Parameters.AddWithValue("@email", email);
+            comando_usuarios.Parameters.AddWithValue("@id_perfil", id_perfil);
+            comando_usuarios.Parameters.AddWithValue("@tel", tel);
+            comando_usuarios.Parameters.AddWithValue("@direccion", direccion);
+            comando_usuarios.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+            comando_usuarios.ExecuteNonQuery();
+            comando_usuarios.Parameters.Clear();
         }
 
         //funcion para ACTUALIZAR un nuevo usuario
@@ -51,22 +51,33 @@ namespace CapaDatos
             string contraseña,  string email, int id_perfil,string tel, string direccion, 
             DateTime fecha_nac, int id_usuario)
         {
-            comando_usuasrios.Connection = connection.abrir_conexion(); // se abre la conexion
-            comando_usuasrios.CommandText = "sp_actualizar_usuario"; // se ejecuta el procedimiento almacenado para actualizar
-            comando_usuasrios.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato procedimiento almacenado (SP)
-            comando_usuasrios.Parameters.AddWithValue("@nombre", nombre);
-            comando_usuasrios.Parameters.AddWithValue("@apellido", apellido);
-            comando_usuasrios.Parameters.AddWithValue("@dni", dni);
-            comando_usuasrios.Parameters.AddWithValue("@usuario", usuario);
-            comando_usuasrios.Parameters.AddWithValue("@contra", contraseña);
-            comando_usuasrios.Parameters.AddWithValue("@email", email);
-            comando_usuasrios.Parameters.AddWithValue("@id_perfil", id_perfil);
-            comando_usuasrios.Parameters.AddWithValue("@tel", tel);
-            comando_usuasrios.Parameters.AddWithValue("@direccion", direccion);
-            comando_usuasrios.Parameters.AddWithValue("@fecha_nac", fecha_nac);
-            comando_usuasrios.Parameters.AddWithValue("@id_usuario", id_usuario);
-            comando_usuasrios.ExecuteNonQuery(); // se ejecuta la consulta
-            comando_usuasrios.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+            comando_usuarios.Connection = connection.abrir_conexion(); // se abre la conexion
+            comando_usuarios.CommandText = "sp_actualizar_usuario"; // se ejecuta el procedimiento almacenado para actualizar
+            comando_usuarios.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato procedimiento almacenado (SP)
+            comando_usuarios.Parameters.AddWithValue("@nombre", nombre);
+            comando_usuarios.Parameters.AddWithValue("@apellido", apellido);
+            comando_usuarios.Parameters.AddWithValue("@dni", dni);
+            comando_usuarios.Parameters.AddWithValue("@usuario", usuario);
+            comando_usuarios.Parameters.AddWithValue("@contra", contraseña);
+            comando_usuarios.Parameters.AddWithValue("@email", email);
+            comando_usuarios.Parameters.AddWithValue("@id_perfil", id_perfil);
+            comando_usuarios.Parameters.AddWithValue("@tel", tel);
+            comando_usuarios.Parameters.AddWithValue("@direccion", direccion);
+            comando_usuarios.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+            comando_usuarios.Parameters.AddWithValue("@id_usuario", id_usuario);
+            comando_usuarios.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_usuarios.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+        }
+
+        //fincion para eliminar físicamente a un usuario desde un perfil administrador
+        public void eliminar_usuario(int id_usuario)
+        {
+            comando_usuarios.Connection = connection.abrir_conexion();
+            comando_usuarios.CommandText = "sp_eliminar_usuario";
+            comando_usuarios.CommandType = CommandType.StoredProcedure;
+            comando_usuarios.Parameters.AddWithValue("@id_usuario", id_usuario);
+            comando_usuarios.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_usuarios.Parameters.Clear(); //limpiar los aprametros de sql command
         }
     }
 }
