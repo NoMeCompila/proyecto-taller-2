@@ -777,7 +777,7 @@ namespace ProyectoTallerII
             this.txt_producto_cod.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_producto_cod.BorderColorIdle = System.Drawing.Color.Magenta;
             this.txt_producto_cod.BorderRadius = 20;
-            this.txt_producto_cod.BorderThickness = 3;
+            this.txt_producto_cod.BorderThickness = 2;
             this.txt_producto_cod.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_producto_cod.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_producto_cod.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
@@ -854,7 +854,7 @@ namespace ProyectoTallerII
             this.txt_producto_nombre.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txt_producto_nombre.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             this.txt_producto_nombre.BorderColorIdle = System.Drawing.Color.Magenta;
-            this.txt_producto_nombre.BorderRadius = 30;
+            this.txt_producto_nombre.BorderRadius = 20;
             this.txt_producto_nombre.BorderThickness = 2;
             this.txt_producto_nombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_producto_nombre.Cursor = System.Windows.Forms.Cursors.IBeam;
