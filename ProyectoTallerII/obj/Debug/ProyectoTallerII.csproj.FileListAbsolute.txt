@@ -195,3 +195,10 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.AdminCliente.resources
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.IHomeGerente.resources
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\SpreadsheetLight.dll
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\System.Drawing.Common.dll
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\System.IO.Packaging.dll
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\SpreadsheetLight.xml
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\System.IO.Packaging.xml

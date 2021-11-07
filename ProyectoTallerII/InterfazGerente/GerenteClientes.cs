@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using SpreadsheetLight;
+using DocumentFormat.OpenXml;
 
 namespace ProyectoTallerII
 {
@@ -20,7 +22,25 @@ namespace ProyectoTallerII
 
         private void btn_user_agregar_Click(object sender, EventArgs e)
         {
+            int iR=1; //numero de fila
+            SLDocument sl = new SLDocument(); //se crea un objeto de tipo documento
+            //for que recorreel datagridview fila por fila
+            foreach (DataGridViewRow row in dataG_usuarios.Rows)
+            {
+                sl.SetCellValue(iR, 1, row.Cells[0].Value.ToString());
+                sl.SetCellValue(iR, 2, row.Cells[1].Value.ToString());
+                sl.SetCellValue(iR, 3, row.Cells[2].Value.ToString());
+                sl.SetCellValue(iR, 4, row.Cells[3].Value.ToString());
+                sl.SetCellValue(iR, 5, row.Cells[4].Value.ToString());
+                sl.SetCellValue(iR, 6, row.Cells[5].Value.ToString());
+                sl.SetCellValue(iR, 7, row.Cells[6].Value.ToString());
+                sl.SetCellValue(iR, 8, row.Cells[7].Value.ToString());
+                
 
+                iR++;
+            }
+
+            sl.SaveAs(@"C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\Reportes\ReporteClientes.xlsx");
         }
 
         private void GerenteClientes_Load(object sender, EventArgs e)

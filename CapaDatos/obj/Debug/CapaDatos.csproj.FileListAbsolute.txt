@@ -6,3 +6,4 @@ C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDato
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.pdb
 C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
