@@ -52,7 +52,7 @@ namespace ProyectoTallerII
                 iR++;
             }
 
-            sl.SaveAs(@"C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\Reportes\ReporteClientes.xlsx");
+            sl.SaveAs(@"C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Reportes\ReporteClientes.xlsx");
 
             MessageBox.Show("Datos de Clientes exportados correctamente", "EXPORTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
