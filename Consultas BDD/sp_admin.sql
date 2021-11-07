@@ -116,4 +116,3 @@ GO
 								-- TODO: PRODUCTOS
 
 -- * Procedimiento almacenado para ver los productos
-

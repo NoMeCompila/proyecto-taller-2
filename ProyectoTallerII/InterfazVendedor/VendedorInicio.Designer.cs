@@ -66,6 +66,7 @@ namespace ProyectoTallerII
             this.card_inicio.Controls.Add(this.card_textoinicio);
             this.card_inicio.Controls.Add(this.lbl_card_inicio);
             this.card_inicio.Controls.Add(this.pb_inicio);
+            this.card_inicio.Cursor = System.Windows.Forms.Cursors.Help;
             this.card_inicio.LeftSahddow = true;
             this.card_inicio.Location = new System.Drawing.Point(40, 116);
             this.card_inicio.Name = "card_inicio";
@@ -127,6 +128,7 @@ namespace ProyectoTallerII
             this.card_usuarios.Controls.Add(this.bunifuLabel2);
             this.card_usuarios.Controls.Add(this.bunifuLabel1);
             this.card_usuarios.Controls.Add(this.pb_usuarios);
+            this.card_usuarios.Cursor = System.Windows.Forms.Cursors.Help;
             this.card_usuarios.LeftSahddow = true;
             this.card_usuarios.Location = new System.Drawing.Point(448, 116);
             this.card_usuarios.Name = "card_usuarios";
@@ -186,6 +188,7 @@ namespace ProyectoTallerII
             this.card_stock.Controls.Add(this.card_textostock);
             this.card_stock.Controls.Add(this.lbl_card_stock);
             this.card_stock.Controls.Add(this.pb_backup);
+            this.card_stock.Cursor = System.Windows.Forms.Cursors.Help;
             this.card_stock.LeftSahddow = true;
             this.card_stock.Location = new System.Drawing.Point(40, 349);
             this.card_stock.Name = "card_stock";
@@ -255,6 +258,7 @@ namespace ProyectoTallerII
             this.card_backup.Controls.Add(this.card_textobackup);
             this.card_backup.Controls.Add(this.pb_stock);
             this.card_backup.Controls.Add(this.bunifuLabel3);
+            this.card_backup.Cursor = System.Windows.Forms.Cursors.Help;
             this.card_backup.LeftSahddow = true;
             this.card_backup.Location = new System.Drawing.Point(448, 349);
             this.card_backup.Name = "card_backup";
