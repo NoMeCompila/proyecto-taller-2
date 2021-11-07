@@ -41,36 +41,36 @@ namespace ProyectoTallerII
             this.card_stock = new Bunifu.Framework.UI.BunifuCards();
             this.card_textostock = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_card_stock = new Bunifu.UI.WinForms.BunifuLabel();
+            this.pb_backup = new System.Windows.Forms.PictureBox();
             this.pb_stock = new System.Windows.Forms.PictureBox();
             this.card_backup = new Bunifu.Framework.UI.BunifuCards();
             this.card_textobackup = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pb_backup = new System.Windows.Forms.PictureBox();
             this.lbl_inicio = new Bunifu.UI.WinForms.BunifuLabel();
             this.card_inicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_inicio)).BeginInit();
             this.card_usuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_usuarios)).BeginInit();
             this.card_stock.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_stock)).BeginInit();
             this.card_backup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).BeginInit();
             this.SuspendLayout();
             // 
             // card_inicio
             // 
-            this.card_inicio.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.card_inicio.BorderRadius = 5;
+            this.card_inicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(172)))), ((int)(((byte)(249)))));
+            this.card_inicio.BorderRadius = 30;
             this.card_inicio.BottomSahddow = true;
             this.card_inicio.color = System.Drawing.Color.DarkViolet;
             this.card_inicio.Controls.Add(this.card_textoinicio);
             this.card_inicio.Controls.Add(this.lbl_card_inicio);
             this.card_inicio.Controls.Add(this.pb_inicio);
-            this.card_inicio.LeftSahddow = false;
+            this.card_inicio.LeftSahddow = true;
             this.card_inicio.Location = new System.Drawing.Point(40, 116);
             this.card_inicio.Name = "card_inicio";
-            this.card_inicio.RightSahddow = true;
-            this.card_inicio.ShadowDepth = 20;
+            this.card_inicio.RightSahddow = false;
+            this.card_inicio.ShadowDepth = 100;
             this.card_inicio.Size = new System.Drawing.Size(295, 164);
             this.card_inicio.TabIndex = 0;
             this.card_inicio.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuCards1_Paint);
@@ -121,17 +121,17 @@ namespace ProyectoTallerII
             // 
             this.card_usuarios.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.card_usuarios.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.card_usuarios.BorderRadius = 5;
+            this.card_usuarios.BorderRadius = 30;
             this.card_usuarios.BottomSahddow = true;
             this.card_usuarios.color = System.Drawing.Color.DarkViolet;
             this.card_usuarios.Controls.Add(this.bunifuLabel2);
             this.card_usuarios.Controls.Add(this.bunifuLabel1);
             this.card_usuarios.Controls.Add(this.pb_usuarios);
-            this.card_usuarios.LeftSahddow = false;
+            this.card_usuarios.LeftSahddow = true;
             this.card_usuarios.Location = new System.Drawing.Point(448, 116);
             this.card_usuarios.Name = "card_usuarios";
-            this.card_usuarios.RightSahddow = true;
-            this.card_usuarios.ShadowDepth = 20;
+            this.card_usuarios.RightSahddow = false;
+            this.card_usuarios.ShadowDepth = 100;
             this.card_usuarios.Size = new System.Drawing.Size(295, 164);
             this.card_usuarios.TabIndex = 1;
             // 
@@ -180,17 +180,17 @@ namespace ProyectoTallerII
             // 
             this.card_stock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.card_stock.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.card_stock.BorderRadius = 5;
+            this.card_stock.BorderRadius = 30;
             this.card_stock.BottomSahddow = true;
             this.card_stock.color = System.Drawing.Color.DarkViolet;
             this.card_stock.Controls.Add(this.card_textostock);
             this.card_stock.Controls.Add(this.lbl_card_stock);
             this.card_stock.Controls.Add(this.pb_backup);
-            this.card_stock.LeftSahddow = false;
+            this.card_stock.LeftSahddow = true;
             this.card_stock.Location = new System.Drawing.Point(40, 349);
             this.card_stock.Name = "card_stock";
-            this.card_stock.RightSahddow = true;
-            this.card_stock.ShadowDepth = 20;
+            this.card_stock.RightSahddow = false;
+            this.card_stock.ShadowDepth = 100;
             this.card_stock.Size = new System.Drawing.Size(295, 164);
             this.card_stock.TabIndex = 1;
             // 
@@ -225,6 +225,16 @@ namespace ProyectoTallerII
             this.lbl_card_stock.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_card_stock.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
+            // pb_backup
+            // 
+            this.pb_backup.Image = global::ProyectoTallerII.Properties.Resources.bank_2_48;
+            this.pb_backup.Location = new System.Drawing.Point(16, 20);
+            this.pb_backup.Name = "pb_backup";
+            this.pb_backup.Size = new System.Drawing.Size(77, 44);
+            this.pb_backup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_backup.TabIndex = 5;
+            this.pb_backup.TabStop = false;
+            // 
             // pb_stock
             // 
             this.pb_stock.Image = global::ProyectoTallerII.Properties.Resources.cart_black;
@@ -238,18 +248,18 @@ namespace ProyectoTallerII
             // card_backup
             // 
             this.card_backup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.card_backup.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.card_backup.BorderRadius = 5;
+            this.card_backup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(172)))), ((int)(((byte)(249)))));
+            this.card_backup.BorderRadius = 30;
             this.card_backup.BottomSahddow = true;
             this.card_backup.color = System.Drawing.Color.DarkViolet;
             this.card_backup.Controls.Add(this.card_textobackup);
             this.card_backup.Controls.Add(this.pb_stock);
             this.card_backup.Controls.Add(this.bunifuLabel3);
-            this.card_backup.LeftSahddow = false;
+            this.card_backup.LeftSahddow = true;
             this.card_backup.Location = new System.Drawing.Point(448, 349);
             this.card_backup.Name = "card_backup";
-            this.card_backup.RightSahddow = true;
-            this.card_backup.ShadowDepth = 20;
+            this.card_backup.RightSahddow = false;
+            this.card_backup.ShadowDepth = 100;
             this.card_backup.Size = new System.Drawing.Size(295, 164);
             this.card_backup.TabIndex = 1;
             // 
@@ -283,16 +293,6 @@ namespace ProyectoTallerII
             this.bunifuLabel3.Text = "PRODUCTOS";
             this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pb_backup
-            // 
-            this.pb_backup.Image = global::ProyectoTallerII.Properties.Resources.bank_2_48;
-            this.pb_backup.Location = new System.Drawing.Point(16, 20);
-            this.pb_backup.Name = "pb_backup";
-            this.pb_backup.Size = new System.Drawing.Size(77, 44);
-            this.pb_backup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_backup.TabIndex = 5;
-            this.pb_backup.TabStop = false;
             // 
             // lbl_inicio
             // 
@@ -333,10 +333,10 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.pb_usuarios)).EndInit();
             this.card_stock.ResumeLayout(false);
             this.card_stock.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_stock)).EndInit();
             this.card_backup.ResumeLayout(false);
             this.card_backup.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_backup)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

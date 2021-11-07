@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace ProyectoTallerII
 {
@@ -30,7 +32,7 @@ namespace ProyectoTallerII
             txt_producto_costo.Clear();
             txt_producto_venta.Clear();
             drd_productos_categoria.SelectedIndex = 0;
-            pb_producto_imagen.Load(Application.StartupPath + @"\Fotos\imagen_nuestra.png");
+            //pb_producto_imagen.Load(Application.StartupPath + @"\Fotos\imagen_nuestra.png");
 
 
 
@@ -107,7 +109,7 @@ namespace ProyectoTallerII
 
             if (getImage.ShowDialog() == DialogResult.OK)
             {
-                pb_producto_imagen.ImageLocation = getImage.FileName;
+                //pb_producto_imagen.ImageLocation = getImage.FileName;
                 //txt_ruta.Text = getImage.FileName;
             }
             else
@@ -129,8 +131,7 @@ namespace ProyectoTallerII
             if (txt_producto_cod.Text == "" ||
                 txt_producto_nombre.Text == ""
                 || txt_producto_costo.Text == "" ||
-                txt_producto_venta.Text == "" ||
-                pb_producto_imagen.Image == ProyectoTallerII.Properties.Resources.imagen_nuestra)
+                txt_producto_venta.Text == "")
             {
                 MessageBox.Show("Debe completar todos los campos!", "ERROR!",
                                 MessageBoxButtons.OK,
@@ -145,7 +146,7 @@ namespace ProyectoTallerII
                               MessageBoxIcon.Question,
                               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-
+                    /*
                     int writeRow = dtg_stock.Rows.Count;
                     dtg_stock.Rows.Add(1);
 
@@ -156,7 +157,7 @@ namespace ProyectoTallerII
                     dtg_stock.Rows[writeRow].Cells[4].Value = txt_producto_venta.Text;
                     dtg_stock.Rows[writeRow].Cells[5].Value = drd_productos_categoria.Text;
                     dtg_stock.Rows[writeRow].Cells[6].Value = pb_producto_imagen.Image;
-                    
+                    */
                     limpiar();
                 }
             }
@@ -165,17 +166,17 @@ namespace ProyectoTallerII
         private void dtg_stock_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1) return;//MUY IMPORTANTE
-            Eliminar.Text = "Eliminar";
+            //Eliminar.Text = "Eliminar";
 
             try
             {
-                int posicion = dtg_stock.CurrentRow.Index;
+                //int posicion = dtg_stock.CurrentRow.Index;
 
-                if (dtg_stock.Columns[e.ColumnIndex].Name == "Eliminar")
+                if (true)
                 {
                     if (MessageBox.Show("¿Seguro que quiere eliminar?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        dtg_stock.Rows.RemoveAt(posicion);
+                        //dtg_stock.Rows.RemoveAt(posicion);
                         limpiar();
                     }
                     else
@@ -201,6 +202,7 @@ namespace ProyectoTallerII
 
             try
             {
+                /*
                 fila = dtg_stock.CurrentRow.Index;
 
                 txt_producto_cod.Text = dtg_stock.CurrentRow.Cells[0].Value.ToString();
@@ -214,7 +216,7 @@ namespace ProyectoTallerII
                 Bitmap img = (Bitmap)dtg_stock.CurrentRow.Cells[6].Value;
                 img.Save(ms, ImageFormat.Jpeg);
                 pb_producto_imagen.Image = Image.FromStream(ms);
-
+                */
 
 
 
@@ -248,6 +250,7 @@ namespace ProyectoTallerII
             }
             else
             {
+                /*
                 dtg_stock[0, fila].Value = txt_producto_cod.Text;
                 dtg_stock[1, fila].Value = txt_producto_nombre.Text;
                 dtg_stock[2, fila].Value = txt_stock.Text;
@@ -255,9 +258,84 @@ namespace ProyectoTallerII
                 dtg_stock[4, fila].Value = txt_producto_venta.Text;
                 dtg_stock[5, fila].Value = drd_productos_categoria.Text;
                 dtg_stock[6, fila].Value = pb_producto_imagen.Image;
+                */
 
                 limpiar();
             }
+        }
+
+        //codigo para el buscador dinámico
+        //objeto donde se almacenan los resultados de la busqueda dinámica
+        DataSet resultados = new DataSet();
+
+        // objeto donde se aplican los fitros
+        DataView filtro;
+        public void leer_datos(string query, ref DataSet setprincipal, string tabla)
+        {
+            resultados.Clear();  // MUY IMPORTANTE LIMPIAR LOS RESULTADOS PARA EVITAR SORBECARGAR EL DATAGRIDVIEW
+            string cadena = "Server=DESKTOP-C7M4JOU;Database=JOYERIA;Integrated Security=true";
+            SqlConnection cn = new SqlConnection(cadena);
+            SqlCommand cmd = new SqlCommand(query, cn);
+            cmd.Parameters.Clear();
+            cn.Open();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            da.Fill(setprincipal, tabla);
+            da.Dispose();
+            cn.Close();
+        }
+
+        private void txt_buscar_KeyUp(object sender, KeyEventArgs e)
+        {
+            string salida_datos = "";
+            string[] palabras_busqueda = this.txt_buscar.Text.Split(' ');
+
+            foreach (string palabra in palabras_busqueda)
+            {
+                if (salida_datos.Length == 0)
+                {
+                    salida_datos = "(tipo LIKE '%" + palabra +
+                        "%' OR nombre LIKE '%" + palabra +
+                        "%' OR material LIKE '%" + palabra + "%')";
+                }
+                else
+                {
+                    salida_datos += "AND (tipo LIKE '%" + palabra +
+                        "%' OR nombre LIKE '%" + palabra +
+                        "%' OR material LIKE '%" + palabra + "%')";
+                }
+            }
+
+            this.filtro.RowFilter = salida_datos;
+        }
+
+
+        private void mostrar_busqueda()
+        {
+
+            //mostrar_client_admin();
+            this.leer_datos("SELECT " +
+                "pro.id_producto AS  ID, " +
+                "cat.descripcion AS TIPO, " +
+                "pro.cod_producto AS CODIGO, " +
+                "pro.nombre AS NOMBRE, " +
+                "pro.stock AS STOCK, " +
+                "pro.precio_costo AS 'PRECIO COSTO', " +
+                "pro.precio_venta AS 'PRECIO VENTA', " +
+                "pro.marca AS MARCA," +
+                "pro.genero AS GENERO," +
+                "pro.material AS MATERIAL," +
+                "pro.gema AS GEMA FROM Producto pro INNER JOIN Categoria cat  ON pro.fk_id_categoria = cat.id_categoria WHERE pro.estado = 1", ref resultados, "Producto");
+            //probando buscador
+            this.filtro = ((DataTable)resultados.Tables["Producto"]).DefaultView;
+
+            //igualamos el datagridview al resultado del filtro
+            this.dtg_stock.DataSource = filtro;
+        }
+
+        private void Form_stock_Load(object sender, EventArgs e)
+        {
+            mostrar_busqueda();
         }
     }
 }

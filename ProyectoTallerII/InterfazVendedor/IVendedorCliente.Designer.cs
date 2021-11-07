@@ -67,8 +67,6 @@ namespace ProyectoTallerII
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnl_buscador = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.lbl_pbuckup = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.lbl_username = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_user_title = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
@@ -86,7 +84,6 @@ namespace ProyectoTallerII
             this.btn_user_agregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dataG_usuarios = new System.Windows.Forms.DataGridView();
             this.pnl_buscador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataG_usuarios)).BeginInit();
             this.SuspendLayout();
@@ -96,8 +93,6 @@ namespace ProyectoTallerII
             this.pnl_buscador.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_buscador.Controls.Add(this.button1);
-            this.pnl_buscador.Controls.Add(this.lbl_pbuckup);
-            this.pnl_buscador.Controls.Add(this.lbl_username);
             this.pnl_buscador.Controls.Add(this.lbl_user_title);
             this.pnl_buscador.Controls.Add(this.txt_buscar);
             this.pnl_buscador.Location = new System.Drawing.Point(26, 60);
@@ -119,39 +114,6 @@ namespace ProyectoTallerII
             this.button1.Size = new System.Drawing.Size(43, 37);
             this.button1.TabIndex = 8;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lbl_pbuckup
-            // 
-            this.lbl_pbuckup.AllowFocused = false;
-            this.lbl_pbuckup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_pbuckup.AutoSizeHeight = true;
-            this.lbl_pbuckup.BorderRadius = 24;
-            this.lbl_pbuckup.Image = ((System.Drawing.Image)(resources.GetObject("lbl_pbuckup.Image")));
-            this.lbl_pbuckup.IsCircle = true;
-            this.lbl_pbuckup.Location = new System.Drawing.Point(680, 7);
-            this.lbl_pbuckup.Name = "lbl_pbuckup";
-            this.lbl_pbuckup.Size = new System.Drawing.Size(49, 49);
-            this.lbl_pbuckup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lbl_pbuckup.TabIndex = 3;
-            this.lbl_pbuckup.TabStop = false;
-            this.lbl_pbuckup.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AllowParentOverrides = false;
-            this.lbl_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_username.AutoEllipsis = false;
-            this.lbl_username.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbl_username.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbl_username.Location = new System.Drawing.Point(544, 12);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_username.Size = new System.Drawing.Size(130, 20);
-            this.lbl_username.TabIndex = 2;
-            this.lbl_username.Text = "Fernando Caballero";
-            this.lbl_username.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_username.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbl_user_title
             // 
@@ -1202,7 +1164,6 @@ namespace ProyectoTallerII
             this.Load += new System.EventHandler(this.Form_vendedor_clientes_Load);
             this.pnl_buscador.ResumeLayout(false);
             this.pnl_buscador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataG_usuarios)).EndInit();
@@ -1214,8 +1175,6 @@ namespace ProyectoTallerII
 
         private System.Windows.Forms.Panel pnl_buscador;
         private System.Windows.Forms.Button button1;
-        private Bunifu.UI.WinForms.BunifuPictureBox lbl_pbuckup;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_username;
         private Bunifu.UI.WinForms.BunifuLabel lbl_user_title;
         private Bunifu.UI.WinForms.BunifuTextBox txt_buscar;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;

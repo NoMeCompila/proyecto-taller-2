@@ -1,4 +1,4 @@
-								--! PROCEDIMIENTOS ALMACENADOS --
+								--! PROCEDIMIENTOS ALMACENADOS PARA EL VENDEDOR --
 
 -- * Procedimiento almacenado para guardar un nuevo cliente
 CREATE PROC sp_guardar_cliente

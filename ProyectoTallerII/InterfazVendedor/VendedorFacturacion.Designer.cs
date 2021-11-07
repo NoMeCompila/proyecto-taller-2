@@ -104,9 +104,7 @@ namespace ProyectoTallerII
             this.dtp_user_date_birth = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.lbl_pbuckup = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_username = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_stock_title = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_stock_limpiar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -118,7 +116,6 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.dtg_stock)).BeginInit();
             this.panel_stock.SuspendLayout();
             this.pnl_buscador.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1024,9 +1021,7 @@ namespace ProyectoTallerII
             this.pnl_buscador.Controls.Add(this.dtp_user_date_birth);
             this.pnl_buscador.Controls.Add(this.bunifuLabel3);
             this.pnl_buscador.Controls.Add(this.bunifuTextBox2);
-            this.pnl_buscador.Controls.Add(this.lbl_pbuckup);
             this.pnl_buscador.Controls.Add(this.bunifuLabel4);
-            this.pnl_buscador.Controls.Add(this.lbl_username);
             this.pnl_buscador.Controls.Add(this.lbl_stock_title);
             this.pnl_buscador.Location = new System.Drawing.Point(12, 39);
             this.pnl_buscador.Name = "pnl_buscador";
@@ -1045,9 +1040,9 @@ namespace ProyectoTallerII
             this.bunifuTextBox1.BorderColorActive = System.Drawing.Color.DodgerBlue;
             this.bunifuTextBox1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuTextBox1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox1.BorderRadius = 1;
-            this.bunifuTextBox1.BorderThickness = 1;
+            this.bunifuTextBox1.BorderColorIdle = System.Drawing.Color.Magenta;
+            this.bunifuTextBox1.BorderRadius = 20;
+            this.bunifuTextBox1.BorderThickness = 3;
             this.bunifuTextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox1.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
@@ -1081,7 +1076,7 @@ namespace ProyectoTallerII
             stateProperties31.ForeColor = System.Drawing.Color.Empty;
             stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox1.OnHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.Silver;
+            stateProperties32.BorderColor = System.Drawing.Color.Magenta;
             stateProperties32.FillColor = System.Drawing.Color.White;
             stateProperties32.ForeColor = System.Drawing.Color.Empty;
             stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -1133,6 +1128,7 @@ namespace ProyectoTallerII
             this.dtp_user_date_birth.Name = "dtp_user_date_birth";
             this.dtp_user_date_birth.Size = new System.Drawing.Size(97, 32);
             this.dtp_user_date_birth.TabIndex = 23;
+            this.dtp_user_date_birth.Value = new System.DateTime(2021, 11, 6, 22, 12, 0, 0);
             // 
             // bunifuLabel3
             // 
@@ -1162,9 +1158,9 @@ namespace ProyectoTallerII
             this.bunifuTextBox2.BorderColorActive = System.Drawing.Color.DodgerBlue;
             this.bunifuTextBox2.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.bunifuTextBox2.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.Silver;
-            this.bunifuTextBox2.BorderRadius = 1;
-            this.bunifuTextBox2.BorderThickness = 1;
+            this.bunifuTextBox2.BorderColorIdle = System.Drawing.Color.Magenta;
+            this.bunifuTextBox2.BorderRadius = 20;
+            this.bunifuTextBox2.BorderThickness = 2;
             this.bunifuTextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.bunifuTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuTextBox2.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
@@ -1198,7 +1194,7 @@ namespace ProyectoTallerII
             stateProperties35.ForeColor = System.Drawing.Color.Empty;
             stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.bunifuTextBox2.OnHoverState = stateProperties35;
-            stateProperties36.BorderColor = System.Drawing.Color.Silver;
+            stateProperties36.BorderColor = System.Drawing.Color.Magenta;
             stateProperties36.FillColor = System.Drawing.Color.White;
             stateProperties36.ForeColor = System.Drawing.Color.Empty;
             stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
@@ -1224,22 +1220,6 @@ namespace ProyectoTallerII
             this.bunifuTextBox2.UseSystemPasswordChar = false;
             this.bunifuTextBox2.WordWrap = true;
             // 
-            // lbl_pbuckup
-            // 
-            this.lbl_pbuckup.AllowFocused = false;
-            this.lbl_pbuckup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_pbuckup.AutoSizeHeight = true;
-            this.lbl_pbuckup.BorderRadius = 24;
-            this.lbl_pbuckup.Image = ((System.Drawing.Image)(resources.GetObject("lbl_pbuckup.Image")));
-            this.lbl_pbuckup.IsCircle = true;
-            this.lbl_pbuckup.Location = new System.Drawing.Point(707, 19);
-            this.lbl_pbuckup.Name = "lbl_pbuckup";
-            this.lbl_pbuckup.Size = new System.Drawing.Size(49, 49);
-            this.lbl_pbuckup.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.lbl_pbuckup.TabIndex = 3;
-            this.lbl_pbuckup.TabStop = false;
-            this.lbl_pbuckup.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // bunifuLabel4
             // 
             this.bunifuLabel4.AllowParentOverrides = false;
@@ -1255,23 +1235,6 @@ namespace ProyectoTallerII
             this.bunifuLabel4.Text = "Encabezado";
             this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.AllowParentOverrides = false;
-            this.lbl_username.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_username.AutoEllipsis = false;
-            this.lbl_username.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lbl_username.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_username.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.lbl_username.Location = new System.Drawing.Point(628, 30);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_username.Size = new System.Drawing.Size(73, 20);
-            this.lbl_username.TabIndex = 2;
-            this.lbl_username.Text = "Vendedor1";
-            this.lbl_username.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lbl_username.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // lbl_stock_title
             // 
@@ -1858,7 +1821,6 @@ namespace ProyectoTallerII
             this.panel_stock.PerformLayout();
             this.pnl_buscador.ResumeLayout(false);
             this.pnl_buscador.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.lbl_pbuckup)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -1880,8 +1842,6 @@ namespace ProyectoTallerII
         private Bunifu.UI.WinForms.BunifuDatePicker dtp_user_date_birth;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
-        private Bunifu.UI.WinForms.BunifuPictureBox lbl_pbuckup;
-        private Bunifu.UI.WinForms.BunifuLabel lbl_username;
         private Bunifu.UI.WinForms.BunifuLabel lbl_stock_title;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
         private Bunifu.UI.WinForms.BunifuHScrollBar bunifuHScrollBar1;

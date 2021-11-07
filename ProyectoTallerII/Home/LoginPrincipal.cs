@@ -50,9 +50,9 @@ namespace ProyectoTallerII
                 form_inicio.Show();
 
             }
-            else if (txt_user.Text == "Gerente1" && txt_pass.Text == "Gerente123!")
+            else if (txt_user.Text == "qwe" && txt_pass.Text == "qwe")
             {
-                Form form_gerente = new Form_Gerente();
+                Form form_gerente = new IHomeGerente();
                 this.Hide();
                 form_gerente.Show();
             }
@@ -65,7 +65,7 @@ namespace ProyectoTallerII
             }
             else
             {
-                MessageBox.Show("Usuario y(o Contraseña incorrectas", "ERROR!",
+                MessageBox.Show("Usuario y/o Contraseña incorrectas", "ERROR!",
                                MessageBoxButtons.OK,
                                MessageBoxIcon.Information
                );

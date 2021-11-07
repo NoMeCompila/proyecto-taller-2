@@ -1,4 +1,4 @@
-								-- !ESTRUCTURA DE LA BASE DE DATOS --
+								--! ESTRUCTURA DE LA BASE DE DATOS --
 
 --todo: CREACION DE LA BASE DE DATOS
 create database Joyeria;
@@ -12,7 +12,6 @@ create table Perfil(
 	descripcion varchar(100) not null,
 	constraint chk_desc check (descripcion in ('Vendedor', 'Administrador', 'Supervisor'))
 );
-
 
 -- * TABLA USUARIO: tabla con todos los datos personales de los usuarios
 create table Usuario(
@@ -116,3 +115,52 @@ ALTER TABLE Usuario
 	ADD estado BIT default 1;
 UPDATE Usuario SET estado = 1;
 
+-- todo: modificaciones a la tabla Producto
+ALTER TABLE Producto
+	DROP COLUMN coleccion;
+
+ALTER TABLE Producto
+	DROP COLUMN imagen;
+
+EXEC sp_help Producto;
+
+ALTER TABLE Producto
+	ADD estado BIT default 1;
+
+-- INSERTANDO DATOS EN LA TABLA CATEGORIA
+
+
+--'Alianzas', 
+--'Aros', 'Colgantes', 'Pendientes', 'Anillos', 
+--'Pulseras', 'Cadenas'
+INSERT INTO Categoria
+	(descripcion)
+VALUES
+	('Anillos'),
+	('Alianzas'),
+	('Aros'),
+	('Colgantes'),
+	('Pendientes'),
+	('Pulseras');
+
+select * from Categoria;
+
+select * from Producto;
+
+
+
+SELECT 
+	pro.id_producto As  ID,           
+    cat.descripcion AS TIPO, 
+    pro.cod_producto AS CODIGO, 
+    pro.nombre AS NOMBRE, 
+    pro.stock AS STOCK, 
+    pro.precio_costo AS 'PRECIO COSTO', 
+    pro.precio_venta AS 'PRECIO VENTA', 
+    pro.marca AS MARCA,
+    pro.genero AS GENERO,
+    pro.material AS MATERIAL,
+    pro.gema AS GEMA
+FROM Producto pro INNER JOIN Categoria cat 
+ON pro.fk_id_categoria = cat.id_categoria
+WHERE pro.estado = 1;

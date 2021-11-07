@@ -1,4 +1,29 @@
-                -- todo: PROCEDIMIENTOS ALMACENADOS PARA EL PERFIL ADMINISTRADOR --
+                    -- ! PROCEDIMIENTOS ALMACENADOS PARA EL PERFIL ADMINISTRADOR --
+
+                                            -- TODO: CLIENTES
+
+--PROCEDIMIENTO ALMACENADO PARA MOSTRAR DATOS 
+-- todo: este  procedimienmto almacenado es solo usado por
+-- todo: el administrador ya que puede ver a todos los usuarios activops e inactivos
+
+-- ? los procedimientos almacenados para actualizar y guardar se comparten con un perfil vendedor
+-- ? es decir se encuentran en el archivo sp_vendedor_clientes.sql
+
+-- * Procedimiento almacenado para mostrar a todos los clientes y poner un alias a sus columnas
+-- ! ESTE PROCEDIMIENTO ALMACENADO SOLO PUEDE SER USADO POR UN ADMIN
+CREATE PROC sp_mostrar_clientes
+AS
+	SELECT 
+		Cliente.id_cliente as ID,
+		Cliente.nombre AS NOMBRE,
+		Cliente.apellido AS APELLIDO,
+		Cliente.dni AS DNI,
+		Cliente.email AS EMAIL,
+		Cliente.telefono AS TELÉFONO,
+		Cliente.direccion AS DIRECCIÓN,
+		Cliente.fecha_nac AS "FECHA NACIMIENTO"
+	FROM Cliente
+GO
 
 -- * Procedimiento almacenado para eliminar físicamente a un cliente
 -- ! ESTE PROCEDIMIENTO ALMACENADO SOLO PUEDE SER USADO POR UN ADMIN
@@ -7,6 +32,8 @@ CREATE PROC sp_eliminar_cliente
 AS
 DELETE FROM Cliente WHERE id_cliente = @id_cliente
 GO
+
+                                         -- TODO: USUASRIOS
 
 -- * Procedimiento almacenado para listar los perfiles de usuario
 CREATE PROC sp_listar_perfiles
@@ -85,3 +112,8 @@ CREATE PROC sp_eliminar_usuario
 AS
     DELETE FROM Usuario WHERE id_usuario = @id_usuario
 GO
+
+								-- TODO: PRODUCTOS
+
+-- * Procedimiento almacenado para ver los productos
+

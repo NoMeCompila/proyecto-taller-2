@@ -159,6 +159,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Home\IHomeGerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home\IHomeGerente.Designer.cs">
+      <DependentUpon>IHomeGerente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home\IHomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -281,6 +287,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Home\IHomeGerente.resx">
+      <DependentUpon>IHomeGerente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home\IHomeAdmin.resx">
       <DependentUpon>IHomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -530,6 +539,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\data_backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pie-chart-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report-3-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel-3-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
