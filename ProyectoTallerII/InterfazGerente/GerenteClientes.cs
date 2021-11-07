@@ -22,8 +22,20 @@ namespace ProyectoTallerII
 
         private void btn_user_agregar_Click(object sender, EventArgs e)
         {
-            int iR=1; //numero de fila
+            //nota: ene xcel las filas comienzan a contarse desde 1 (uno)
+            int iR=2; //numero de fila (se inicia en la 2da fila porque la primera va a ser ocupada por
+                      //el nombre de las coluimnas)
             SLDocument sl = new SLDocument(); //se crea un objeto de tipo documento
+
+            int iC = 1;
+            foreach (DataGridViewColumn column in dataG_usuarios.Columns)
+            {
+                sl.SetCellValue(1, iC, column.HeaderText.ToString());
+                iC++;
+            }
+
+
+
             //for que recorreel datagridview fila por fila
             foreach (DataGridViewRow row in dataG_usuarios.Rows)
             {
@@ -41,6 +53,8 @@ namespace ProyectoTallerII
             }
 
             sl.SaveAs(@"C:\Users\Fer\Desktop\taller copia\proyecto-taller-2\Reportes\ReporteClientes.xlsx");
+
+            MessageBox.Show("Datos de Clientes exportados correctamente", "EXPORTADO", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void GerenteClientes_Load(object sender, EventArgs e)

@@ -41,10 +41,10 @@ namespace ProyectoTallerII
             this.lbl_clientes = new Bunifu.UI.WinForms.BunifuLabel();
             this.dataG_usuarios = new System.Windows.Forms.DataGridView();
             this.pnl_gerente_auditoria = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.btn_user_agregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataG_usuarios)).BeginInit();
             this.pnl_gerente_auditoria.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +127,22 @@ namespace ProyectoTallerII
             this.pnl_gerente_auditoria.ShowBorders = true;
             this.pnl_gerente_auditoria.Size = new System.Drawing.Size(741, 144);
             this.pnl_gerente_auditoria.TabIndex = 26;
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.bunifuLabel1.Location = new System.Drawing.Point(353, 79);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(99, 20);
+            this.bunifuLabel1.TabIndex = 15;
+            this.bunifuLabel1.Text = "Exportar Datos";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // btn_user_agregar
             // 
@@ -310,21 +326,6 @@ namespace ProyectoTallerII
             this.txt_buscar.UseSystemPasswordChar = false;
             this.txt_buscar.WordWrap = true;
             this.txt_buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyUp);
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(353, 79);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(99, 20);
-            this.bunifuLabel1.TabIndex = 15;
-            this.bunifuLabel1.Text = "Exportar Datos";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // GerenteClientes
             // 
