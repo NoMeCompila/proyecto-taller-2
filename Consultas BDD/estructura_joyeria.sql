@@ -164,3 +164,27 @@ SELECT
 FROM Producto pro INNER JOIN Categoria cat 
 ON pro.fk_id_categoria = cat.id_categoria
 WHERE pro.estado = 1;
+
+select * from VentaDetalle;
+
+select * from Venta;
+
+ALTER TABLE VentaDetalle
+	DROP COLUMN total;
+
+ALTER TABLE Venta
+	DROP COLUMN telefono_cliente;
+
+--'CK__VentaDeta__total__5165187F
+
+
+select * FROM TipoPago;
+
+INSERT INTO TipoPago(descripcion)
+VALUES('Credito'),
+('Debito'),
+('Efectivo'),
+('Mercado Pago');
+
+
+SELECT * FROM Producto;
