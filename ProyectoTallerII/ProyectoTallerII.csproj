@@ -201,6 +201,12 @@
     <Compile Include="InterfazAdmin\AdminCliente.Designer.cs">
       <DependentUpon>AdminCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazAdmin\AdminVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazAdmin\AdminVentas.Designer.cs">
+      <DependentUpon>AdminVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazGerente\GerenteAuditoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,11 @@
     <Compile Include="InterfazGerente\GerenteVentas.Designer.cs">
       <DependentUpon>GerenteVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="JoyeriaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JoyeriaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Home\IHomeGerente.resx">
@@ -316,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazAdmin\AdminCliente.resx">
       <DependentUpon>AdminCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazAdmin\AdminVentas.resx">
+      <DependentUpon>AdminVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazGerente\GerenteAuditoria.resx">
       <DependentUpon>GerenteAuditoria.cs</DependentUpon>
@@ -379,6 +393,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="JoyeriaDataSet.xsc">
+      <DependentUpon>JoyeriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JoyeriaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JoyeriaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JoyeriaDataSet.xss">
+      <DependentUpon>JoyeriaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

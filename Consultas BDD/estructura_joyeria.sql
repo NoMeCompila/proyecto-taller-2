@@ -165,9 +165,7 @@ FROM Producto pro INNER JOIN Categoria cat
 ON pro.fk_id_categoria = cat.id_categoria
 WHERE pro.estado = 1;
 
-select * from VentaDetalle;
 
-select * from Venta;
 
 ALTER TABLE VentaDetalle
 	DROP COLUMN total;
@@ -188,3 +186,16 @@ VALUES('Credito'),
 
 
 SELECT * FROM Producto;
+
+
+
+select * from Venta;
+
+select * from VentaDetalle;
+select * from Cliente;
+select * from Usuario;
+select * from TipoPago;
+
+SELECT SYSDATETIME();
+
+2021-11-07

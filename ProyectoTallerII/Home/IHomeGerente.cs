@@ -121,7 +121,7 @@ namespace ProyectoTallerII
 
         private void button1_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_facturacion_vendedor());
+            open_child_form(new AdminVentas());
         }
 
         private void button2_Click(object sender, EventArgs e)
