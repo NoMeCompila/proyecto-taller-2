@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 namespace CapaDatos
 {
-    class cd_conexion
+    public class cd_conexion
     {
         //objeto que guarda la cadena de conexion
         private SqlConnection conexion = new SqlConnection(

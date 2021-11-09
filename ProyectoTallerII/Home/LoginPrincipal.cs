@@ -43,13 +43,13 @@ namespace ProyectoTallerII
                 txt_user.Clear();
                 txt_user.Focus();
             }
-            else if(txt_user.Text == "123" && txt_pass.Text == "123")
+            else if(txt_user.Text == "234" && txt_pass.Text == "234")
             {
                 Form form_inicio = new IHomeAdmin();
                 this.Hide();
                 form_inicio.Show();
             }
-            else if (txt_user.Text == "gerente2" && txt_pass.Text == "Gerente123!")
+            else if (txt_user.Text == "123" && txt_pass.Text == "123")
             {
                 Form form_gerente = new IHomeGerente();
                 this.Hide();

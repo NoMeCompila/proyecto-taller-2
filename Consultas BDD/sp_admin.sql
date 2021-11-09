@@ -229,37 +229,6 @@ GO
 
 select * from Producto
 
-
-/*
-select * from Venta;
-exec sp_help Venta;
-nro_venta
-id_v_detalle
-id_t_pago
-id_cliente
-id_usuario
-fecha_venta
-total_venta
-*/
-
-
-
-
-/*
-select * from VentaDetalle;
-exec sp_help Venta;
-nro_venta
-id_v_detalle
-id_t_pago
-id_cliente
-id_usuario
-fecha_venta
-total_venta
-
-ventadetalle pasa a ser ventas
-venta pasa a ser VentaDetalle
-*/
-
 exec sp_rename 'VentaDetalle', 'Ventas';
 
 exec sp_rename 'Venta', 'VntaDetalle';

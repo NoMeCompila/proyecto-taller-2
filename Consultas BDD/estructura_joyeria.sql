@@ -171,3 +171,5 @@ VALUES('Credito'),
 ('Debito'),
 ('Efectivo'),
 ('Mercado Pago');
+
+select * from VentaDetalle
