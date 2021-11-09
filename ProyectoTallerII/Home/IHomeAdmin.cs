@@ -196,5 +196,15 @@ namespace ProyectoTallerII
         {
             open_child_form(new Form_usuarios());
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("seguro que desea salir?", "ERROR!",
+                               MessageBoxButtons.YesNo,
+                               MessageBoxIcon.Warning) ==  DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }

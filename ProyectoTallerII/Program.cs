@@ -16,7 +16,7 @@ namespace ProyectoTallerII
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPrincipal());
+            Application.Run(new LoginUsuarios());
         }
     }
 }

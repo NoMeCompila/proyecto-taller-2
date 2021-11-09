@@ -313,3 +313,6 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.AdminVentas.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.txt_marca.resources
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.LoginUsuarios.resources
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\Common.dll
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\Common.pdb

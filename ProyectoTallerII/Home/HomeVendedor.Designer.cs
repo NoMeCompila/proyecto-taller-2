@@ -52,6 +52,8 @@ namespace ProyectoTallerII
             this.btn_ventas_gerente = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btn_inicio_gerente = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.pnl_contenido.SuspendLayout();
             this.pnl_cabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
@@ -246,6 +248,8 @@ namespace ProyectoTallerII
             // pnl_sidevar
             // 
             this.pnl_sidevar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(152)))), ((int)(((byte)(243)))));
+            this.pnl_sidevar.Controls.Add(this.panel3);
+            this.pnl_sidevar.Controls.Add(this.button4);
             this.pnl_sidevar.Controls.Add(this.bunifuSeparator2);
             this.pnl_sidevar.Controls.Add(this.pictureBox1);
             this.pnl_sidevar.Controls.Add(this.button1);
@@ -382,6 +386,33 @@ namespace ProyectoTallerII
             this.btn_inicio_gerente.UseVisualStyleBackColor = true;
             this.btn_inicio_gerente.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
+            // button4
+            // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Image = global::ProyectoTallerII.Properties.Resources.logout_48;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(7, 509);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(177, 52);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "Salir";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel3.Location = new System.Drawing.Point(0, 509);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 52);
+            this.panel3.TabIndex = 13;
+            // 
             // Form_vendedor_init
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -430,5 +461,7 @@ namespace ProyectoTallerII
         private System.Windows.Forms.Panel pnl_sidevar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button button4;
     }
 }

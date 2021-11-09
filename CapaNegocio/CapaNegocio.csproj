@@ -50,11 +50,16 @@
     <Compile Include="cn_productos.cs" />
     <Compile Include="cn_usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
       <Project>{147b7c5d-4959-44a3-a692-84a87c67f2e8}</Project>
       <Name>CapaDatos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{d06d66f7-06f1-48aa-a843-7e9360665cde}</Project>
+      <Name>Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -363,6 +363,16 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap login_48 {
+            get {
+                object obj = ResourceManager.GetObject("login-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap login_fondo {
             get {
                 object obj = ResourceManager.GetObject("login-fondo", resourceCulture);
@@ -376,6 +386,16 @@ namespace ProyectoTallerII.Properties {
         internal static System.Drawing.Bitmap LOGOPERLE {
             get {
                 object obj = ResourceManager.GetObject("LOGOPERLE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logout_48 {
+            get {
+                object obj = ResourceManager.GetObject("logout-48", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

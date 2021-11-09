@@ -1,0 +1,6 @@
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Common\bin\Debug\Common.dll
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Common\bin\Debug\Common.pdb
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Common\obj\Debug\Common.csproj.AssemblyReference.cache
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Common\obj\Debug\Common.dll
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\Common\obj\Debug\Common.pdb
