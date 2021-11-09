@@ -126,7 +126,7 @@ namespace ProyectoTallerII
 
         private void button2_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_stock());
+            open_child_form(new txt_marca());
         }
 
         private void timer_hora_Tick(object sender, EventArgs e)

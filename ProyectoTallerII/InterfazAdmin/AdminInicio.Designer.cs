@@ -158,10 +158,10 @@ namespace ProyectoTallerII
             this.card_textousuarios.Location = new System.Drawing.Point(16, 67);
             this.card_textousuarios.Name = "card_textousuarios";
             this.card_textousuarios.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.card_textousuarios.Size = new System.Drawing.Size(208, 51);
+            this.card_textousuarios.Size = new System.Drawing.Size(213, 51);
             this.card_textousuarios.TabIndex = 4;
-            this.card_textousuarios.Text = "En este apartado se pueden ver los\r\ndetalles de cada venta con la \r\nposibilidad d" +
-    "e exportar los datos";
+            this.card_textousuarios.Text = "ventas: en este apartado se pueden \r\nver los detalles de cada venta con la \r\nopci" +
+    "ón de imprimir los datos";
             this.card_textousuarios.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.card_textousuarios.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

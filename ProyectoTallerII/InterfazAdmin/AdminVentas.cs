@@ -37,10 +37,14 @@ namespace ProyectoTallerII
 
         private void AdminVentas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'joyeriaDataSet1.VentaDetalle' Puede moverla o quitarla según sea necesario.
+            this.ventaDetalleTableAdapter1.Fill(this.joyeriaDataSet1.VentaDetalle);
+            // TODO: esta línea de código carga datos en la tabla 'joyeriaDataSet1.Ventas' Puede moverla o quitarla según sea necesario.
+            this.ventasTableAdapter.Fill(this.joyeriaDataSet1.Ventas);
             // TODO: esta línea de código carga datos en la tabla 'joyeriaDataSet.Venta' Puede moverla o quitarla según sea necesario.
-            this.ventaTableAdapter.Fill(this.joyeriaDataSet.Venta);
+            //this.ventaTableAdapter.Fill(this.joyeriaDataSet1.Ventas);
             // TODO: esta línea de código carga datos en la tabla 'joyeriaDataSet.VentaDetalle' Puede moverla o quitarla según sea necesario.
-            this.ventaDetalleTableAdapter.Fill(this.joyeriaDataSet.VentaDetalle);
+            //this.ventaDetalleTableAdapter.Fill(this.joyeriaDataSet.VentaDetalle);
 
         }
     }

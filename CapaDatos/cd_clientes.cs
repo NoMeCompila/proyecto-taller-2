@@ -62,6 +62,27 @@ namespace CapaDatos
             comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
         }
 
+        public void guardar_cliente(string nombre, string apellido, string dni, 
+            string email, string tel, string direccion, DateTime fecha_nac, bool estado)
+        {
+            comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
+            comando_clientes.CommandText = "sp_guardar_cliente_admin"; // se ejecuta el procedimiento almacenado para insertar
+            comando_clientes.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato SP
+            comando_clientes.Parameters.AddWithValue("@nombre", nombre);
+            comando_clientes.Parameters.AddWithValue("@apellido", apellido);
+            comando_clientes.Parameters.AddWithValue("@dni", dni);
+            comando_clientes.Parameters.AddWithValue("@email", email);
+            comando_clientes.Parameters.AddWithValue("@tel", tel);
+            comando_clientes.Parameters.AddWithValue("@direccion", direccion);
+            comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+            comando_clientes.Parameters.AddWithValue("@estado", estado);
+            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+        }
+
+
+
+
         //funcion para ACTUALIZAR un nuevo cliente
         public void actualizar_cliente(string nombre, string apellido, string dni, string email, string tel, string direccion, DateTime fecha_nac, int id_cliente)
         {
@@ -79,6 +100,27 @@ namespace CapaDatos
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
             comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
         }
+
+        public void actualizar_cliente_admin(string nombre, string apellido, string dni, 
+            string email, string tel, string direccion, DateTime fecha_nac,bool estado, int id_cliente)
+        {
+            comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
+            comando_clientes.CommandText = "sp_actualizar_cliente_admin"; // se ejecuta el procedimiento almacenado para insertar
+            comando_clientes.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato SP
+            comando_clientes.Parameters.AddWithValue("@nombre", nombre);
+            comando_clientes.Parameters.AddWithValue("@apellido", apellido);
+            comando_clientes.Parameters.AddWithValue("@dni", dni);
+            comando_clientes.Parameters.AddWithValue("@email", email);
+            comando_clientes.Parameters.AddWithValue("@tel", tel);
+            comando_clientes.Parameters.AddWithValue("@direccion", direccion);
+            comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+            comando_clientes.Parameters.AddWithValue("@estado", estado);
+            comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
+            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+            comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+        }
+
+
 
         //fincion para eliminar lógicamente a un usuario desde un perfil vendedor
         public void eliminar_cliente(int id_cliente)

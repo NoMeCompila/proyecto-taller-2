@@ -171,13 +171,14 @@ namespace ProyectoTallerII
 
                     try
                     {
-                        objetoCN.insertar_cliete(txt_user_nombre.Text,
+                        objetoCN.guardar_cliete(txt_user_nombre.Text,
                                              txt_user_apellido.Text,
                                              txt_user_dni.Text,
                                              txt_user_email.Text,
                                              txt_user_tel.Text,
                                              txt_user_adress.Text,
-                                             dtp_user_date_birth.Text);
+                                             dtp_user_date_birth.Text,
+                                             combo_estado.Text);
 
 
                         MessageBox.Show("Cliente guardado correctamente", "GUARDADO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -289,7 +290,7 @@ namespace ProyectoTallerII
                              MessageBoxIcon.Question,
                              MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    objetoCN.actualizar_cliet
+                    objetoCN.actualizar_cliente_admin
                     (
                             txt_user_nombre.Text,
                             txt_user_apellido.Text,
@@ -298,6 +299,7 @@ namespace ProyectoTallerII
                             txt_user_tel.Text,
                             txt_user_adress.Text,
                             dtp_user_date_birth.Text,
+                            combo_estado.Text,
                             Convert.ToInt32(id)
                      );
 
@@ -348,6 +350,7 @@ namespace ProyectoTallerII
             txt_user_tel.Text = dataG_usuarios.CurrentRow.Cells["teléfono"].Value.ToString();
             txt_user_adress.Text = dataG_usuarios.CurrentRow.Cells["dirección"].Value.ToString();
             dtp_user_date_birth.Text = dataG_usuarios.CurrentRow.Cells["fecha nacimiento"].Value.ToString();
+            combo_estado.Text = dataG_usuarios.CurrentRow.Cells["estado"].Value.ToString();
             id = dataG_usuarios.CurrentRow.Cells["id"].Value.ToString();
 
             btn_user_agregar.Enabled = false;
@@ -440,8 +443,8 @@ namespace ProyectoTallerII
                 "Cliente.telefono AS TELÉFONO, " +
                 "Cliente.direccion AS DIRECCIÓN, " +
                 "Cliente.fecha_nac AS " +
-                "'FECHA NACIMIENTO' " +
-                "FROM Cliente", ref resultados, "Cliente");
+                "'FECHA NACIMIENTO', " +
+                "Cliente.estado AS ESTADO   FROM Cliente", ref resultados, "Cliente");
             //probando buscador
             this.filtro = ((DataTable)resultados.Tables["Cliente"]).DefaultView;
 

@@ -314,6 +314,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JoyeriaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="JoyeriaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JoyeriaDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Home\IHomeGerente.resx">
@@ -403,6 +408,17 @@
     </None>
     <None Include="JoyeriaDataSet.xss">
       <DependentUpon>JoyeriaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="JoyeriaDataSet1.xsc">
+      <DependentUpon>JoyeriaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="JoyeriaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JoyeriaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JoyeriaDataSet1.xss">
+      <DependentUpon>JoyeriaDataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

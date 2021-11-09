@@ -14,6 +14,7 @@ AS
 	VALUES (@nombre, @apellido, @dni, @email, @tel, @direccion, @fecha_nac)
 GO
 
+
 -- * Procedimiento almacenado para actualizar un cliente
 CREATE PROC sp_actualizar_cliente
 	@nombre VARCHAR(100),

@@ -66,38 +66,6 @@ namespace ProyectoTallerII
         }
 
 
-        private void bunifuDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex == -1) return;//MUY IMPORTANTE
-            //Eliminar.Text = "Eliminar";
-
-            try
-            {
-                /*
-                int posicion = dtg_usuarios.CurrentRow.Index;
-
-                if (dtg_usuarios.Columns[e.ColumnIndex].Name == "Eliminar")
-                {
-                    if (MessageBox.Show("¿Seguro que quiere eliminar?", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        dtg_usuarios.Rows.RemoveAt(posicion);
-                        limpiar();
-                    }
-                    else
-                    {
-                        limpiar();
-                    }
-                } */
-            }
-            catch(NullReferenceException)
-            {
-                MessageBox.Show("La tabla está vacía, inserte datos primero", "ERROR!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                );
-            }
-        }
-
         
         private void bunifuLabel1_Click(object sender, EventArgs e)
         {
@@ -469,40 +437,6 @@ namespace ProyectoTallerII
             }
         }
 
-        private void dtg_usuarios_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex == -1) return;
-            try
-            {
-                /*
-                fila = dtg_usuarios.CurrentRow.Index;
-                txt_user_nombre.Text = dtg_usuarios[0, fila].Value.ToString();
-                txt_user_apellido.Text = dtg_usuarios[1, fila].Value.ToString();
-                txt_user_dni.Text = dtg_usuarios[2, fila].Value.ToString();
-                txt_user_usuario.Text = dtg_usuarios[3, fila].Value.ToString();
-                txt_user_contraseña.Text = dtg_usuarios[4, fila].Value.ToString();
-                txt_user_email.Text = dtg_usuarios[5, fila].Value.ToString();
-                drd_user_perfil.Text = dtg_usuarios[6, fila].Value.ToString();
-                txt_user_tel.Text = dtg_usuarios[7, fila].Value.ToString();
-                txt_user_adress.Text = dtg_usuarios[8, fila].Value.ToString();
-                dtp_user_date_birth.Text = dtg_usuarios[9, fila].Value.ToString();
-                */
-
-                btn_user_agregar.Enabled = false;
-                btn_modificar.Enabled = true;
-
-
-            }
-            catch (NullReferenceException)
-            {
-                MessageBox.Show("La tabla está vacía, inserte datos primero", "ERROR!",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                );
-            }
-           
-        }
-
 
         private void txt_user_nombre_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -672,6 +606,7 @@ namespace ProyectoTallerII
             }
             else
             {
+                MessageBox.Show("Eliminacion Cancelada!", "Cancelado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.limpiar();
             }
         }

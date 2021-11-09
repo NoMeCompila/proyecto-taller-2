@@ -919,7 +919,7 @@
   <data name="bunifuLabel9.Text" xml:space="preserve">
     <value>al oprimir el boton "Generar backup" usted realiza una 
 copia de seguridad de todos los datos de su negocio y 
-los guarda en uin archivo respaldo.bak para poder 
+los guarda en un archivo respaldo.bak para poder 
 restaurarlo en caso de ser  necesario  </value>
   </data>
   <data name="bunifuLabel8.BaseStylesheet" xml:space="preserve">

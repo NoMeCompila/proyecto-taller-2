@@ -48,18 +48,16 @@ namespace ProyectoTallerII
                 Form form_inicio = new IHomeAdmin();
                 this.Hide();
                 form_inicio.Show();
-
             }
-            else if (txt_user.Text == "qwe" && txt_pass.Text == "qwe")
+            else if (txt_user.Text == "gerente2" && txt_pass.Text == "Gerente123!")
             {
                 Form form_gerente = new IHomeGerente();
                 this.Hide();
                 form_gerente.Show();
             }
-            else if (txt_user.Text == "fer" && txt_pass.Text == "123")
+            else if (txt_user.Text == "vendedor1" && txt_pass.Text == "Vendedor123!")
             {
                 Form form_vendedor = new Form_vendedor_init();
-                //this.Hide();
                 this.Visible = false;
                 form_vendedor.Show();
             }

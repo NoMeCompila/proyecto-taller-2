@@ -303,7 +303,6 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteReportes.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_home_gerente.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_home.resources
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_stock.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_usuarios.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteVentas.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Properties.Resources.resources
@@ -313,3 +312,4 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.exe
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.pdb
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.AdminVentas.resources
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.txt_marca.resources

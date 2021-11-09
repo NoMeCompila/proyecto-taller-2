@@ -103,11 +103,11 @@ INSERT INTO Cliente(nombre, apellido, dni, email, telefono, direccion, fecha_nac
 VALUES('Fernando', 'Caballero', '40982473', 'cabafer1@gmail.com', '3794002323', 'Pje Florida 228', '1998-01-24');
 
 -- * se verifica si se agregaron correctamente los datos
-select * from Cliente;
+--select * from Cliente;
 
 -- todo: MODIFICACIONES A LA TABLA CLIENTE
 ALTER TABLE Cliente
-	ADD estado boolean default true;
+	ADD estado bit  default 1;
 UPDATE Cliente set estado = 1;
 
 -- todo: modificaciones a la tabla Usuario
@@ -122,17 +122,12 @@ ALTER TABLE Producto
 ALTER TABLE Producto
 	DROP COLUMN imagen;
 
-EXEC sp_help Producto;
 
 ALTER TABLE Producto
 	ADD estado BIT default 1;
 
 -- INSERTANDO DATOS EN LA TABLA CATEGORIA
 
-
---'Alianzas', 
---'Aros', 'Colgantes', 'Pendientes', 'Anillos', 
---'Pulseras', 'Cadenas'
 INSERT INTO Categoria
 	(descripcion)
 VALUES
@@ -142,11 +137,6 @@ VALUES
 	('Colgantes'),
 	('Pendientes'),
 	('Pulseras');
-
-select * from Categoria;
-
-select * from Producto;
-
 
 
 SELECT 
@@ -160,7 +150,8 @@ SELECT
     pro.marca AS MARCA,
     pro.genero AS GENERO,
     pro.material AS MATERIAL,
-    pro.gema AS GEMA
+    pro.gema AS GEMA,
+	pro.estado AS ESTADO 
 FROM Producto pro INNER JOIN Categoria cat 
 ON pro.fk_id_categoria = cat.id_categoria
 WHERE pro.estado = 1;
@@ -173,29 +164,10 @@ ALTER TABLE VentaDetalle
 ALTER TABLE Venta
 	DROP COLUMN telefono_cliente;
 
---'CK__VentaDeta__total__5165187F
 
-
-select * FROM TipoPago;
 
 INSERT INTO TipoPago(descripcion)
 VALUES('Credito'),
 ('Debito'),
 ('Efectivo'),
 ('Mercado Pago');
-
-
-SELECT * FROM Producto;
-
-
-
-select * from Venta;
-
-select * from VentaDetalle;
-select * from Cliente;
-select * from Usuario;
-select * from TipoPago;
-
-SELECT SYSDATETIME();
-
-2021-11-07

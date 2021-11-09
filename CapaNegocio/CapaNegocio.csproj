@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cn_categoria.cs" />
     <Compile Include="cn_clientes.cs" />
     <Compile Include="cn_perfiles.cs" />
+    <Compile Include="cn_productos.cs" />
     <Compile Include="cn_usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

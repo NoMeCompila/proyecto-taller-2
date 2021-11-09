@@ -11,13 +11,16 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Data;
 using System.Data.SqlClient;
+using CapaNegocio;
 
 namespace ProyectoTallerII
 {
-    public partial class Form_stock : Form
+    public partial class txt_marca : Form
     {
+        cn_productos objetoCN = new cn_productos();
+        private string id = null;
         int fila;
-        public Form_stock()
+        public txt_marca()
         {
             InitializeComponent();
             limpiar();
@@ -25,17 +28,23 @@ namespace ProyectoTallerII
         void limpiar()
         {
             btn_stock_modificar.Enabled = false;
+            btn_elimiar.Enabled = false;
 
             txt_producto_cod.Clear();
             txt_producto_nombre.Clear();
             txt_stock.Clear();
             txt_producto_costo.Clear();
             txt_producto_venta.Clear();
-            drd_productos_categoria.SelectedIndex = 0;
-            //pb_producto_imagen.Load(Application.StartupPath + @"\Fotos\imagen_nuestra.png");
+            txt_marca1.Clear();
+            dd_genero.SelectedIndex = 0;
+            txt_material.Clear();
+            dd_gema.SelectedItem = 0;
 
 
 
+            //drd_productos_categoria.SelectedIndex = 1;
+            
+            
             btn_stock_agregar.Enabled = true;
         }
 
@@ -158,7 +167,24 @@ namespace ProyectoTallerII
                     dtg_stock.Rows[writeRow].Cells[5].Value = drd_productos_categoria.Text;
                     dtg_stock.Rows[writeRow].Cells[6].Value = pb_producto_imagen.Image;
                     */
-                    limpiar();
+
+
+                    objetoCN.insertar_producto(
+
+                                             Convert.ToInt32(drd_productos_categoria.SelectedValue),
+                                             Convert.ToInt32(txt_producto_cod.Text),
+                                             txt_producto_nombre.Text,
+                                             Convert.ToInt32(txt_stock.Text),
+                                             Convert.ToDouble(txt_producto_costo.Text),
+                                             Convert.ToDouble(txt_producto_venta.Text),
+                                             txt_marca1.Text,
+                                             dd_genero.Text,
+                                             txt_material.Text,
+                                             dd_gema.Text,
+                                             Convert.ToBoolean(combo_estado.Text));
+
+                    this.mostrar_busqueda();
+                    this.limpiar();
                 }
             }
         }
@@ -217,11 +243,22 @@ namespace ProyectoTallerII
                 img.Save(ms, ImageFormat.Jpeg);
                 pb_producto_imagen.Image = Image.FromStream(ms);
                 */
+                txt_producto_cod.Text = dtg_stock.CurrentRow.Cells["codigo"].Value.ToString();
+                txt_producto_nombre.Text = dtg_stock.CurrentRow.Cells["nombre"].Value.ToString();
+                txt_stock.Text = dtg_stock.CurrentRow.Cells["stock"].Value.ToString();
+                drd_productos_categoria.Text = dtg_stock.CurrentRow.Cells["tipo"].Value.ToString();
+                txt_producto_costo.Text = dtg_stock.CurrentRow.Cells["precio costo"].Value.ToString();
+                txt_producto_venta.Text = dtg_stock.CurrentRow.Cells["precio venta"].Value.ToString();
+                txt_marca1.Text = dtg_stock.CurrentRow.Cells["marca"].Value.ToString();
+                dd_genero.Text = dtg_stock.CurrentRow.Cells["genero"].Value.ToString();
+                txt_material.Text = dtg_stock.CurrentRow.Cells["material"].Value.ToString();
+                dd_gema.Text = dtg_stock.CurrentRow.Cells["gema"].Value.ToString();
+                combo_estado.Text = dtg_stock.CurrentRow.Cells["estado"].Value.ToString();
+                id = dtg_stock.CurrentRow.Cells["id"].Value.ToString();
 
 
 
-
-
+                btn_elimiar.Enabled = true;
                 btn_stock_agregar.Enabled = false;
                 btn_stock_modificar.Enabled = true;
 
@@ -250,16 +287,26 @@ namespace ProyectoTallerII
             }
             else
             {
-                /*
-                dtg_stock[0, fila].Value = txt_producto_cod.Text;
-                dtg_stock[1, fila].Value = txt_producto_nombre.Text;
-                dtg_stock[2, fila].Value = txt_stock.Text;
-                dtg_stock[3, fila].Value = txt_producto_costo.Text;
-                dtg_stock[4, fila].Value = txt_producto_venta.Text;
-                dtg_stock[5, fila].Value = drd_productos_categoria.Text;
-                dtg_stock[6, fila].Value = pb_producto_imagen.Image;
-                */
+                //bjetoCD.actualizar_producto(fk_id_categoria, cod_producto, nombre, stock,
+                //precio_costo, precio_venta, marca, genero, material, gema, estado, id_producto);
+                
+                
+                
+                objetoCN.actualizar_producto(
+                    Convert.ToInt32(drd_productos_categoria.SelectedValue),
+                    Convert.ToInt32(txt_producto_cod.Text),
+                    txt_producto_nombre.Text,
+                    Convert.ToInt32(txt_stock.Text),
+                    Convert.ToDouble(txt_producto_costo.Text),
+                    Convert.ToDouble(txt_producto_venta.Text),
+                    txt_marca1.Text,
+                    dd_genero.Text,
+                    txt_material.Text,
+                    dd_gema.Text,
+                    Convert.ToBoolean(combo_estado.Text),
+                    Convert.ToInt32(id));
 
+                mostrar_busqueda();
                 limpiar();
             }
         }
@@ -295,13 +342,13 @@ namespace ProyectoTallerII
                 if (salida_datos.Length == 0)
                 {
                     salida_datos = "(tipo LIKE '%" + palabra +
-                        "%' OR nombre LIKE '%" + palabra +
+                        "%' OR codigo LIKE '%" + palabra +
                         "%' OR material LIKE '%" + palabra + "%')";
                 }
                 else
                 {
                     salida_datos += "AND (tipo LIKE '%" + palabra +
-                        "%' OR nombre LIKE '%" + palabra +
+                        "%' OR codigo LIKE '%" + palabra +
                         "%' OR material LIKE '%" + palabra + "%')";
                 }
             }
@@ -325,7 +372,7 @@ namespace ProyectoTallerII
                 "pro.marca AS MARCA," +
                 "pro.genero AS GENERO," +
                 "pro.material AS MATERIAL," +
-                "pro.gema AS GEMA FROM Producto pro INNER JOIN Categoria cat  ON pro.fk_id_categoria = cat.id_categoria WHERE pro.estado = 1", ref resultados, "Producto");
+                "pro.gema AS GEMA, pro.estado AS ESTADO FROM Producto pro INNER JOIN Categoria cat  ON pro.fk_id_categoria = cat.id_categoria", ref resultados, "Producto");
             //probando buscador
             this.filtro = ((DataTable)resultados.Tables["Producto"]).DefaultView;
 
@@ -333,9 +380,45 @@ namespace ProyectoTallerII
             this.dtg_stock.DataSource = filtro;
         }
 
+        private void listar_categrias()
+        {
+            cn_categoria objPer = new cn_categoria();
+            drd_productos_categoria.DataSource = objPer.mostrar_categorias();
+            drd_productos_categoria.DisplayMember = "descripcion";
+            drd_productos_categoria.ValueMember = "id_categoria";
+        }
+
+
         private void Form_stock_Load(object sender, EventArgs e)
         {
             mostrar_busqueda();
+            listar_categrias();
+        }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_elimiar_Click(object sender, EventArgs e)
+        {
+            id = dtg_stock.CurrentRow.Cells["id"].Value.ToString(); //IMPORTATNE: darle valor al id para especificar que dato se quiere actualizar
+            if (MessageBox.Show("Seguro que desea eliminar el producto?",
+                             "ELIMINAR!",
+                             MessageBoxButtons.YesNo,
+                             MessageBoxIcon.Question,
+                             MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                objetoCN.eliminar_producto(Convert.ToInt32(id));
+                MessageBox.Show("Producto Eliminado correctamente", "ELIMINADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.mostrar_busqueda();
+                this.limpiar();
+            }
+            else
+            {
+                MessageBox.Show("Eliminacion Cancelada!", "Cancelado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.limpiar();
+            }
         }
     }
 }

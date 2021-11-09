@@ -17,6 +17,6 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\bin\Debug\CapaDa
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\bin\Debug\System.Data.SqlClient.xml
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.csproj.AssemblyReference.cache
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.csproj.CoreCompileInputs.cache
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.dll
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.pdb
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaNegocio\obj\Debug\CapaNegocio.csproj.CopyComplete

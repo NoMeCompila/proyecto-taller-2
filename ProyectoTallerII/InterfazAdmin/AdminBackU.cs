@@ -45,7 +45,7 @@ namespace ProyectoTallerII
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Si desea generar otra copia de seguridad por favor, cierre el formulario e intentelo de nuevo "+ex, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Si desea generar otra copia de seguridad por favor, cierre el formulario e intentelo de nuevo ", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             finally
             {

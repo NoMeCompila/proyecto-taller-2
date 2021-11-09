@@ -42,11 +42,27 @@ namespace CapaNegocio
                 Convert.ToDateTime(fecha_nac));
         }
 
+        public void guardar_cliete(string nombre, string apellido, string dni, string email, string tel,
+            string direccion, string fecha_nac, string estado)
+        {
+            objetoCD.guardar_cliente(nombre, apellido, dni, email, tel, direccion,
+                Convert.ToDateTime(fecha_nac), Convert.ToBoolean(estado));
+        }
+
+
+
         //funcion para ACTUALIZAR  un cliente
         public void actualizar_cliet(string nombre, string apellido, string dni, string email, string tel,
             string direccion, string fecha_nac, int id_cliente) // valor extra para saber a que cliente se quiere actualizar
         {
             objetoCD.actualizar_cliente(nombre, apellido, dni, email, tel, direccion, Convert.ToDateTime(fecha_nac), Convert.ToInt32(id_cliente));
+        }
+
+
+        public void actualizar_cliente_admin(string nombre, string apellido, string dni, string email, string tel,
+            string direccion, string fecha_nac,string estado, int id_cliente) // valor extra para saber a que cliente se quiere actualizar
+        {
+            objetoCD.actualizar_cliente_admin(nombre, apellido, dni, email, tel, direccion, Convert.ToDateTime(fecha_nac),Convert.ToBoolean(estado), Convert.ToInt32(id_cliente));
         }
 
         //funcion para eliminar un cliente lógicamente desde un perfil de vendedor
