@@ -172,4 +172,4 @@ VALUES('Credito'),
 ('Efectivo'),
 ('Mercado Pago');
 
-select * from VentaDetalle
+select * from Usuario
