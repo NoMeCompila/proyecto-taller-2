@@ -31,7 +31,7 @@ namespace ProyectoTallerII
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminVentas));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lbl_inicio = new Bunifu.UI.WinForms.BunifuLabel();
             this.joyeriaDataSet = new ProyectoTallerII.JoyeriaDataSet();
             this.ventaDetalleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -52,7 +52,6 @@ namespace ProyectoTallerII
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ventaDetalleBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ventaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -64,6 +63,7 @@ namespace ProyectoTallerII
             this.ventasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ventasTableAdapter = new ProyectoTallerII.JoyeriaDataSet1TableAdapters.VentasTableAdapter();
             this.tableAdapterManager1 = new ProyectoTallerII.JoyeriaDataSet1TableAdapters.TableAdapterManager();
+            this.ventaDetalleTableAdapter1 = new ProyectoTallerII.JoyeriaDataSet1TableAdapters.VentaDetalleTableAdapter();
             this.ventasDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,7 +72,6 @@ namespace ProyectoTallerII
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ventaDetalleBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.ventaDetalleTableAdapter1 = new ProyectoTallerII.JoyeriaDataSet1TableAdapters.VentaDetalleTableAdapter();
             this.ventaDetalleDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,7 +99,7 @@ namespace ProyectoTallerII
             this.lbl_inicio.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_inicio.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_inicio.Font = new System.Drawing.Font("Segoe UI Emoji", 10F, System.Drawing.FontStyle.Bold);
-            this.lbl_inicio.Location = new System.Drawing.Point(330, 70);
+            this.lbl_inicio.Location = new System.Drawing.Point(315, 70);
             this.lbl_inicio.Name = "lbl_inicio";
             this.lbl_inicio.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_inicio.Size = new System.Drawing.Size(151, 17);
@@ -269,31 +268,14 @@ namespace ProyectoTallerII
             this.ventaBindingSource.DataMember = "FK__Venta__id_v_deta__5629CD9C";
             this.ventaBindingSource.DataSource = this.ventaDetalleBindingSource;
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 15F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(715, 105);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(56, 28);
-            this.bunifuLabel1.TabIndex = 4;
-            this.bunifuLabel1.Text = "Buscar";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // bunifuLabel2
             // 
             this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel2.AutoEllipsis = false;
             this.bunifuLabel2.CursorType = null;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(729, 204);
+            this.bunifuLabel2.Location = new System.Drawing.Point(351, 136);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(42, 21);
@@ -305,11 +287,11 @@ namespace ProyectoTallerII
             // bunifuLabel3
             // 
             this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuLabel3.AutoEllipsis = false;
             this.bunifuLabel3.CursorType = null;
             this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel3.Location = new System.Drawing.Point(725, 139);
+            this.bunifuLabel3.Location = new System.Drawing.Point(217, 136);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel3.Size = new System.Drawing.Size(46, 21);
@@ -320,7 +302,7 @@ namespace ProyectoTallerII
             // 
             // bunifuDatePicker1
             // 
-            this.bunifuDatePicker1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuDatePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDatePicker1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDatePicker1.BorderRadius = 1;
             this.bunifuDatePicker1.Color = System.Drawing.Color.Silver;
@@ -338,7 +320,7 @@ namespace ProyectoTallerII
             this.bunifuDatePicker1.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker1.LeftTextMargin = 5;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(696, 166);
+            this.bunifuDatePicker1.Location = new System.Drawing.Point(188, 163);
             this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker1.Name = "bunifuDatePicker1";
             this.bunifuDatePicker1.Size = new System.Drawing.Size(101, 32);
@@ -347,7 +329,7 @@ namespace ProyectoTallerII
             // 
             // bunifuDatePicker2
             // 
-            this.bunifuDatePicker2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuDatePicker2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuDatePicker2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuDatePicker2.BorderRadius = 1;
             this.bunifuDatePicker2.Color = System.Drawing.Color.Silver;
@@ -365,7 +347,7 @@ namespace ProyectoTallerII
             this.bunifuDatePicker2.IconColor = System.Drawing.Color.Gray;
             this.bunifuDatePicker2.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.bunifuDatePicker2.LeftTextMargin = 5;
-            this.bunifuDatePicker2.Location = new System.Drawing.Point(696, 231);
+            this.bunifuDatePicker2.Location = new System.Drawing.Point(318, 163);
             this.bunifuDatePicker2.MinimumSize = new System.Drawing.Size(4, 32);
             this.bunifuDatePicker2.Name = "bunifuDatePicker2";
             this.bunifuDatePicker2.Size = new System.Drawing.Size(101, 32);
@@ -377,7 +359,7 @@ namespace ProyectoTallerII
             this.bunifuButton1.AllowAnimations = true;
             this.bunifuButton1.AllowMouseEffects = true;
             this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuButton1.AnimationSpeed = 200;
             this.bunifuButton1.AutoGenerateColors = false;
             this.bunifuButton1.AutoRoundBorders = false;
@@ -392,11 +374,11 @@ namespace ProyectoTallerII
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges1;
+            borderEdges6.BottomLeft = true;
+            borderEdges6.BottomRight = true;
+            borderEdges6.TopLeft = true;
+            borderEdges6.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges6;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -420,7 +402,7 @@ namespace ProyectoTallerII
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(696, 275);
+            this.bunifuButton1.Location = new System.Drawing.Point(459, 152);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.OnDisabledState.BorderRadius = 1;
@@ -465,10 +447,11 @@ namespace ProyectoTallerII
             // bunifuLabel4
             // 
             this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.bunifuLabel4.AutoEllipsis = false;
             this.bunifuLabel4.CursorType = null;
             this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(12, 105);
+            this.bunifuLabel4.Location = new System.Drawing.Point(736, 323);
             this.bunifuLabel4.Name = "bunifuLabel4";
             this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel4.Size = new System.Drawing.Size(64, 21);
@@ -480,11 +463,11 @@ namespace ProyectoTallerII
             // bunifuLabel5
             // 
             this.bunifuLabel5.AllowParentOverrides = false;
-            this.bunifuLabel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuLabel5.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.bunifuLabel5.AutoEllipsis = false;
             this.bunifuLabel5.CursorType = null;
             this.bunifuLabel5.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel5.Location = new System.Drawing.Point(28, 371);
+            this.bunifuLabel5.Location = new System.Drawing.Point(752, 565);
             this.bunifuLabel5.Name = "bunifuLabel5";
             this.bunifuLabel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel5.Size = new System.Drawing.Size(48, 21);
@@ -520,8 +503,13 @@ namespace ProyectoTallerII
             this.tableAdapterManager1.VentaDetalleTableAdapter = this.ventaDetalleTableAdapter1;
             this.tableAdapterManager1.VentasTableAdapter = this.ventasTableAdapter;
             // 
+            // ventaDetalleTableAdapter1
+            // 
+            this.ventaDetalleTableAdapter1.ClearBeforeFill = true;
+            // 
             // ventasDataGridView
             // 
+            this.ventasDataGridView.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ventasDataGridView.AutoGenerateColumns = false;
             this.ventasDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ventasDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -532,7 +520,7 @@ namespace ProyectoTallerII
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.ventasDataGridView.DataSource = this.ventasBindingSource;
-            this.ventasDataGridView.Location = new System.Drawing.Point(19, 154);
+            this.ventasDataGridView.Location = new System.Drawing.Point(19, 295);
             this.ventasDataGridView.Name = "ventasDataGridView";
             this.ventasDataGridView.Size = new System.Drawing.Size(621, 160);
             this.ventasDataGridView.TabIndex = 11;
@@ -579,12 +567,9 @@ namespace ProyectoTallerII
             this.ventaDetalleBindingSource1.DataMember = "FK__Venta__id_v_deta__5629CD9C";
             this.ventaDetalleBindingSource1.DataSource = this.ventasBindingSource;
             // 
-            // ventaDetalleTableAdapter1
-            // 
-            this.ventaDetalleTableAdapter1.ClearBeforeFill = true;
-            // 
             // ventaDetalleDataGridView
             // 
+            this.ventaDetalleDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ventaDetalleDataGridView.AutoGenerateColumns = false;
             this.ventaDetalleDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ventaDetalleDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -595,7 +580,7 @@ namespace ProyectoTallerII
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
             this.ventaDetalleDataGridView.DataSource = this.ventaDetalleBindingSource1;
-            this.ventaDetalleDataGridView.Location = new System.Drawing.Point(19, 418);
+            this.ventaDetalleDataGridView.Location = new System.Drawing.Point(19, 551);
             this.ventaDetalleDataGridView.Name = "ventaDetalleDataGridView";
             this.ventaDetalleDataGridView.Size = new System.Drawing.Size(621, 160);
             this.ventaDetalleDataGridView.TabIndex = 11;
@@ -652,7 +637,6 @@ namespace ProyectoTallerII
             this.Controls.Add(this.bunifuDatePicker1);
             this.Controls.Add(this.bunifuLabel3);
             this.Controls.Add(this.bunifuLabel2);
-            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.ventaDetalleBindingNavigator);
             this.Controls.Add(this.lbl_inicio);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -696,7 +680,6 @@ namespace ProyectoTallerII
         private System.Windows.Forms.ToolStripButton ventaDetalleBindingNavigatorSaveItem;
         private JoyeriaDataSetTableAdapters.VentaTableAdapter ventaTableAdapter;
         private System.Windows.Forms.BindingSource ventaBindingSource;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
         private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;

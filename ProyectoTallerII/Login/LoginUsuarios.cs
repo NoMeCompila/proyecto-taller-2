@@ -63,7 +63,6 @@ namespace ProyectoTallerII
                         formu.FormClosed += LogOut;
                         this.Hide();
                     }
-
                     if (UserLognCache.id_perfil == Perfiles.Gerente)
                     {
                         IHomeGerente formu = new IHomeGerente();
@@ -71,9 +70,6 @@ namespace ProyectoTallerII
                         formu.FormClosed += LogOut;
                         this.Hide();
                     }
-
-
-
                     if (UserLognCache.id_perfil == Perfiles.Vendedor)
                     {
                         Form_vendedor_init formu = new Form_vendedor_init();
@@ -81,11 +77,6 @@ namespace ProyectoTallerII
                         formu.FormClosed += LogOut;
                         this.Hide();
                     }
-
-
-
-
-
                 }
                 else
                 {
