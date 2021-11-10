@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Runtime.InteropServices;
+using Common.Cache;
 
 namespace ProyectoTallerII
 {
-    public partial class form_inicio : Form
+    public partial class IHomeAdmin : Form
     {
-        public form_inicio()
+        
+        public IHomeAdmin()
         {
             InitializeComponent();
         }
@@ -32,9 +35,7 @@ namespace ProyectoTallerII
 
         private void pb_exit_Click(object sender, EventArgs e)
         {
-            //this.Close();
             Application.Exit();
-            //Environment.Exit(1);
             
         }
 
@@ -98,13 +99,13 @@ namespace ProyectoTallerII
 
         private void open_child_form(object child_form)
         {
-            if (this.pnl_contenido.Controls.Count > 0)
-                this.pnl_contenido.Controls.RemoveAt(0);
+            if (this.lbl_nombre.Controls.Count > 0)
+                this.lbl_nombre.Controls.RemoveAt(0);
             Form frm = child_form as Form;
             frm.TopLevel = false;
             frm.Dock = DockStyle.Fill;
-            this.pnl_contenido.Controls.Add(frm);
-            this.pnl_contenido.Tag = frm;
+            this.lbl_nombre.Controls.Add(frm);
+            this.lbl_nombre.Tag = frm;
             frm.Show();
             
         }
@@ -116,17 +117,17 @@ namespace ProyectoTallerII
 
         private void btn_usuarios_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_usuarios());
+            open_child_form(new GerenteAuditoria());
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_back());
+            open_child_form(new AdminVentas());
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            open_child_form(new txt_marca());
+            open_child_form(new GerenteReportes());
         }
 
         private void timer_hora_Tick(object sender, EventArgs e)
@@ -135,9 +136,87 @@ namespace ProyectoTallerII
            // lbl_fecha.Text = DateTime.Now.ToLongDateString();
         }
 
-        private void form_inicio_FormClosed(object sender, FormClosedEventArgs e)
+        private void btn_clientes_gerente_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            open_child_form(new AdminCliente());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            open_child_form(new txt_marca());
+        }
+
+        //EVENTO PARA QUE SE PUEDA MOVER EL FORMULARIO A PLACER
+        int ejeX; // variables para guardar las coordenadas del mouse
+        int ejeY;
+        private void pnl_cabecera_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pnl_cabecera_MouseDown(object sender, MouseEventArgs e)
+        {
+            //para poder arrastrar el formulario sin bordes
+
+            
+            w = this.Width;
+            h = this.Height;
+        }
+
+        private void pnl_cabecera_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+       
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        Rectangle sizeGripRectangle;
+        bool inSizeDrag = false;
+        const int GRIP_SIZE = 15;
+
+        int w = 0;
+        int h = 0;
+
+        private void bunifuSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            open_child_form(new Form_back());
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            open_child_form(new Form_usuarios());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("seguro que desea salir?", "ERROR!",
+                               MessageBoxButtons.YesNo,
+                               MessageBoxIcon.Warning) ==  DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void CargarNombre()
+        {
+            label_nombre.Text = UserLognCache.nombre_usuario + " " + UserLognCache.apellido_usuario;
+
+        }
+
+        private void IHomeAdmin_Load(object sender, EventArgs e)
+        {
+            this.CargarNombre();
         }
     }
 }

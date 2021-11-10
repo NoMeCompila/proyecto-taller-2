@@ -30,9 +30,8 @@ namespace ProyectoTallerII
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IHomeAdmin));
-            this.pnl_contenido = new System.Windows.Forms.Panel();
+            this.lbl_nombre = new System.Windows.Forms.Panel();
             this.lbl_bienvenida = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnl_cabecera = new System.Windows.Forms.Panel();
             this.lbl_username = new Bunifu.UI.WinForms.BunifuLabel();
             this.lbl_titulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -41,15 +40,11 @@ namespace ProyectoTallerII
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_sidevar = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.pb_restaurado = new System.Windows.Forms.PictureBox();
-            this.pb_maximizar = new System.Windows.Forms.PictureBox();
-            this.pb_minimizar = new System.Windows.Forms.PictureBox();
-            this.pb_cerrar = new System.Windows.Forms.PictureBox();
             this.button4 = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -58,28 +53,39 @@ namespace ProyectoTallerII
             this.btn_ventas_gerente = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btn_inicio_gerente = new System.Windows.Forms.Button();
-            this.pnl_contenido.SuspendLayout();
-            this.pnl_cabecera.SuspendLayout();
+            this.pb_cerrar = new System.Windows.Forms.PictureBox();
+            this.pb_minimizar = new System.Windows.Forms.PictureBox();
+            this.pb_maximizar = new System.Windows.Forms.PictureBox();
+            this.pb_restaurado = new System.Windows.Forms.PictureBox();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
+            this.pnl_cabecera = new System.Windows.Forms.Panel();
+            this.label_nombre = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_nombre.SuspendLayout();
             this.pnl_sidevar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
+            this.pnl_cabecera.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pnl_contenido
+            // lbl_nombre
             // 
-            this.pnl_contenido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbl_nombre.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_contenido.BackColor = System.Drawing.Color.White;
-            this.pnl_contenido.Controls.Add(this.lbl_bienvenida);
-            this.pnl_contenido.Location = new System.Drawing.Point(184, 0);
-            this.pnl_contenido.Name = "pnl_contenido";
-            this.pnl_contenido.Size = new System.Drawing.Size(741, 561);
-            this.pnl_contenido.TabIndex = 2;
-            this.pnl_contenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_contenido_Paint);
+            this.lbl_nombre.BackColor = System.Drawing.Color.White;
+            this.lbl_nombre.Controls.Add(this.lbl_bienvenida);
+            this.lbl_nombre.Location = new System.Drawing.Point(184, 0);
+            this.lbl_nombre.Name = "lbl_nombre";
+            this.lbl_nombre.Size = new System.Drawing.Size(741, 561);
+            this.lbl_nombre.TabIndex = 2;
+            this.lbl_nombre.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_contenido_Paint);
             // 
             // lbl_bienvenida
             // 
@@ -92,26 +98,11 @@ namespace ProyectoTallerII
             this.lbl_bienvenida.Location = new System.Drawing.Point(31, 231);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
             this.lbl_bienvenida.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_bienvenida.Size = new System.Drawing.Size(685, 64);
+            this.lbl_bienvenida.Size = new System.Drawing.Size(685, 60);
             this.lbl_bienvenida.TabIndex = 12;
             this.lbl_bienvenida.Text = "Bienvenido al Sistema - Perfil Administrador";
             this.lbl_bienvenida.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_bienvenida.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pnl_cabecera
-            // 
-            this.pnl_cabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(152)))), ((int)(((byte)(243)))));
-            this.pnl_cabecera.Controls.Add(this.pb_restaurado);
-            this.pnl_cabecera.Controls.Add(this.pb_maximizar);
-            this.pnl_cabecera.Controls.Add(this.pb_minimizar);
-            this.pnl_cabecera.Controls.Add(this.pb_cerrar);
-            this.pnl_cabecera.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_cabecera.Location = new System.Drawing.Point(184, 0);
-            this.pnl_cabecera.Name = "pnl_cabecera";
-            this.pnl_cabecera.Size = new System.Drawing.Size(741, 41);
-            this.pnl_cabecera.TabIndex = 3;
-            this.pnl_cabecera.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cabecera_Paint);
-            this.pnl_cabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_cabecera_MouseDown_1);
             // 
             // lbl_username
             // 
@@ -141,7 +132,7 @@ namespace ProyectoTallerII
             this.lbl_titulo.Location = new System.Drawing.Point(3, 3);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_titulo.Size = new System.Drawing.Size(173, 64);
+            this.lbl_titulo.Size = new System.Drawing.Size(173, 60);
             this.lbl_titulo.TabIndex = 7;
             this.lbl_titulo.Text = "Perle Joyas";
             this.lbl_titulo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -158,7 +149,7 @@ namespace ProyectoTallerII
             this.bunifuLabel1.Location = new System.Drawing.Point(3, 3);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(173, 64);
+            this.bunifuLabel1.Size = new System.Drawing.Size(173, 60);
             this.bunifuLabel1.TabIndex = 14;
             this.bunifuLabel1.Text = "Perle Joyas";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,22 +214,6 @@ namespace ProyectoTallerII
             this.pnl_sidevar.TabIndex = 0;
             this.pnl_sidevar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_sidevar_Paint);
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel6.Location = new System.Drawing.Point(0, 406);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(10, 39);
-            this.panel6.TabIndex = 14;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel3.Location = new System.Drawing.Point(0, 352);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 39);
-            this.panel3.TabIndex = 13;
-            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.BlueViolet;
@@ -246,59 +221,6 @@ namespace ProyectoTallerII
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(10, 52);
             this.panel7.TabIndex = 17;
-            // 
-            // pb_restaurado
-            // 
-            this.pb_restaurado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_restaurado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_restaurado.Image = global::ProyectoTallerII.Properties.Resources.restore_window_black;
-            this.pb_restaurado.Location = new System.Drawing.Point(601, 4);
-            this.pb_restaurado.Name = "pb_restaurado";
-            this.pb_restaurado.Size = new System.Drawing.Size(49, 34);
-            this.pb_restaurado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_restaurado.TabIndex = 6;
-            this.pb_restaurado.TabStop = false;
-            this.pb_restaurado.Visible = false;
-            this.pb_restaurado.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pb_maximizar
-            // 
-            this.pb_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_maximizar.Image = global::ProyectoTallerII.Properties.Resources.maximize_window_black;
-            this.pb_maximizar.Location = new System.Drawing.Point(601, 3);
-            this.pb_maximizar.Name = "pb_maximizar";
-            this.pb_maximizar.Size = new System.Drawing.Size(49, 34);
-            this.pb_maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_maximizar.TabIndex = 5;
-            this.pb_maximizar.TabStop = false;
-            this.pb_maximizar.Click += new System.EventHandler(this.pb_full_screen_Click);
-            // 
-            // pb_minimizar
-            // 
-            this.pb_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_minimizar.Image = global::ProyectoTallerII.Properties.Resources.minimize_window_black;
-            this.pb_minimizar.Location = new System.Drawing.Point(647, 3);
-            this.pb_minimizar.Name = "pb_minimizar";
-            this.pb_minimizar.Size = new System.Drawing.Size(49, 34);
-            this.pb_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_minimizar.TabIndex = 4;
-            this.pb_minimizar.TabStop = false;
-            this.pb_minimizar.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pb_cerrar
-            // 
-            this.pb_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pb_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pb_cerrar.Image = global::ProyectoTallerII.Properties.Resources.close_window_black;
-            this.pb_cerrar.Location = new System.Drawing.Point(692, 3);
-            this.pb_cerrar.Name = "pb_cerrar";
-            this.pb_cerrar.Size = new System.Drawing.Size(49, 34);
-            this.pb_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pb_cerrar.TabIndex = 3;
-            this.pb_cerrar.TabStop = false;
-            this.pb_cerrar.Click += new System.EventHandler(this.pb_exit_Click);
             // 
             // button4
             // 
@@ -319,6 +241,14 @@ namespace ProyectoTallerII
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel6.Location = new System.Drawing.Point(0, 406);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(10, 39);
+            this.panel6.TabIndex = 14;
+            // 
             // button3
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -337,6 +267,14 @@ namespace ProyectoTallerII
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel3.Location = new System.Drawing.Point(0, 352);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 39);
+            this.panel3.TabIndex = 13;
             // 
             // button2
             // 
@@ -475,38 +413,186 @@ namespace ProyectoTallerII
             this.btn_inicio_gerente.UseVisualStyleBackColor = true;
             this.btn_inicio_gerente.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
+            // pb_cerrar
+            // 
+            this.pb_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_cerrar.Image = global::ProyectoTallerII.Properties.Resources.close_window_black;
+            this.pb_cerrar.Location = new System.Drawing.Point(692, 3);
+            this.pb_cerrar.Name = "pb_cerrar";
+            this.pb_cerrar.Size = new System.Drawing.Size(49, 34);
+            this.pb_cerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_cerrar.TabIndex = 3;
+            this.pb_cerrar.TabStop = false;
+            this.pb_cerrar.Click += new System.EventHandler(this.pb_exit_Click);
+            // 
+            // pb_minimizar
+            // 
+            this.pb_minimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_minimizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_minimizar.Image = global::ProyectoTallerII.Properties.Resources.minimize_window_black;
+            this.pb_minimizar.Location = new System.Drawing.Point(647, 3);
+            this.pb_minimizar.Name = "pb_minimizar";
+            this.pb_minimizar.Size = new System.Drawing.Size(49, 34);
+            this.pb_minimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_minimizar.TabIndex = 4;
+            this.pb_minimizar.TabStop = false;
+            this.pb_minimizar.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // pb_maximizar
+            // 
+            this.pb_maximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_maximizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_maximizar.Image = global::ProyectoTallerII.Properties.Resources.maximize_window_black;
+            this.pb_maximizar.Location = new System.Drawing.Point(601, 3);
+            this.pb_maximizar.Name = "pb_maximizar";
+            this.pb_maximizar.Size = new System.Drawing.Size(49, 34);
+            this.pb_maximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_maximizar.TabIndex = 5;
+            this.pb_maximizar.TabStop = false;
+            this.pb_maximizar.Click += new System.EventHandler(this.pb_full_screen_Click);
+            // 
+            // pb_restaurado
+            // 
+            this.pb_restaurado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pb_restaurado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pb_restaurado.Image = global::ProyectoTallerII.Properties.Resources.restore_window_black;
+            this.pb_restaurado.Location = new System.Drawing.Point(601, 4);
+            this.pb_restaurado.Name = "pb_restaurado";
+            this.pb_restaurado.Size = new System.Drawing.Size(49, 34);
+            this.pb_restaurado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_restaurado.TabIndex = 6;
+            this.pb_restaurado.TabStop = false;
+            this.pb_restaurado.Visible = false;
+            this.pb_restaurado.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 18;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(37, 37);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuPictureBox1.TabIndex = 9;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // pnl_cabecera
+            // 
+            this.pnl_cabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(152)))), ((int)(((byte)(243)))));
+            this.pnl_cabecera.Controls.Add(this.label_nombre);
+            this.pnl_cabecera.Controls.Add(this.bunifuLabel4);
+            this.pnl_cabecera.Controls.Add(this.bunifuPictureBox1);
+            this.pnl_cabecera.Controls.Add(this.pb_restaurado);
+            this.pnl_cabecera.Controls.Add(this.pb_maximizar);
+            this.pnl_cabecera.Controls.Add(this.pb_minimizar);
+            this.pnl_cabecera.Controls.Add(this.pb_cerrar);
+            this.pnl_cabecera.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_cabecera.Location = new System.Drawing.Point(184, 0);
+            this.pnl_cabecera.Name = "pnl_cabecera";
+            this.pnl_cabecera.Size = new System.Drawing.Size(741, 41);
+            this.pnl_cabecera.TabIndex = 3;
+            this.pnl_cabecera.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cabecera_Paint);
+            this.pnl_cabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_cabecera_MouseDown_1);
+            // 
+            // label_nombre
+            // 
+            this.label_nombre.AllowParentOverrides = false;
+            this.label_nombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_nombre.AutoEllipsis = false;
+            this.label_nombre.CursorType = null;
+            this.label_nombre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_nombre.Location = new System.Drawing.Point(124, 12);
+            this.label_nombre.Name = "label_nombre";
+            this.label_nombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_nombre.Size = new System.Drawing.Size(58, 21);
+            this.label_nombre.TabIndex = 11;
+            this.label_nombre.Text = "Nombre";
+            this.label_nombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.label_nombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(49, 12);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(54, 21);
+            this.bunifuLabel4.TabIndex = 10;
+            this.bunifuLabel4.Text = "ADMIN:";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel2
+            // 
+            this.bunifuLabel2.AllowParentOverrides = false;
+            this.bunifuLabel2.AutoEllipsis = false;
+            this.bunifuLabel2.CursorType = null;
+            this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel2.Location = new System.Drawing.Point(55, 12);
+            this.bunifuLabel2.Name = "bunifuLabel2";
+            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(54, 21);
+            this.bunifuLabel2.TabIndex = 7;
+            this.bunifuLabel2.Text = "ADMIN:";
+            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel3
+            // 
+            this.bunifuLabel3.AllowParentOverrides = false;
+            this.bunifuLabel3.AutoEllipsis = false;
+            this.bunifuLabel3.CursorType = null;
+            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel3.Location = new System.Drawing.Point(115, 12);
+            this.bunifuLabel3.Name = "bunifuLabel3";
+            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(54, 21);
+            this.bunifuLabel3.TabIndex = 8;
+            this.bunifuLabel3.Text = "ADMIN:";
+            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
             // IHomeAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 561);
             this.Controls.Add(this.pnl_cabecera);
-            this.Controls.Add(this.pnl_contenido);
+            this.Controls.Add(this.lbl_nombre);
             this.Controls.Add(this.pnl_sidevar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "IHomeAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario 2";
-            this.pnl_contenido.ResumeLayout(false);
-            this.pnl_contenido.PerformLayout();
-            this.pnl_cabecera.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.IHomeAdmin_Load);
+            this.lbl_nombre.ResumeLayout(false);
+            this.lbl_nombre.PerformLayout();
             this.pnl_sidevar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
+            this.pnl_cabecera.ResumeLayout(false);
+            this.pnl_cabecera.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel pnl_contenido;
-        private System.Windows.Forms.Panel pnl_cabecera;
-        private System.Windows.Forms.PictureBox pb_cerrar;
-        private System.Windows.Forms.PictureBox pb_maximizar;
-        private System.Windows.Forms.PictureBox pb_restaurado;
-        private System.Windows.Forms.PictureBox pb_minimizar;
+        private System.Windows.Forms.Panel lbl_nombre;
         private Bunifu.UI.WinForms.BunifuLabel lbl_username;
         private Bunifu.UI.WinForms.BunifuLabel lbl_titulo;
         private Bunifu.UI.WinForms.BunifuLabel lbl_bienvenida;
@@ -529,5 +615,15 @@ namespace ProyectoTallerII
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.PictureBox pb_cerrar;
+        private System.Windows.Forms.PictureBox pb_minimizar;
+        private System.Windows.Forms.PictureBox pb_maximizar;
+        private System.Windows.Forms.PictureBox pb_restaurado;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
+        private System.Windows.Forms.Panel pnl_cabecera;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private Bunifu.UI.WinForms.BunifuLabel label_nombre;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
     }
 }

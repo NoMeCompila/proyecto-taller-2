@@ -177,23 +177,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Home\IHomeGerente.cs">
+    <Compile Include="InterfazGerente\HomeGerente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\IHomeGerente.Designer.cs">
-      <DependentUpon>IHomeGerente.cs</DependentUpon>
+    <Compile Include="InterfazGerente\HomeGerente.Designer.cs">
+      <DependentUpon>HomeGerente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home\IHomeAdmin.cs">
+    <Compile Include="InterfazAdmin\HomeAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home\IHomeAdmin.Designer.cs">
-      <DependentUpon>IHomeAdmin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home\LoginPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home\LoginPrincipal.Designer.cs">
-      <DependentUpon>LoginPrincipal.cs</DependentUpon>
+    <Compile Include="InterfazAdmin\HomeAdmin.Designer.cs">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfazAdmin\AdminCliente.cs">
       <SubType>Form</SubType>
@@ -219,11 +213,11 @@
     <Compile Include="InterfazGerente\GerenteClientes.Designer.cs">
       <DependentUpon>GerenteClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfazVendedor\IVendedorCliente.cs">
+    <Compile Include="InterfazVendedor\VendedorCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfazVendedor\IVendedorCliente.Designer.cs">
-      <DependentUpon>IVendedorCliente.cs</DependentUpon>
+    <Compile Include="InterfazVendedor\VendedorCliente.Designer.cs">
+      <DependentUpon>VendedorCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfazVendedor\VendedorFacturacion.cs">
       <SubType>Form</SubType>
@@ -243,29 +237,11 @@
     <Compile Include="InterfazVendedor\VendedorProductos.Designer.cs">
       <DependentUpon>VendedorProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfazVendedor\VendedorClientes.cs">
+    <Compile Include="InterfazVendedor\HomeVendedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfazVendedor\VendedorClientes.Designer.cs">
-      <DependentUpon>VendedorClientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home\HomeVendedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home\HomeVendedor.Designer.cs">
+    <Compile Include="InterfazVendedor\HomeVendedor.Designer.cs">
       <DependentUpon>HomeVendedor.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home\HomeGerente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home\HomeGerente.Designer.cs">
-      <DependentUpon>HomeGerente.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Home\HomeAdmin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Home\HomeAdmin.Designer.cs">
-      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfazAdmin\AdminBackU.cs">
       <SubType>Form</SubType>
@@ -327,14 +303,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Home\IHomeGerente.resx">
-      <DependentUpon>IHomeGerente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazGerente\HomeGerente.resx">
+      <DependentUpon>HomeGerente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home\IHomeAdmin.resx">
-      <DependentUpon>IHomeAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home\LoginPrincipal.resx">
-      <DependentUpon>LoginPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazAdmin\HomeAdmin.resx">
+      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazAdmin\AdminCliente.resx">
       <DependentUpon>AdminCliente.cs</DependentUpon>
@@ -348,8 +321,8 @@
     <EmbeddedResource Include="InterfazGerente\GerenteClientes.resx">
       <DependentUpon>GerenteClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfazVendedor\IVendedorCliente.resx">
-      <DependentUpon>IVendedorCliente.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazVendedor\VendedorCliente.resx">
+      <DependentUpon>VendedorCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazVendedor\VendedorFacturacion.resx">
       <DependentUpon>VendedorFacturacion.cs</DependentUpon>
@@ -360,17 +333,8 @@
     <EmbeddedResource Include="InterfazVendedor\VendedorProductos.resx">
       <DependentUpon>VendedorProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfazVendedor\VendedorClientes.resx">
-      <DependentUpon>VendedorClientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home\HomeVendedor.resx">
+    <EmbeddedResource Include="InterfazVendedor\HomeVendedor.resx">
       <DependentUpon>HomeVendedor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home\HomeGerente.resx">
-      <DependentUpon>HomeGerente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Home\HomeAdmin.resx">
-      <DependentUpon>HomeAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazAdmin\AdminBackU.resx">
       <DependentUpon>AdminBackU.cs</DependentUpon>

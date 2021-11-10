@@ -8,12 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Runtime.InteropServices;
+using Common.Cache;
 
 namespace ProyectoTallerII
 {
-    public partial class Form_Gerente : Form
+    public partial class IHomeGerente : Form
     {
-        public Form_Gerente()
+        
+        public IHomeGerente()
         {
             InitializeComponent();
         }
@@ -119,7 +122,7 @@ namespace ProyectoTallerII
 
         private void button1_Click(object sender, EventArgs e)
         {
-            open_child_form(new GerenteVentas());
+            open_child_form(new AdminVentas());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -135,7 +138,84 @@ namespace ProyectoTallerII
 
         private void btn_clientes_gerente_Click(object sender, EventArgs e)
         {
-            open_child_form(new GerenteClientes()); 
+            open_child_form(new GerenteReportes());
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            open_child_form(new GerenteClientes());
+        }
+
+        //EVENTO PARA QUE SE PUEDA MOVER EL FORMULARIO A PLACER
+        int ejeX; // variables para guardar las coordenadas del mouse
+        int ejeY;
+        private void pnl_cabecera_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void pnl_cabecera_MouseDown(object sender, MouseEventArgs e)
+        {
+            //para poder arrastrar el formulario sin bordes
+
+            
+            w = this.Width;
+            h = this.Height;
+        }
+
+        private void pnl_cabecera_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+       
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        Rectangle sizeGripRectangle;
+        bool inSizeDrag = false;
+        const int GRIP_SIZE = 15;
+
+        int w = 0;
+        int h = 0;
+
+        private void bunifuSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            open_child_form(new Form_back());
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            open_child_form(new Form_usuarios());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("seguro que desea salir?", "ERROR!",
+                               MessageBoxButtons.YesNo,
+                               MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
+        private void CargarDatos()
+        {
+            label_nombre.Text = UserLognCache.nombre_usuario + " " + UserLognCache.apellido_usuario;
+        }
+
+        private void IHomeGerente_Load(object sender, EventArgs e)
+        {
+            this.CargarDatos();
         }
     }
 }

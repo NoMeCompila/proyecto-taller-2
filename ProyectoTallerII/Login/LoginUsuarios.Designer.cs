@@ -98,17 +98,18 @@ namespace ProyectoTallerII
             this.lbl_footer.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_footer.Font = new System.Drawing.Font("Segoe UI Emoji", 10F);
             this.lbl_footer.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.lbl_footer.Location = new System.Drawing.Point(188, 510);
+            this.lbl_footer.Location = new System.Drawing.Point(180, 510);
             this.lbl_footer.Name = "lbl_footer";
             this.lbl_footer.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_footer.Size = new System.Drawing.Size(155, 17);
+            this.lbl_footer.Size = new System.Drawing.Size(158, 17);
             this.lbl_footer.TabIndex = 3;
-            this.lbl_footer.Text = "Sistemas de Ventas Joyera";
+            this.lbl_footer.Text = "Sistemas de Ventas Joyeria";
             this.lbl_footer.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lbl_footer.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
             this.pictureBox1.Location = new System.Drawing.Point(451, 0);
             this.pictureBox1.Name = "pictureBox1";

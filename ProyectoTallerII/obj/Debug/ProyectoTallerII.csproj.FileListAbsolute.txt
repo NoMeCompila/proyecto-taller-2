@@ -287,7 +287,6 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\bin\Debug\C
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.csproj.AssemblyReference.cache
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.IHomeGerente.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.IHomeAdmin.resources
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.LoginPrincipal.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.AdminCliente.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteAuditoria.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteClientes.resources
@@ -295,10 +294,7 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\P
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_facturacion_vendedor.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.VendedorInicio.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_listar_productos.resources
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_vendedor_clientes.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_vendedor_init.resources
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_Gerente.resources
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.form_inicio.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_back.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.GerenteReportes.resources
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\ProyectoTallerII\obj\Debug\ProyectoTallerII.Form_home_gerente.resources

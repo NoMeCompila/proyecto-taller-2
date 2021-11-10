@@ -9,13 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Runtime.InteropServices;
+using Common.Cache;
 
 namespace ProyectoTallerII
 {
-    public partial class IHomeGerente : Form
+    public partial class Form_vendedor_init : Form
     {
         
-        public IHomeGerente()
+        public Form_vendedor_init()
         {
             InitializeComponent();
         }
@@ -111,7 +112,7 @@ namespace ProyectoTallerII
 
         private void btn_inicio_Click(object sender, EventArgs e)
         {
-            open_child_form(new Form_home_gerente());
+            open_child_form(new VendedorInicio());
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
@@ -137,12 +138,12 @@ namespace ProyectoTallerII
 
         private void btn_clientes_gerente_Click(object sender, EventArgs e)
         {
-            open_child_form(new AdminCliente());
+            open_child_form(new IVendedorCliente());
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            open_child_form(new GerenteClientes());
+            open_child_form(new Form_listar_productos()); 
         }
 
         //EVENTO PARA QUE SE PUEDA MOVER EL FORMULARIO A PLACER
@@ -187,16 +188,6 @@ namespace ProyectoTallerII
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            open_child_form(new Form_back());
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            open_child_form(new Form_usuarios());
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("seguro que desea salir?", "ERROR!",
@@ -205,6 +196,17 @@ namespace ProyectoTallerII
             {
                 this.Close();
             }
+        }
+
+        private void CargarNombre()
+        {
+            label_nombre.Text = UserLognCache.nombre_usuario + " " + UserLognCache.apellido_usuario;
+
+        }
+
+        private void Form_vendedor_init_Load(object sender, EventArgs e)
+        {
+            this.CargarNombre();
         }
     }
 }

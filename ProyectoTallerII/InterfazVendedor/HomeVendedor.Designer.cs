@@ -1,7 +1,7 @@
 ﻿
 namespace ProyectoTallerII
 {
-    partial class IHomeGerente
+    partial class Form_vendedor_init
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace ProyectoTallerII
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IHomeGerente));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_vendedor_init));
             this.pnl_contenido = new System.Windows.Forms.Panel();
             this.lbl_bienvenida = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnl_cabecera = new System.Windows.Forms.Panel();
@@ -45,6 +45,8 @@ namespace ProyectoTallerII
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_sidevar = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
@@ -52,8 +54,9 @@ namespace ProyectoTallerII
             this.btn_ventas_gerente = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btn_inicio_gerente = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.label_nombre = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnl_contenido.SuspendLayout();
             this.pnl_cabecera.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
@@ -62,6 +65,7 @@ namespace ProyectoTallerII
             ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).BeginInit();
             this.pnl_sidevar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_contenido
@@ -73,7 +77,7 @@ namespace ProyectoTallerII
             this.pnl_contenido.Controls.Add(this.lbl_bienvenida);
             this.pnl_contenido.Location = new System.Drawing.Point(184, 0);
             this.pnl_contenido.Name = "pnl_contenido";
-            this.pnl_contenido.Size = new System.Drawing.Size(741, 561);
+            this.pnl_contenido.Size = new System.Drawing.Size(729, 561);
             this.pnl_contenido.TabIndex = 2;
             this.pnl_contenido.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_contenido_Paint);
             // 
@@ -85,18 +89,21 @@ namespace ProyectoTallerII
             this.lbl_bienvenida.Cursor = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.CursorType = System.Windows.Forms.Cursors.Default;
             this.lbl_bienvenida.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
-            this.lbl_bienvenida.Location = new System.Drawing.Point(89, 242);
+            this.lbl_bienvenida.Location = new System.Drawing.Point(64, 236);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
             this.lbl_bienvenida.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_bienvenida.Size = new System.Drawing.Size(585, 60);
+            this.lbl_bienvenida.Size = new System.Drawing.Size(604, 60);
             this.lbl_bienvenida.TabIndex = 12;
-            this.lbl_bienvenida.Text = "Bienvenido al Sistema - Perfil Gerente";
+            this.lbl_bienvenida.Text = "Bienvenido al Sistema- Perfil Vendedor";
             this.lbl_bienvenida.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lbl_bienvenida.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pnl_cabecera
             // 
             this.pnl_cabecera.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(152)))), ((int)(((byte)(243)))));
+            this.pnl_cabecera.Controls.Add(this.label_nombre);
+            this.pnl_cabecera.Controls.Add(this.bunifuLabel4);
+            this.pnl_cabecera.Controls.Add(this.bunifuPictureBox1);
             this.pnl_cabecera.Controls.Add(this.pb_restaurado);
             this.pnl_cabecera.Controls.Add(this.pb_maximizar);
             this.pnl_cabecera.Controls.Add(this.pb_minimizar);
@@ -216,7 +223,7 @@ namespace ProyectoTallerII
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel2.Location = new System.Drawing.Point(0, 184);
+            this.panel2.Location = new System.Drawing.Point(0, 175);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(10, 39);
             this.panel2.TabIndex = 6;
@@ -224,7 +231,7 @@ namespace ProyectoTallerII
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel4.Location = new System.Drawing.Point(0, 296);
+            this.panel4.Location = new System.Drawing.Point(0, 287);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(10, 39);
             this.panel4.TabIndex = 6;
@@ -232,7 +239,7 @@ namespace ProyectoTallerII
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel5.Location = new System.Drawing.Point(0, 240);
+            this.panel5.Location = new System.Drawing.Point(0, 231);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(10, 39);
             this.panel5.TabIndex = 11;
@@ -240,7 +247,7 @@ namespace ProyectoTallerII
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel1.Location = new System.Drawing.Point(0, 352);
+            this.panel1.Location = new System.Drawing.Point(0, 343);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 39);
             this.panel1.TabIndex = 12;
@@ -268,6 +275,33 @@ namespace ProyectoTallerII
             this.pnl_sidevar.TabIndex = 0;
             this.pnl_sidevar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_sidevar_Paint);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.BlueViolet;
+            this.panel3.Location = new System.Drawing.Point(0, 509);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 52);
+            this.panel3.TabIndex = 13;
+            // 
+            // button4
+            // 
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Image = global::ProyectoTallerII.Properties.Resources.logout_48;
+            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.Location = new System.Drawing.Point(7, 509);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(177, 52);
+            this.button4.TabIndex = 19;
+            this.button4.Text = "Salir";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // bunifuSeparator2
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
@@ -285,7 +319,7 @@ namespace ProyectoTallerII
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::ProyectoTallerII.Properties.Resources.LOGOPERLE;
             this.pictureBox1.Location = new System.Drawing.Point(12, 24);
             this.pictureBox1.Name = "pictureBox1";
@@ -302,13 +336,13 @@ namespace ProyectoTallerII
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = global::ProyectoTallerII.Properties.Resources.user_black;
+            this.button1.Image = global::ProyectoTallerII.Properties.Resources.cart_black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(9, 352);
+            this.button1.Location = new System.Drawing.Point(9, 343);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 39);
             this.button1.TabIndex = 4;
-            this.button1.Text = "Clientes";
+            this.button1.Text = "Productos";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
@@ -321,13 +355,13 @@ namespace ProyectoTallerII
             this.btn_clientes_gerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes_gerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.btn_clientes_gerente.ForeColor = System.Drawing.Color.Black;
-            this.btn_clientes_gerente.Image = global::ProyectoTallerII.Properties.Resources.pie_chart_48;
+            this.btn_clientes_gerente.Image = global::ProyectoTallerII.Properties.Resources.user_black;
             this.btn_clientes_gerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_clientes_gerente.Location = new System.Drawing.Point(9, 296);
+            this.btn_clientes_gerente.Location = new System.Drawing.Point(9, 231);
             this.btn_clientes_gerente.Name = "btn_clientes_gerente";
             this.btn_clientes_gerente.Size = new System.Drawing.Size(177, 39);
             this.btn_clientes_gerente.TabIndex = 2;
-            this.btn_clientes_gerente.Text = "Reportes";
+            this.btn_clientes_gerente.Text = "Clientes";
             this.btn_clientes_gerente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_clientes_gerente.UseVisualStyleBackColor = true;
             this.btn_clientes_gerente.Click += new System.EventHandler(this.btn_clientes_gerente_Click);
@@ -342,7 +376,7 @@ namespace ProyectoTallerII
             this.btn_ventas_gerente.ForeColor = System.Drawing.Color.Black;
             this.btn_ventas_gerente.Image = global::ProyectoTallerII.Properties.Resources.bank_2_48;
             this.btn_ventas_gerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ventas_gerente.Location = new System.Drawing.Point(9, 240);
+            this.btn_ventas_gerente.Location = new System.Drawing.Point(9, 287);
             this.btn_ventas_gerente.Name = "btn_ventas_gerente";
             this.btn_ventas_gerente.Size = new System.Drawing.Size(177, 39);
             this.btn_ventas_gerente.TabIndex = 3;
@@ -377,7 +411,7 @@ namespace ProyectoTallerII
             this.btn_inicio_gerente.ForeColor = System.Drawing.Color.Black;
             this.btn_inicio_gerente.Image = global::ProyectoTallerII.Properties.Resources.home__1_;
             this.btn_inicio_gerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_inicio_gerente.Location = new System.Drawing.Point(7, 184);
+            this.btn_inicio_gerente.Location = new System.Drawing.Point(7, 175);
             this.btn_inicio_gerente.Name = "btn_inicio_gerente";
             this.btn_inicio_gerente.Size = new System.Drawing.Size(177, 39);
             this.btn_inicio_gerente.TabIndex = 1;
@@ -386,34 +420,56 @@ namespace ProyectoTallerII
             this.btn_inicio_gerente.UseVisualStyleBackColor = true;
             this.btn_inicio_gerente.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
-            // button4
+            // label_nombre
             // 
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Image = global::ProyectoTallerII.Properties.Resources.logout_48;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(7, 509);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(177, 52);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Salir";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label_nombre.AllowParentOverrides = false;
+            this.label_nombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_nombre.AutoEllipsis = false;
+            this.label_nombre.CursorType = null;
+            this.label_nombre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_nombre.Location = new System.Drawing.Point(154, 12);
+            this.label_nombre.Name = "label_nombre";
+            this.label_nombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_nombre.Size = new System.Drawing.Size(58, 21);
+            this.label_nombre.TabIndex = 17;
+            this.label_nombre.Text = "Nombre";
+            this.label_nombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.label_nombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // panel3
+            // bunifuLabel4
             // 
-            this.panel3.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel3.Location = new System.Drawing.Point(0, 509);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 52);
-            this.panel3.TabIndex = 13;
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(52, 12);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(85, 21);
+            this.bunifuLabel4.TabIndex = 16;
+            this.bunifuLabel4.Text = "VENDEDOR:";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // IHomeGerente
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 18;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(37, 37);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuPictureBox1.TabIndex = 15;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
+            // 
+            // Form_vendedor_init
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -422,18 +478,21 @@ namespace ProyectoTallerII
             this.Controls.Add(this.pnl_contenido);
             this.Controls.Add(this.pnl_sidevar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "IHomeGerente";
+            this.Name = "Form_vendedor_init";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario 2";
+            this.Load += new System.EventHandler(this.Form_vendedor_init_Load);
             this.pnl_contenido.ResumeLayout(false);
             this.pnl_contenido.PerformLayout();
             this.pnl_cabecera.ResumeLayout(false);
+            this.pnl_cabecera.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).EndInit();
             this.pnl_sidevar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -463,5 +522,8 @@ namespace ProyectoTallerII
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button button4;
+        private Bunifu.UI.WinForms.BunifuLabel label_nombre;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel4;
+        private Bunifu.UI.WinForms.BunifuPictureBox bunifuPictureBox1;
     }
 }
