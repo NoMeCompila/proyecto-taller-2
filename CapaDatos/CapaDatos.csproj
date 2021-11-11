@@ -50,6 +50,7 @@
     <Compile Include="cd_perfiles.cs" />
     <Compile Include="cd_productos.cs" />
     <Compile Include="cd_usuarios.cs" />
+    <Compile Include="cd_venta.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDatos.cs" />
   </ItemGroup>

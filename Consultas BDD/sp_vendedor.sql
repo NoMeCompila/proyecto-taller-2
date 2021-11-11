@@ -62,3 +62,14 @@ AS
 	UPDATE Cliente SET estado = 0 
 	WHERE id_cliente = @id_cliente
 GO
+
+
+
+
+
+
+									-- TODO: PRODUCTOS
+
+
+CREATE PROC sp_registrar_venta
+	@id_

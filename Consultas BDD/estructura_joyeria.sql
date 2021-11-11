@@ -86,12 +86,136 @@ create table VentaDetalle(
 
 -- * TABLA VENTA: resumen de todos los datos referentes a una venta
 create table Venta(
-	nro_venta int primary key identity,
-	id_v_detalle int not null foreign key references VentaDetalle(id_v_detalle),
-	id_t_pago int not null foreign key references TipoPago(id_t_pago),
+	id_venta int primary key identity,
+	id_vendedor int not null foreign key references Usuario(id_usuario),
 	id_cliente int not null foreign key references  Cliente(id_cliente),
-	id_usuario int not null foreign key references  Usuario(id_usuario),
-	telefono_cliente varchar(15) not null,
-	fecha_venta date not null,
-	total_venta money not null
+	id_tpago int not null foreign key references TipoPago(id_t_pago),
+	total decimal(10,2) not null,
+	fecha_venta date not null
+	
 );
+
+ALTER TABLE Ventas
+	ADD vendedor_dni int
+
+ALTER TABLE Ventas
+	ADD cliente_dni int
+
+ALTER TABLE Ventas
+	ADD cliente_tel varchar(100)
+
+ALTER TABLE Ventas
+	ADD cliente_email varchar(100)
+
+ALTER TABLE Ventas
+	ADD cliente_fullname varchar(100)
+
+ALTER TABLE Ventas
+	ADD importe decimal(10,2)
+
+ALTER TABLE Ventas
+	ADD vuelto  decimal(10,2)
+
+select * from Ventas
+
+
+create table Venta(
+	id_venta int primary key identity,
+	id_vendedor int not null foreign key references Usuario(id_usuario),
+	id_cliente int not null foreign key references  Cliente(id_cliente),
+	id_tpago int not null foreign key references TipoPago(id_t_pago),
+	total decimal(10,2) not null,
+	fecha_venta date not null
+	
+);
+
+
+
+
+-- ! SE CREA UN TIPO DE DATO DE ESTRUCTURA VENTADETALLE
+CREATE TYPE EVentaEdalle AS TABLE(
+	id_producto INT NULL,
+	cantidad INT NULL,
+	precio DECIMAL NULL,
+	sub_total DECIMAL NULL
+)
+GO
+
+	
+-- TODO:transaccion para registrar una venta
+
+CREATE PROC sp_registrar_venta(
+	@id_vendedor int,
+	@id_cliente int,
+	@id_tpago int,
+	@total decimal,
+	@fecha date,
+	@vendedor_dni int,
+	@cliente_dni int,
+	@cliente_tel int,
+	@cliente_email varchar(100),
+	@cliente_fullname varchar(100),
+	@importe decimal,
+	@vuelto decimal,
+	@VentaDetalle [EVentaEdalle] READONLY,
+	@resultado bit output,
+	@mensaje varchar(500) output)
+AS
+	BEGIN
+		BEGIN TRY
+			DECLARE @id_venta INT = 0
+			SET @resultado = 1
+			SET @mensaje = ''
+			BEGIN TRANSACTION registro
+			
+				INSERT INTO Ventas(
+					id_vendedor,
+					id_cliente,
+					id_tpago,
+					total,
+					fecha,
+					vendedor_dni,
+					cliente_dni,
+					cliente_tel,
+					cliente_email,
+					cliente_fullname,
+					importe,
+					vuelto)
+				VALUES(
+					@id_vendedor,
+					@id_cliente,
+					@id_tpago,
+					@total,
+					@fecha,
+					@vendedor_dni,
+					@cliente_dni,
+					@cliente_tel,
+					@cliente_email,
+					@cliente_fullname,
+					@importe,
+					@vuelto)
+
+				SET @id_venta = SCOPE_IDENTITY()
+				EXEC sp_help VentaDetalle
+				INSERT INTO VentaDetalle(
+					id_venta,
+					id_producto,
+					cantidad,
+					precio,
+					sub_total)
+				SELECT 
+					@id_venta, 
+					id_producto,
+					cantidad,
+					precio,
+					sub_total FROM @VentaDetalle					 
+			COMMIT TRANSACTION registro
+		END TRY
+		BEGIN CATCH
+			set @resultado = 0
+			set @mensaje = ERROR_MESSAGE()
+			ROLLBACK TRANSACTION registro
+		END CATCH	
+	END	 
+GO
+

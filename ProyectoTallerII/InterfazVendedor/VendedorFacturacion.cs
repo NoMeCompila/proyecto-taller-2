@@ -24,7 +24,7 @@ namespace ProyectoTallerII
         {
             this.inicioVendedor();
         }
-
+                                                                                                                                                                
         private void inicioVendedor()
         {
             txt_fecha.Text = DateTime.Now.ToString("dd/MM/yyyy");

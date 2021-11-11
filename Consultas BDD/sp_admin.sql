@@ -335,3 +335,4 @@ FROM Producto pro INNER JOIN Categoria cat
 ON pro.fk_id_categoria = cat.id_categoria
 
 
+EXEC sp_help Ventas
