@@ -197,8 +197,16 @@ namespace ProyectoTallerII
 
             if (!prod_existe)
             {
-                data_productos.Rows.Add(new object[]
+                //string mensaje = string.Empty;
+                bool respuesta = new cn_venta().RestarStock(
+                        txt_cod.Text.ToString(),
+                        Convert.ToInt32(txt_cantidad.Text.ToString())
+                    );
+
+                if (respuesta)
                 {
+                    data_productos.Rows.Add(new object[]
+               {
                     txt_cod.Text,
                     txt_prod_nombre.Text,
                     txt_marca.Text,
@@ -208,9 +216,12 @@ namespace ProyectoTallerII
                     txt_precio.Text,
                     txt_cantidad.Text,
                     (Convert.ToDecimal(txt_cantidad.Text) * Convert.ToDecimal(txt_precio.Text)).ToString()
-                });
-                this.CalcularTotal();
+               });
+                    this.CalcularTotal();
+                }
             }
+
+               
         }
 
         private void CalcularTotal()
@@ -282,8 +293,18 @@ namespace ProyectoTallerII
                 int index = e.RowIndex;
                 if (index >= 0)
                 {
-                    data_productos.Rows.RemoveAt(index);
-                    this.CalcularTotal();
+                    bool respuesta = new cn_venta().SumarStock(
+                        data_productos.Rows[index].Cells["cod_prod"].Value.ToString(),
+                        Convert.ToInt32(data_productos.Rows[index].Cells["cantidad"].Value.ToString())
+                    );
+
+                    if (respuesta)
+                    {
+                        data_productos.Rows.RemoveAt(index);
+                        this.CalcularTotal();
+                    }
+
+                    
                 }
             }
         }

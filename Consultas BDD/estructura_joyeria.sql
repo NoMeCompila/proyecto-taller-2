@@ -219,3 +219,19 @@ AS
 	END	 
 GO
 
+exec sp_help Producto
+
+
+id_venta
+id_vendedor
+id_cliente
+id_tpago
+total
+fecha
+vendedor_dni
+cliente_dni
+cliente_tel
+cliente_email
+cliente_fullname
+importe
+vuelto
