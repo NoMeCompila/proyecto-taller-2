@@ -33,6 +33,9 @@ namespace ProyectoTallerII
             this.pnl_contenido = new System.Windows.Forms.Panel();
             this.lbl_bienvenida = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnl_cabecera = new System.Windows.Forms.Panel();
+            this.label_nombre = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pb_restaurado = new System.Windows.Forms.PictureBox();
             this.pb_maximizar = new System.Windows.Forms.PictureBox();
             this.pb_minimizar = new System.Windows.Forms.PictureBox();
@@ -41,7 +44,6 @@ namespace ProyectoTallerII
             this.lbl_titulo = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnl_sidevar = new System.Windows.Forms.Panel();
@@ -50,22 +52,18 @@ namespace ProyectoTallerII
             this.bunifuSeparator2 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.btn_clientes_gerente = new System.Windows.Forms.Button();
             this.btn_ventas_gerente = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.UI.WinForms.BunifuSeparator();
             this.btn_inicio_gerente = new System.Windows.Forms.Button();
-            this.label_nombre = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuLabel4 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPictureBox1 = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.pnl_contenido.SuspendLayout();
             this.pnl_cabecera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).BeginInit();
             this.pnl_sidevar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_contenido
@@ -115,6 +113,55 @@ namespace ProyectoTallerII
             this.pnl_cabecera.TabIndex = 3;
             this.pnl_cabecera.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_cabecera_Paint);
             this.pnl_cabecera.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_cabecera_MouseDown_1);
+            // 
+            // label_nombre
+            // 
+            this.label_nombre.AllowParentOverrides = false;
+            this.label_nombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label_nombre.AutoEllipsis = false;
+            this.label_nombre.CursorType = null;
+            this.label_nombre.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.label_nombre.Location = new System.Drawing.Point(124, 12);
+            this.label_nombre.Name = "label_nombre";
+            this.label_nombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.label_nombre.Size = new System.Drawing.Size(58, 21);
+            this.label_nombre.TabIndex = 14;
+            this.label_nombre.Text = "Nombre";
+            this.label_nombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.label_nombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuLabel4
+            // 
+            this.bunifuLabel4.AllowParentOverrides = false;
+            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuLabel4.AutoEllipsis = false;
+            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.bunifuLabel4.Location = new System.Drawing.Point(49, 12);
+            this.bunifuLabel4.Name = "bunifuLabel4";
+            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel4.Size = new System.Drawing.Size(68, 21);
+            this.bunifuLabel4.TabIndex = 13;
+            this.bunifuLabel4.Text = "GERENTE:";
+            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // bunifuPictureBox1
+            // 
+            this.bunifuPictureBox1.AllowFocused = false;
+            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.bunifuPictureBox1.AutoSizeHeight = true;
+            this.bunifuPictureBox1.BorderRadius = 18;
+            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
+            this.bunifuPictureBox1.IsCircle = true;
+            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
+            this.bunifuPictureBox1.Size = new System.Drawing.Size(37, 37);
+            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.bunifuPictureBox1.TabIndex = 12;
+            this.bunifuPictureBox1.TabStop = false;
+            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // pb_restaurado
             // 
@@ -228,14 +275,6 @@ namespace ProyectoTallerII
             this.panel2.Size = new System.Drawing.Size(10, 39);
             this.panel2.TabIndex = 6;
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel4.Location = new System.Drawing.Point(0, 296);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 39);
-            this.panel4.TabIndex = 6;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.BlueViolet;
@@ -247,7 +286,7 @@ namespace ProyectoTallerII
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.BlueViolet;
-            this.panel1.Location = new System.Drawing.Point(0, 352);
+            this.panel1.Location = new System.Drawing.Point(0, 294);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(10, 39);
             this.panel1.TabIndex = 12;
@@ -262,9 +301,7 @@ namespace ProyectoTallerII
             this.pnl_sidevar.Controls.Add(this.button1);
             this.pnl_sidevar.Controls.Add(this.panel1);
             this.pnl_sidevar.Controls.Add(this.panel5);
-            this.pnl_sidevar.Controls.Add(this.btn_clientes_gerente);
             this.pnl_sidevar.Controls.Add(this.btn_ventas_gerente);
-            this.pnl_sidevar.Controls.Add(this.panel4);
             this.pnl_sidevar.Controls.Add(this.bunifuSeparator1);
             this.pnl_sidevar.Controls.Add(this.panel2);
             this.pnl_sidevar.Controls.Add(this.btn_inicio_gerente);
@@ -338,7 +375,7 @@ namespace ProyectoTallerII
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::ProyectoTallerII.Properties.Resources.user_black;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(9, 352);
+            this.button1.Location = new System.Drawing.Point(9, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(177, 39);
             this.button1.TabIndex = 4;
@@ -346,25 +383,6 @@ namespace ProyectoTallerII
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btn_clientes_gerente
-            // 
-            this.btn_clientes_gerente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_clientes_gerente.FlatAppearance.BorderColor = System.Drawing.Color.BlueViolet;
-            this.btn_clientes_gerente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
-            this.btn_clientes_gerente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_clientes_gerente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.btn_clientes_gerente.ForeColor = System.Drawing.Color.Black;
-            this.btn_clientes_gerente.Image = global::ProyectoTallerII.Properties.Resources.pie_chart_48;
-            this.btn_clientes_gerente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_clientes_gerente.Location = new System.Drawing.Point(9, 296);
-            this.btn_clientes_gerente.Name = "btn_clientes_gerente";
-            this.btn_clientes_gerente.Size = new System.Drawing.Size(177, 39);
-            this.btn_clientes_gerente.TabIndex = 2;
-            this.btn_clientes_gerente.Text = "Reportes";
-            this.btn_clientes_gerente.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_clientes_gerente.UseVisualStyleBackColor = true;
-            this.btn_clientes_gerente.Click += new System.EventHandler(this.btn_clientes_gerente_Click);
             // 
             // btn_ventas_gerente
             // 
@@ -420,55 +438,6 @@ namespace ProyectoTallerII
             this.btn_inicio_gerente.UseVisualStyleBackColor = true;
             this.btn_inicio_gerente.Click += new System.EventHandler(this.btn_inicio_Click);
             // 
-            // label_nombre
-            // 
-            this.label_nombre.AllowParentOverrides = false;
-            this.label_nombre.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label_nombre.AutoEllipsis = false;
-            this.label_nombre.CursorType = null;
-            this.label_nombre.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.label_nombre.Location = new System.Drawing.Point(124, 12);
-            this.label_nombre.Name = "label_nombre";
-            this.label_nombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label_nombre.Size = new System.Drawing.Size(58, 21);
-            this.label_nombre.TabIndex = 14;
-            this.label_nombre.Text = "Nombre";
-            this.label_nombre.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.label_nombre.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuLabel4
-            // 
-            this.bunifuLabel4.AllowParentOverrides = false;
-            this.bunifuLabel4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuLabel4.AutoEllipsis = false;
-            this.bunifuLabel4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel4.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel4.Location = new System.Drawing.Point(49, 12);
-            this.bunifuLabel4.Name = "bunifuLabel4";
-            this.bunifuLabel4.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel4.Size = new System.Drawing.Size(65, 21);
-            this.bunifuLabel4.TabIndex = 13;
-            this.bunifuLabel4.Text = "GERENTE";
-            this.bunifuLabel4.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel4.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // bunifuPictureBox1
-            // 
-            this.bunifuPictureBox1.AllowFocused = false;
-            this.bunifuPictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.bunifuPictureBox1.AutoSizeHeight = true;
-            this.bunifuPictureBox1.BorderRadius = 18;
-            this.bunifuPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuPictureBox1.Image")));
-            this.bunifuPictureBox1.IsCircle = true;
-            this.bunifuPictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.bunifuPictureBox1.Name = "bunifuPictureBox1";
-            this.bunifuPictureBox1.Size = new System.Drawing.Size(37, 37);
-            this.bunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.bunifuPictureBox1.TabIndex = 12;
-            this.bunifuPictureBox1.TabStop = false;
-            this.bunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // IHomeGerente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,13 +455,13 @@ namespace ProyectoTallerII
             this.pnl_contenido.PerformLayout();
             this.pnl_cabecera.ResumeLayout(false);
             this.pnl_cabecera.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_restaurado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_maximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_cerrar)).EndInit();
             this.pnl_sidevar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -511,9 +480,7 @@ namespace ProyectoTallerII
         private System.Windows.Forms.Button btn_inicio_gerente;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuSeparator bunifuSeparator1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btn_ventas_gerente;
-        private System.Windows.Forms.Button btn_clientes_gerente;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;

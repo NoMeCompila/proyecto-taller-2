@@ -317,3 +317,21 @@ select * from Ventas
 select * from VentaDetalle
 
 select * from Producto
+
+
+SELECT
+	pro.id_producto AS  ID, 
+	cat.descripcion AS TIPO, 
+	pro.cod_producto AS CODIGO, 
+	pro.nombre AS NOMBRE, 
+	pro.stock AS STOCK, 
+	pro.precio_costo AS 'PRECIO COSTO', 
+	pro.precio_venta AS 'PRECIO VENTA', 
+	pro.marca AS MARCA,
+	pro.genero AS GENERO,
+	pro.material AS MATERIAL,
+	pro.gema AS GEMA 
+FROM Producto pro INNER JOIN Categoria cat  
+ON pro.fk_id_categoria = cat.id_categoria
+
+

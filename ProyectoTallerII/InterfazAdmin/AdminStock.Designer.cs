@@ -34,6 +34,14 @@ namespace ProyectoTallerII
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -61,19 +69,15 @@ namespace ProyectoTallerII
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.pnl_buscador = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.lbl_stock_title = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel_stock = new Bunifu.UI.WinForms.BunifuPanel();
+            this.dd_gema = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.txt_material = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.dd_genero = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.txt_marca1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.combo_estado = new System.Windows.Forms.ComboBox();
             this.btn_elimiar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txt_stock = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -86,10 +90,6 @@ namespace ProyectoTallerII
             this.btn_stock_agregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txt_producto_venta = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dtg_stock = new System.Windows.Forms.DataGridView();
-            this.txt_marca1 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.dd_genero = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.txt_material = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.dd_gema = new Bunifu.UI.WinForms.BunifuDropdown();
             this.pnl_buscador.SuspendLayout();
             this.panel_stock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_stock)).BeginInit();
@@ -246,6 +246,253 @@ namespace ProyectoTallerII
             this.panel_stock.ShowBorders = true;
             this.panel_stock.Size = new System.Drawing.Size(715, 241);
             this.panel_stock.TabIndex = 22;
+            // 
+            // dd_gema
+            // 
+            this.dd_gema.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dd_gema.BackColor = System.Drawing.Color.Transparent;
+            this.dd_gema.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dd_gema.BorderColor = System.Drawing.Color.Magenta;
+            this.dd_gema.BorderRadius = 17;
+            this.dd_gema.Color = System.Drawing.Color.Magenta;
+            this.dd_gema.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.dd_gema.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dd_gema.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dd_gema.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dd_gema.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.dd_gema.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.dd_gema.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dd_gema.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.dd_gema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dd_gema.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dd_gema.FillDropDown = true;
+            this.dd_gema.FillIndicator = false;
+            this.dd_gema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dd_gema.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dd_gema.ForeColor = System.Drawing.Color.Black;
+            this.dd_gema.FormattingEnabled = true;
+            this.dd_gema.Icon = null;
+            this.dd_gema.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dd_gema.IndicatorColor = System.Drawing.Color.Gray;
+            this.dd_gema.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dd_gema.ItemBackColor = System.Drawing.Color.White;
+            this.dd_gema.ItemBorderColor = System.Drawing.Color.White;
+            this.dd_gema.ItemForeColor = System.Drawing.Color.Black;
+            this.dd_gema.ItemHeight = 26;
+            this.dd_gema.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.dd_gema.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.dd_gema.Items.AddRange(new object[] {
+            "No Posee",
+            "12 Kilates",
+            "14 Kilates",
+            "18 Kilates",
+            "22 Kilates",
+            "24 Kilates"});
+            this.dd_gema.ItemTopMargin = 3;
+            this.dd_gema.Location = new System.Drawing.Point(292, 170);
+            this.dd_gema.Name = "dd_gema";
+            this.dd_gema.Size = new System.Drawing.Size(198, 32);
+            this.dd_gema.TabIndex = 32;
+            this.dd_gema.Text = "Gema";
+            this.dd_gema.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dd_gema.TextLeftMargin = 5;
+            // 
+            // txt_material
+            // 
+            this.txt_material.AcceptsReturn = false;
+            this.txt_material.AcceptsTab = false;
+            this.txt_material.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_material.AnimationSpeed = 200;
+            this.txt_material.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_material.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_material.BackColor = System.Drawing.Color.Transparent;
+            this.txt_material.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_material.BackgroundImage")));
+            this.txt_material.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_material.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_material.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_material.BorderColorIdle = System.Drawing.Color.Magenta;
+            this.txt_material.BorderRadius = 20;
+            this.txt_material.BorderThickness = 2;
+            this.txt_material.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_material.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_material.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
+            this.txt_material.DefaultText = "";
+            this.txt_material.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_material.HideSelection = true;
+            this.txt_material.IconLeft = null;
+            this.txt_material.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_material.IconPadding = 10;
+            this.txt_material.IconRight = null;
+            this.txt_material.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_material.Lines = new string[0];
+            this.txt_material.Location = new System.Drawing.Point(75, 170);
+            this.txt_material.MaxLength = 32767;
+            this.txt_material.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_material.Modified = false;
+            this.txt_material.Multiline = false;
+            this.txt_material.Name = "txt_material";
+            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_material.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_material.OnDisabledState = stateProperties6;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties7.FillColor = System.Drawing.Color.Empty;
+            stateProperties7.ForeColor = System.Drawing.Color.Empty;
+            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_material.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Magenta;
+            stateProperties8.FillColor = System.Drawing.SystemColors.ButtonFace;
+            stateProperties8.ForeColor = System.Drawing.Color.Empty;
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_material.OnIdleState = stateProperties8;
+            this.txt_material.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_material.PasswordChar = '\0';
+            this.txt_material.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_material.PlaceholderText = "Material";
+            this.txt_material.ReadOnly = false;
+            this.txt_material.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_material.SelectedText = "";
+            this.txt_material.SelectionLength = 0;
+            this.txt_material.SelectionStart = 0;
+            this.txt_material.ShortcutsEnabled = true;
+            this.txt_material.Size = new System.Drawing.Size(198, 38);
+            this.txt_material.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_material.TabIndex = 31;
+            this.txt_material.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_material.TextMarginBottom = 0;
+            this.txt_material.TextMarginLeft = 3;
+            this.txt_material.TextMarginTop = 0;
+            this.txt_material.TextPlaceholder = "Material";
+            this.txt_material.UseSystemPasswordChar = false;
+            this.txt_material.WordWrap = true;
+            // 
+            // dd_genero
+            // 
+            this.dd_genero.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dd_genero.BackColor = System.Drawing.Color.Transparent;
+            this.dd_genero.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dd_genero.BorderColor = System.Drawing.Color.Magenta;
+            this.dd_genero.BorderRadius = 17;
+            this.dd_genero.Color = System.Drawing.Color.Magenta;
+            this.dd_genero.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.dd_genero.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dd_genero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.dd_genero.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.dd_genero.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.dd_genero.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.dd_genero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.dd_genero.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.dd_genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dd_genero.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dd_genero.FillDropDown = true;
+            this.dd_genero.FillIndicator = false;
+            this.dd_genero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dd_genero.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dd_genero.ForeColor = System.Drawing.Color.Black;
+            this.dd_genero.FormattingEnabled = true;
+            this.dd_genero.Icon = null;
+            this.dd_genero.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dd_genero.IndicatorColor = System.Drawing.Color.Gray;
+            this.dd_genero.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.dd_genero.ItemBackColor = System.Drawing.Color.White;
+            this.dd_genero.ItemBorderColor = System.Drawing.Color.White;
+            this.dd_genero.ItemForeColor = System.Drawing.Color.Black;
+            this.dd_genero.ItemHeight = 26;
+            this.dd_genero.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.dd_genero.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.dd_genero.Items.AddRange(new object[] {
+            "Caballero",
+            "Dama",
+            "Unisex"});
+            this.dd_genero.ItemTopMargin = 3;
+            this.dd_genero.Location = new System.Drawing.Point(292, 132);
+            this.dd_genero.Name = "dd_genero";
+            this.dd_genero.Size = new System.Drawing.Size(198, 32);
+            this.dd_genero.TabIndex = 30;
+            this.dd_genero.Text = "Género";
+            this.dd_genero.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.dd_genero.TextLeftMargin = 5;
+            // 
+            // txt_marca1
+            // 
+            this.txt_marca1.AcceptsReturn = false;
+            this.txt_marca1.AcceptsTab = false;
+            this.txt_marca1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txt_marca1.AnimationSpeed = 200;
+            this.txt_marca1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_marca1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_marca1.BackColor = System.Drawing.Color.Transparent;
+            this.txt_marca1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_marca1.BackgroundImage")));
+            this.txt_marca1.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_marca1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_marca1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_marca1.BorderColorIdle = System.Drawing.Color.Magenta;
+            this.txt_marca1.BorderRadius = 20;
+            this.txt_marca1.BorderThickness = 2;
+            this.txt_marca1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_marca1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_marca1.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
+            this.txt_marca1.DefaultText = "";
+            this.txt_marca1.FillColor = System.Drawing.SystemColors.ButtonFace;
+            this.txt_marca1.HideSelection = true;
+            this.txt_marca1.IconLeft = null;
+            this.txt_marca1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_marca1.IconPadding = 10;
+            this.txt_marca1.IconRight = null;
+            this.txt_marca1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_marca1.Lines = new string[0];
+            this.txt_marca1.Location = new System.Drawing.Point(292, 88);
+            this.txt_marca1.MaxLength = 32767;
+            this.txt_marca1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_marca1.Modified = false;
+            this.txt_marca1.Multiline = false;
+            this.txt_marca1.Name = "txt_marca1";
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_marca1.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_marca1.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_marca1.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Magenta;
+            stateProperties12.FillColor = System.Drawing.SystemColors.ButtonFace;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_marca1.OnIdleState = stateProperties12;
+            this.txt_marca1.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_marca1.PasswordChar = '\0';
+            this.txt_marca1.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txt_marca1.PlaceholderText = "Marca";
+            this.txt_marca1.ReadOnly = false;
+            this.txt_marca1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_marca1.SelectedText = "";
+            this.txt_marca1.SelectionLength = 0;
+            this.txt_marca1.SelectionStart = 0;
+            this.txt_marca1.ShortcutsEnabled = true;
+            this.txt_marca1.Size = new System.Drawing.Size(198, 38);
+            this.txt_marca1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_marca1.TabIndex = 29;
+            this.txt_marca1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_marca1.TextMarginBottom = 0;
+            this.txt_marca1.TextMarginLeft = 3;
+            this.txt_marca1.TextMarginTop = 0;
+            this.txt_marca1.TextPlaceholder = "Marca";
+            this.txt_marca1.UseSystemPasswordChar = false;
+            this.txt_marca1.WordWrap = true;
             // 
             // combo_estado
             // 
@@ -885,6 +1132,7 @@ namespace ProyectoTallerII
             this.txt_producto_costo.TextPlaceholder = "Percio Costo";
             this.txt_producto_costo.UseSystemPasswordChar = false;
             this.txt_producto_costo.WordWrap = true;
+            this.txt_producto_costo.TextChanged += new System.EventHandler(this.txt_producto_costo_TextChanged);
             this.txt_producto_costo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_producto_costo_KeyPress);
             // 
             // btn_stock_agregar
@@ -1100,253 +1348,6 @@ namespace ProyectoTallerII
             this.dtg_stock.Size = new System.Drawing.Size(803, 154);
             this.dtg_stock.TabIndex = 25;
             this.dtg_stock.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_stock_CellClick);
-            // 
-            // txt_marca1
-            // 
-            this.txt_marca1.AcceptsReturn = false;
-            this.txt_marca1.AcceptsTab = false;
-            this.txt_marca1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_marca1.AnimationSpeed = 200;
-            this.txt_marca1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_marca1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_marca1.BackColor = System.Drawing.Color.Transparent;
-            this.txt_marca1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_marca1.BackgroundImage")));
-            this.txt_marca1.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_marca1.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_marca1.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_marca1.BorderColorIdle = System.Drawing.Color.Magenta;
-            this.txt_marca1.BorderRadius = 20;
-            this.txt_marca1.BorderThickness = 2;
-            this.txt_marca1.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_marca1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_marca1.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
-            this.txt_marca1.DefaultText = "";
-            this.txt_marca1.FillColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_marca1.HideSelection = true;
-            this.txt_marca1.IconLeft = null;
-            this.txt_marca1.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_marca1.IconPadding = 10;
-            this.txt_marca1.IconRight = null;
-            this.txt_marca1.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_marca1.Lines = new string[0];
-            this.txt_marca1.Location = new System.Drawing.Point(292, 88);
-            this.txt_marca1.MaxLength = 32767;
-            this.txt_marca1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_marca1.Modified = false;
-            this.txt_marca1.Multiline = false;
-            this.txt_marca1.Name = "txt_marca1";
-            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_marca1.OnActiveState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_marca1.OnDisabledState = stateProperties10;
-            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties11.FillColor = System.Drawing.Color.Empty;
-            stateProperties11.ForeColor = System.Drawing.Color.Empty;
-            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_marca1.OnHoverState = stateProperties11;
-            stateProperties12.BorderColor = System.Drawing.Color.Magenta;
-            stateProperties12.FillColor = System.Drawing.SystemColors.ButtonFace;
-            stateProperties12.ForeColor = System.Drawing.Color.Empty;
-            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_marca1.OnIdleState = stateProperties12;
-            this.txt_marca1.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_marca1.PasswordChar = '\0';
-            this.txt_marca1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txt_marca1.PlaceholderText = "Marca";
-            this.txt_marca1.ReadOnly = false;
-            this.txt_marca1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_marca1.SelectedText = "";
-            this.txt_marca1.SelectionLength = 0;
-            this.txt_marca1.SelectionStart = 0;
-            this.txt_marca1.ShortcutsEnabled = true;
-            this.txt_marca1.Size = new System.Drawing.Size(198, 38);
-            this.txt_marca1.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_marca1.TabIndex = 29;
-            this.txt_marca1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_marca1.TextMarginBottom = 0;
-            this.txt_marca1.TextMarginLeft = 3;
-            this.txt_marca1.TextMarginTop = 0;
-            this.txt_marca1.TextPlaceholder = "Marca";
-            this.txt_marca1.UseSystemPasswordChar = false;
-            this.txt_marca1.WordWrap = true;
-            // 
-            // dd_genero
-            // 
-            this.dd_genero.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dd_genero.BackColor = System.Drawing.Color.Transparent;
-            this.dd_genero.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dd_genero.BorderColor = System.Drawing.Color.Magenta;
-            this.dd_genero.BorderRadius = 17;
-            this.dd_genero.Color = System.Drawing.Color.Magenta;
-            this.dd_genero.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.dd_genero.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dd_genero.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dd_genero.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dd_genero.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.dd_genero.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.dd_genero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dd_genero.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.dd_genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dd_genero.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.dd_genero.FillDropDown = true;
-            this.dd_genero.FillIndicator = false;
-            this.dd_genero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dd_genero.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dd_genero.ForeColor = System.Drawing.Color.Black;
-            this.dd_genero.FormattingEnabled = true;
-            this.dd_genero.Icon = null;
-            this.dd_genero.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.dd_genero.IndicatorColor = System.Drawing.Color.Gray;
-            this.dd_genero.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.dd_genero.ItemBackColor = System.Drawing.Color.White;
-            this.dd_genero.ItemBorderColor = System.Drawing.Color.White;
-            this.dd_genero.ItemForeColor = System.Drawing.Color.Black;
-            this.dd_genero.ItemHeight = 26;
-            this.dd_genero.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.dd_genero.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.dd_genero.Items.AddRange(new object[] {
-            "Caballero",
-            "Dama",
-            "Unisex"});
-            this.dd_genero.ItemTopMargin = 3;
-            this.dd_genero.Location = new System.Drawing.Point(292, 132);
-            this.dd_genero.Name = "dd_genero";
-            this.dd_genero.Size = new System.Drawing.Size(198, 32);
-            this.dd_genero.TabIndex = 30;
-            this.dd_genero.Text = "Género";
-            this.dd_genero.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.dd_genero.TextLeftMargin = 5;
-            // 
-            // txt_material
-            // 
-            this.txt_material.AcceptsReturn = false;
-            this.txt_material.AcceptsTab = false;
-            this.txt_material.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txt_material.AnimationSpeed = 200;
-            this.txt_material.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_material.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_material.BackColor = System.Drawing.Color.Transparent;
-            this.txt_material.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_material.BackgroundImage")));
-            this.txt_material.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_material.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_material.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_material.BorderColorIdle = System.Drawing.Color.Magenta;
-            this.txt_material.BorderRadius = 20;
-            this.txt_material.BorderThickness = 2;
-            this.txt_material.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_material.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_material.DefaultFont = new System.Drawing.Font("Segoe UI", 10F);
-            this.txt_material.DefaultText = "";
-            this.txt_material.FillColor = System.Drawing.SystemColors.ButtonFace;
-            this.txt_material.HideSelection = true;
-            this.txt_material.IconLeft = null;
-            this.txt_material.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_material.IconPadding = 10;
-            this.txt_material.IconRight = null;
-            this.txt_material.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_material.Lines = new string[0];
-            this.txt_material.Location = new System.Drawing.Point(75, 170);
-            this.txt_material.MaxLength = 32767;
-            this.txt_material.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_material.Modified = false;
-            this.txt_material.Multiline = false;
-            this.txt_material.Name = "txt_material";
-            stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties5.FillColor = System.Drawing.Color.Empty;
-            stateProperties5.ForeColor = System.Drawing.Color.Empty;
-            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_material.OnActiveState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_material.OnDisabledState = stateProperties6;
-            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties7.FillColor = System.Drawing.Color.Empty;
-            stateProperties7.ForeColor = System.Drawing.Color.Empty;
-            stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_material.OnHoverState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Magenta;
-            stateProperties8.FillColor = System.Drawing.SystemColors.ButtonFace;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_material.OnIdleState = stateProperties8;
-            this.txt_material.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_material.PasswordChar = '\0';
-            this.txt_material.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txt_material.PlaceholderText = "Material";
-            this.txt_material.ReadOnly = false;
-            this.txt_material.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_material.SelectedText = "";
-            this.txt_material.SelectionLength = 0;
-            this.txt_material.SelectionStart = 0;
-            this.txt_material.ShortcutsEnabled = true;
-            this.txt_material.Size = new System.Drawing.Size(198, 38);
-            this.txt_material.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txt_material.TabIndex = 31;
-            this.txt_material.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_material.TextMarginBottom = 0;
-            this.txt_material.TextMarginLeft = 3;
-            this.txt_material.TextMarginTop = 0;
-            this.txt_material.TextPlaceholder = "Material";
-            this.txt_material.UseSystemPasswordChar = false;
-            this.txt_material.WordWrap = true;
-            // 
-            // dd_gema
-            // 
-            this.dd_gema.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dd_gema.BackColor = System.Drawing.Color.Transparent;
-            this.dd_gema.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dd_gema.BorderColor = System.Drawing.Color.Magenta;
-            this.dd_gema.BorderRadius = 17;
-            this.dd_gema.Color = System.Drawing.Color.Magenta;
-            this.dd_gema.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.dd_gema.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dd_gema.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.dd_gema.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            this.dd_gema.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.dd_gema.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
-            this.dd_gema.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.dd_gema.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
-            this.dd_gema.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.dd_gema.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.dd_gema.FillDropDown = true;
-            this.dd_gema.FillIndicator = false;
-            this.dd_gema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dd_gema.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dd_gema.ForeColor = System.Drawing.Color.Black;
-            this.dd_gema.FormattingEnabled = true;
-            this.dd_gema.Icon = null;
-            this.dd_gema.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.dd_gema.IndicatorColor = System.Drawing.Color.Gray;
-            this.dd_gema.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.dd_gema.ItemBackColor = System.Drawing.Color.White;
-            this.dd_gema.ItemBorderColor = System.Drawing.Color.White;
-            this.dd_gema.ItemForeColor = System.Drawing.Color.Black;
-            this.dd_gema.ItemHeight = 26;
-            this.dd_gema.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
-            this.dd_gema.ItemHighLightForeColor = System.Drawing.Color.White;
-            this.dd_gema.Items.AddRange(new object[] {
-            "No Posee",
-            "12 Kilates",
-            "14 Kilates",
-            "18 Kilates",
-            "22 Kilates",
-            "24 Kilates"});
-            this.dd_gema.ItemTopMargin = 3;
-            this.dd_gema.Location = new System.Drawing.Point(292, 170);
-            this.dd_gema.Name = "dd_gema";
-            this.dd_gema.Size = new System.Drawing.Size(198, 32);
-            this.dd_gema.TabIndex = 32;
-            this.dd_gema.Text = "Gema";
-            this.dd_gema.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.dd_gema.TextLeftMargin = 5;
             // 
             // txt_marca
             // 

@@ -342,14 +342,18 @@ namespace ProyectoTallerII
                 if (salida_datos.Length == 0)
                 {
                     salida_datos = "(tipo LIKE '%" + palabra +
+                        "%' OR nombre LIKE '%" + palabra +
+                        "%' OR material LIKE '%" + palabra +
                         "%' OR codigo LIKE '%" + palabra +
-                        "%' OR material LIKE '%" + palabra + "%')";
+                        "%' OR marca LIKE '%" + palabra + "%')";
                 }
                 else
                 {
                     salida_datos += "AND (tipo LIKE '%" + palabra +
+                        "%' OR nombre LIKE '%" + palabra +
+                        "%' OR material LIKE '%" + palabra +
                         "%' OR codigo LIKE '%" + palabra +
-                        "%' OR material LIKE '%" + palabra + "%')";
+                        "%' OR marca LIKE '%" + palabra + "%')";
                 }
             }
 
@@ -419,6 +423,11 @@ namespace ProyectoTallerII
                 MessageBox.Show("Eliminacion Cancelada!", "Cancelado!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.limpiar();
             }
+        }
+
+        private void txt_producto_costo_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

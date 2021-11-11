@@ -42,8 +42,10 @@ namespace CapaDatos
                             UserLognCache.nombre_usuario = reader.GetString(2);
                             UserLognCache.apellido_usuario = reader.GetString(3);
                             UserLognCache.dni_usuario = reader.GetString(4);
+                            
                             UserLognCache.user = reader.GetString(5);
                             UserLognCache.pass = reader.GetString(6);
+                            UserLognCache.tel_usuario = reader.GetString(8);
                         }
                         return true;
                     }

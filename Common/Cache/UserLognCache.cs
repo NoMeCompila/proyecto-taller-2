@@ -18,9 +18,9 @@ namespace Common.Cache
         public static string dni_usuario { get; set; }
         public static string user { get; set; }
         public static string pass { get; set; }
-        
+        //public static string correo_user { get; set; }
+        public static string tel_usuario { get; set; }
 
-        
     }
 
 

@@ -16,4 +16,5 @@ C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDato
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\bin\Debug\Common.dll
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\bin\Debug\Common.pdb
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaDatos\bin\Debug\CapaEntidad.pdb

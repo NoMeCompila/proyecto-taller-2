@@ -213,6 +213,18 @@
     <Compile Include="InterfazGerente\GerenteClientes.Designer.cs">
       <DependentUpon>GerenteClientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazVendedor\VendedorBuscarClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazVendedor\VendedorBuscarClientes.Designer.cs">
+      <DependentUpon>VendedorBuscarClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfazVendedor\BuscarProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazVendedor\BuscarProductos.Designer.cs">
+      <DependentUpon>BuscarProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazVendedor\VendedorCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,11 +243,11 @@
     <Compile Include="InterfazVendedor\VendedorInicio.Designer.cs">
       <DependentUpon>VendedorInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfazVendedor\VendedorProductos.cs">
+    <Compile Include="InterfazVendedor\VendedorBuscarProductos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InterfazVendedor\VendedorProductos.Designer.cs">
-      <DependentUpon>VendedorProductos.cs</DependentUpon>
+    <Compile Include="InterfazVendedor\VendedorBuscarProductos.Designer.cs">
+      <DependentUpon>VendedorBuscarProductos.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfazVendedor\HomeVendedor.cs">
       <SubType>Form</SubType>
@@ -279,12 +291,6 @@
     <Compile Include="InterfazAdmin\AdminUsuario.Designer.cs">
       <DependentUpon>AdminUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="InterfazGerente\GerenteVentas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="InterfazGerente\GerenteVentas.Designer.cs">
-      <DependentUpon>GerenteVentas.cs</DependentUpon>
-    </Compile>
     <Compile Include="JoyeriaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -321,6 +327,12 @@
     <EmbeddedResource Include="InterfazGerente\GerenteClientes.resx">
       <DependentUpon>GerenteClientes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfazVendedor\VendedorBuscarClientes.resx">
+      <DependentUpon>VendedorBuscarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazVendedor\BuscarProductos.resx">
+      <DependentUpon>BuscarProductos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfazVendedor\VendedorCliente.resx">
       <DependentUpon>VendedorCliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,8 +342,8 @@
     <EmbeddedResource Include="InterfazVendedor\VendedorInicio.resx">
       <DependentUpon>VendedorInicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InterfazVendedor\VendedorProductos.resx">
-      <DependentUpon>VendedorProductos.cs</DependentUpon>
+    <EmbeddedResource Include="InterfazVendedor\VendedorBuscarProductos.resx">
+      <DependentUpon>VendedorBuscarProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazVendedor\HomeVendedor.resx">
       <DependentUpon>HomeVendedor.cs</DependentUpon>
@@ -353,9 +365,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazAdmin\AdminUsuario.resx">
       <DependentUpon>AdminUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="InterfazGerente\GerenteVentas.resx">
-      <DependentUpon>GerenteVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginUsuarios.resx">
       <DependentUpon>LoginUsuarios.cs</DependentUpon>
@@ -528,6 +537,10 @@
     <None Include="Resources\audi %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{af837a58-b440-4308-9328-bbfcb7063c74}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CapaNegocio\CapaNegocio.csproj">
       <Project>{87892bec-8621-4597-8445-c09aa6c09d36}</Project>
       <Name>CapaNegocio</Name>

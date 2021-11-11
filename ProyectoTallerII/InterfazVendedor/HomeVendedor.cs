@@ -122,7 +122,7 @@ namespace ProyectoTallerII
 
         private void button1_Click(object sender, EventArgs e)
         {
-            open_child_form(new AdminVentas());
+            open_child_form(new Form_facturacion_vendedor());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -190,9 +190,9 @@ namespace ProyectoTallerII
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("seguro que desea salir?", "ERROR!",
+            if (MessageBox.Show("seguro que desea salir?", "SALIR?",
                                MessageBoxButtons.YesNo,
-                               MessageBoxIcon.Warning) == DialogResult.Yes)
+                               MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

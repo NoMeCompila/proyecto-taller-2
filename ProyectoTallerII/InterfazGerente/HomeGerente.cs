@@ -200,9 +200,9 @@ namespace ProyectoTallerII
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("seguro que desea salir?", "ERROR!",
+            if (MessageBox.Show("seguro que desea salir?", "SALIR?",
                                MessageBoxButtons.YesNo,
-                               MessageBoxIcon.Warning) == DialogResult.Yes)
+                               MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 this.Close();
             }

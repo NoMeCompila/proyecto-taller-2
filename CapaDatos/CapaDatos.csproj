@@ -57,6 +57,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{af837a58-b440-4308-9328-bbfcb7063c74}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{d06d66f7-06f1-48aa-a843-7e9360665cde}</Project>
       <Name>Common</Name>

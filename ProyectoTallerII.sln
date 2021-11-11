@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoTallerII", "ProyectoTallerII\ProyectoTallerII.csproj", "{F9297514-5D61-4D19-BBBC-04DE917C5FE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaPresentacion", "ProyectoTallerII\CapaPresentacion.csproj", "{F9297514-5D61-4D19-BBBC-04DE917C5FE1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{147B7C5D-4959-44A3-A692-84A87C67F2E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocio", "CapaNegocio\CapaNegocio.csproj", "{87892BEC-8621-4597-8445-C09AA6C09D36}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{D06D66F7-06F1-48AA-A843-7E9360665CDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaEntidad", "CapaEntidad\CapaEntidad.csproj", "{AF837A58-B440-4308-9328-BBFCB7063C74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D06D66F7-06F1-48AA-A843-7E9360665CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D06D66F7-06F1-48AA-A843-7E9360665CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D06D66F7-06F1-48AA-A843-7E9360665CDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF837A58-B440-4308-9328-BBFCB7063C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF837A58-B440-4308-9328-BBFCB7063C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF837A58-B440-4308-9328-BBFCB7063C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF837A58-B440-4308-9328-BBFCB7063C74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
