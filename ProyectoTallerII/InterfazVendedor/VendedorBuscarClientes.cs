@@ -111,11 +111,14 @@ namespace ProyectoTallerII
             {
                 client = new Cliente()
                 {
+                    id_cliente = Convert.ToInt32(dataG_usuarios.Rows[iRow].Cells["ID"].Value.ToString()),
                     dni = dataG_usuarios.Rows[iRow].Cells["DNI"].Value.ToString(),
                     nombre = dataG_usuarios.Rows[iRow].Cells["NOMBRE"].Value.ToString(),
                     apellido = dataG_usuarios.Rows[iRow].Cells["APELLIDO"].Value.ToString(),
                     telefono = dataG_usuarios.Rows[iRow].Cells["TELÉFONO"].Value.ToString(),
                     email = dataG_usuarios.Rows[iRow].Cells["EMAIL"].Value.ToString()
+                    
+                     
                 };
                 this.DialogResult = DialogResult.OK;
                 this.Close();

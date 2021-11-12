@@ -117,6 +117,7 @@ namespace ProyectoTallerII
             {
                 producto = new Producto()
                 {
+                    id_prod = Convert.ToInt32(dgv_productos.Rows[iRow].Cells["ID"].Value.ToString()),
                     cod_producto = dgv_productos.Rows[iRow].Cells["CODIGO"].Value.ToString(),
                     nombre = dgv_productos.Rows[iRow].Cells["NOMBRE"].Value.ToString(),
                     marca = dgv_productos.Rows[iRow].Cells["MARCA"].Value.ToString(),

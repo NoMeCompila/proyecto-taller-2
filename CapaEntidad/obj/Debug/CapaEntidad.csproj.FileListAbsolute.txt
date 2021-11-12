@@ -1,6 +1,6 @@
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\bin\Debug\CapaEntidad.dll
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\bin\Debug\CapaEntidad.pdb
-C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Fer\Desktop\taller_copia\proyecto-taller-2\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache

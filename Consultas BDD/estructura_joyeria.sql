@@ -133,33 +133,76 @@ create table Venta(
 
 
 -- ! SE CREA UN TIPO DE DATO DE ESTRUCTURA VENTADETALLE
-CREATE TYPE EVentaEdalle AS TABLE(
-	id_producto INT NULL,
-	cantidad INT NULL,
-	precio DECIMAL NULL,
-	sub_total DECIMAL NULL
+
+
+
+
+
+
+
+
+CREATE TYPE [dbo].[detalle_tabla] AS TABLE(
+	[id_producto] INT NULL,
+	[cantidad] INT NULL,
+	[precio] DECIMAL NULL,
+	[sub_total] DECIMAL NULL,
+	[cod_prod] VARCHAR(100),
+	[nombre_prod] VARCHAR(100),
+	[marca] VARCHAR(100),
+	[material] VARCHAR(100),
+	[Kilates] VARCHAR(100)
 )
 GO
 
-	
--- TODO:transaccion para registrar una venta
+drop type	detalle_tabla
+drop PROC	sp_registro
 
-CREATE PROC sp_registrar_venta(
-	@id_vendedor int,
-	@id_cliente int,
-	@id_tpago int,
-	@total decimal,
-	@fecha date,
-	@vendedor_dni int,
-	@cliente_dni int,
-	@cliente_tel int,
-	@cliente_email varchar(100),
-	@cliente_fullname varchar(100),
-	@importe decimal,
-	@vuelto decimal,
-	@VentaDetalle [EVentaEdalle] READONLY,
-	@resultado bit output,
-	@mensaje varchar(500) output)
+
+select * from Ventas
+
+EXEC sp_help VentaDetalle
+
+alter table Ventas
+	add vendedor_nombre varchar(100)
+
+
+alter table Ventas
+	add vendedor_tel varchar(100)
+
+alter table Ventas
+	add nro_correlativo varchar(100)
+
+go
+-- TODO:transaccion para registrar una venta
+-- Intentando pasar un parámetro con valores de 
+-- tabla con 8 columnas cuando el tipo de tabla 
+-- definida por el usuario correspondiente requiere 9 columnas.
+
+
+/*
+'Error al convertir el tipo de datos nvarchar a numeric.
+Los datos para el parámetro con valores de tabla '@detalle_tabla' 
+no se ajustan al tipo de tabla del parámetro. El error de SQL Server es: 8114, estado: 5
+Se terminó la instrucción.'
+*/
+CREATE PROC sp_registro(
+@id_vendedor int,
+@id_cliente int,
+@total decimal,
+@fecha date,
+@vendedor_dni varchar(100),
+@cliente_dni varchar(100),
+@cliente_tel varchar(100),
+@cliente_email varchar(100),
+@cliente_fullname varchar(100),
+@importe decimal,
+@vuelto decimal,
+@vendedor_nombre varchar(100),
+@vendedor_tel varchar(100),
+@nro_correlativo varchar(100),
+@detalle_tabla [detalle_tabla] READONLY,
+@resultado bit output,
+@mensaje varchar(500) output)
 AS
 	BEGIN
 		BEGIN TRY
@@ -168,47 +211,25 @@ AS
 			SET @mensaje = ''
 			BEGIN TRANSACTION registro
 			
-				INSERT INTO Ventas(
-					id_vendedor,
-					id_cliente,
-					id_tpago,
-					total,
-					fecha,
-					vendedor_dni,
-					cliente_dni,
-					cliente_tel,
-					cliente_email,
-					cliente_fullname,
-					importe,
-					vuelto)
-				VALUES(
-					@id_vendedor,
-					@id_cliente,
-					@id_tpago,
-					@total,
-					@fecha,
-					@vendedor_dni,
-					@cliente_dni,
-					@cliente_tel,
-					@cliente_email,
-					@cliente_fullname,
-					@importe,
-					@vuelto)
+				INSERT INTO Ventas(id_vendedor,id_cliente,total,fecha,
+				vendedor_dni,cliente_dni,cliente_tel,cliente_email,cliente_fullname,
+				importe,vuelto,vendedor_nombre,vendedor_tel,nro_correlativo)
+				
+				
+				VALUES(@id_vendedor,@id_cliente,@total,@fecha,
+				@vendedor_dni,@cliente_dni, @cliente_tel,@cliente_email,@cliente_fullname,
+				@importe,@vuelto,@vendedor_nombre,@vendedor_tel,@nro_correlativo)
 
 				SET @id_venta = SCOPE_IDENTITY()
-				EXEC sp_help VentaDetalle
-				INSERT INTO VentaDetalle(
-					id_venta,
-					id_producto,
-					cantidad,
-					precio,
-					sub_total)
+				
+
+
+				INSERT INTO VentaDetalle(id_venta, id_producto,cantidad,precio,sub_total,
+					cod_prod, nombre_prod, marca, material, Kilates)
 				SELECT 
-					@id_venta, 
-					id_producto,
-					cantidad,
-					precio,
-					sub_total FROM @VentaDetalle					 
+					@id_venta, id_producto, cantidad, precio, sub_total, 
+					cod_prod, nombre_prod, marca, material, Kilates 
+					FROM  @detalle_tabla 				 
 			COMMIT TRANSACTION registro
 		END TRY
 		BEGIN CATCH
@@ -219,19 +240,19 @@ AS
 	END	 
 GO
 
-exec sp_help Producto
+DROP PROC sp_registrar_venta
+
+SELECT * from Ventas;
+
+EXEC sp_help VentaDetalle
 
 
-id_venta
-id_vendedor
-id_cliente
-id_tpago
-total
-fecha
-vendedor_dni
-cliente_dni
-cliente_tel
-cliente_email
-cliente_fullname
-importe
-vuelto
+EXEC sp_help Ventas
+
+ALTER TABLE Ventas ALTER COLUMN vendedor_dni varchar(100);  
+GO  
+
+ALTER TABLE Ventas ALTER COLUMN cliente_dni varchar(100);  
+GO  
+
+select * from Ventas
