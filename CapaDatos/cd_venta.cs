@@ -150,5 +150,142 @@ namespace CapaDatos
 
         }
 
+
+
+        public Ventas GetVenta(string nro)
+        {
+            Ventas vta = new Ventas();
+             using (SqlConnection conexion = new SqlConnection("Server = DESKTOP-C7M4JOU; Database = JOYERIA; Integrated Security = true"))
+            {
+                try
+                {
+                    conexion.Open();
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select v.id_venta, v.nro_correlativo as 'nro factura',");
+                    query.AppendLine("v.fecha  as fecha,");
+                    query.AppendLine("u.dni as 'vendedor dni',");
+                    query.AppendLine("CONCAT(u.nombre, ' ', u.apellido)  as 'vendedor nombre',");
+                    query.AppendLine("c.id_cliente as 'id cliente', ");
+                    query.AppendLine("c.dni as 'cliente dni',");
+                    query.AppendLine("c.telefono as 'cliente tel.',");
+                    query.AppendLine("CONCAT(c.nombre, ' ', c.apellido)  as 'cliente nombre',");
+                    query.AppendLine("c.email as 'cliente correo',");
+                    query.AppendLine("v.total as total,");
+                    query.AppendLine("v.importe as importe,");
+                    query.AppendLine("v.vuelto as vuelto");
+                    query.AppendLine("from Ventas where v.nro_correlativo = @nro_correlativo  v inner join Usuario u on v.id_vendedor = u.id_usuario inner join Cliente c on c.id_cliente = v.id_cliente");
+                    SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
+                    cmd.Parameters.AddWithValue("@numero", nro);
+                    cmd.CommandType = System.Data.CommandType.Text;
+
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while(dr.Read())
+                        {
+                            vta = new Ventas()
+                            {
+                                id_venta = int.Parse(dr["id_venta"].ToString()),
+                                nro_correlativo = dr["nro factura"].ToString(),
+                                fecha = Convert.ToDateTime(dr["fecha"].ToString()),
+                                vendedor_dni = dr["vendedor dni"].ToString(),
+                                vendedor_nombre = dr["vendedor nombre"].ToString(),
+                                id_cliente = Convert.ToInt32(dr["id cliente"].ToString()),
+                                cliente_dni = dr["cliente dni"].ToString(),
+                                cliente_tel= dr["cliente tel."].ToString(),
+                                cliente_fullname = dr["cliente tel."].ToString(),
+                                cliente_email = dr["cliente correo"].ToString(),
+                                total = Convert.ToInt32(dr["total"].ToString()),
+                                importe = Convert.ToInt32(dr["importe"].ToString()),
+                                vuelto = Convert.ToInt32(dr["vuelto"].ToString()),
+                                
+                                
+
+
+                            };
+                        }
+                    }
+
+                }
+                catch(Exception ex)
+                {
+                    vta = new Ventas();
+                }
+            }
+
+                return vta;
+        }
+
+        public List<ventas_detalle> getDetalle(int id_venta)
+        {
+            List<ventas_detalle> detalleLista = new List<ventas_detalle>();
+            using (SqlConnection conexion = new SqlConnection("Server = DESKTOP-C7M4JOU; Database = JOYERIA; Integrated Security = true"))
+            {
+                try
+                {
+                    conexion.Open();
+                    StringBuilder query = new StringBuilder();
+                    query.AppendLine("select  p.id_producto as 'ID producto',");
+                    query.AppendLine("p.cod_producto as 'Cod producto',");
+                    query.AppendLine("p.nombre as nombre,");
+                    query.AppendLine("p.material as material,");
+                    query.AppendLine("p.gema as kilates,");
+                    query.AppendLine("p.precio_venta as precio,");
+                    query.AppendLine("vd.cantidad as cantidad,");
+                    query.AppendLine("vd.sub_total as subtotal");
+                    query.AppendLine("from VentaDetalle vd inner join Producto p  on vd.id_producto = p.id_producto");
+                    query.AppendLine("where vd.id_venta = @id_venta");
+
+
+                    SqlCommand cmd = new SqlCommand(query.ToString(), conexion);
+                    cmd.Parameters.AddWithValue("@id_venta", id_venta);
+                    cmd.CommandType = System.Data.CommandType.Text;
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            detalleLista.Add(new ventas_detalle()
+                            {
+
+
+                                /*id_venta = int.Parse(dr["id_venta"].ToString()),
+                                nro_correlativo = dr["nro factura"].ToString(),
+                                fecha = Convert.ToDateTime(dr["fecha"].ToString()),
+                                vendedor_dni = dr["vendedor dni"].ToString(),
+                                vendedor_nombre = dr["vendedor nombre"].ToString(),
+                                id_cliente = Convert.ToInt32(dr["id cliente"].ToString()),
+                                cliente_dni = dr["cliente dni"].ToString(),
+                                cliente_tel= dr["cliente tel."].ToString(),
+                                cliente_fullname = dr["cliente tel."].ToString(),
+                                cliente_email = dr["cliente correo"].ToString(),
+                                total = Convert.ToInt32(dr["total"].ToString()),
+                                importe = Convert.ToInt32(dr["importe"].ToString()),
+                                vuelto = Convert.ToInt32(dr["vuelto"].ToString()),*/
+
+                                id_producto = int.Parse(dr["ID producto"].ToString()),
+                                cod_producto = dr["Cod producto"].ToString(),
+                                nombre = dr["nro factura"].ToString(),
+                                material = dr["material"].ToString(),
+                                gema = dr["kilates"].ToString(),
+                                precio_venta = Convert.ToDecimal(dr["precio"].ToString()),
+                                cantidad = Convert.ToInt32(dr["cantidad"].ToString()),
+                                sub_total = Convert.ToDecimal(dr["vuelto"].ToString()),
+                            }) ;
+                        }
+                    }
+
+
+                }
+                catch
+                {
+                    detalleLista = new List<ventas_detalle>();
+                }
+            }
+
+
+                return detalleLista;
+        }
+
     }
 }

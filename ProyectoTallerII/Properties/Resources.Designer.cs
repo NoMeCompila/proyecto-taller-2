@@ -463,6 +463,26 @@ namespace ProyectoTallerII.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pdf_48 {
+            get {
+                object obj = ResourceManager.GetObject("pdf-48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pdfbLANCO {
+            get {
+                object obj = ResourceManager.GetObject("pdfbLANCO", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pie_chart_48 {
             get {
                 object obj = ResourceManager.GetObject("pie-chart-48", resourceCulture);

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using CapaNegocio;
 using System.Data.SqlClient;
+using CapaEntidad;
 
 namespace ProyectoTallerII
 {
@@ -168,38 +169,35 @@ namespace ProyectoTallerII
                               MessageBoxIcon.Question,
                               MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-
-                    try
+                    string mensaje = string.Empty;
+                    CapaEntidad.Cliente cli = new CapaEntidad.Cliente()
                     {
-                        objetoCN.guardar_cliete(txt_user_nombre.Text,
-                                             txt_user_apellido.Text,
-                                             txt_user_dni.Text,
-                                             txt_user_email.Text,
-                                             txt_user_tel.Text,
-                                             txt_user_adress.Text,
-                                             dtp_user_date_birth.Text,
-                                             combo_estado.Text);
+                        nombre = txt_user_nombre.Text,
+                        apellido = txt_user_apellido.Text,
+                        dni = txt_user_dni.Text,
+                        email = txt_user_email.Text,
+                        telefono = txt_user_tel.Text,
+                        direccion = txt_user_adress.Text,
+                        fecha_nac = Convert.ToDateTime(dtp_user_date_birth.Text),
+                        estado = Convert.ToBoolean(combo_estado.Text)
+                    };
+                    int id_nuevo_cliente = new cn_clientes().registrar_cliente(cli, out mensaje);
 
-
-                        MessageBox.Show("Cliente guardado correctamente", "GUARDADO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //mostrar_client_admin(); //se actualioza la vista del DGV
+                    if (id_nuevo_cliente != 0)
+                    {
+                        MessageBox.Show("Cliente guardado cone éxito!",
+                                "GUARDADO!",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                        this.limpiar();
 
                         this.mostrar_busqueda();
-
-                        limpiar();
                     }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("No se pudo insertar: " + ex, "ERROR", MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                    else {
+                        MessageBox.Show(mensaje); 
                     }
 
-
-                    limpiar();
-                }
-                else
-                {
-                    limpiar();
+                    
                 }
             }
         }
@@ -290,28 +288,46 @@ namespace ProyectoTallerII
                              MessageBoxIcon.Question,
                              MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 {
-                    objetoCN.actualizar_cliente_admin
-                    (
-                            txt_user_nombre.Text,
-                            txt_user_apellido.Text,
-                            txt_user_dni.Text,
-                            txt_user_email.Text,
-                            txt_user_tel.Text,
-                            txt_user_adress.Text,
-                            dtp_user_date_birth.Text,
-                            combo_estado.Text,
-                            Convert.ToInt32(id)
-                     );
+                    try
+                    {
 
-                    //se muestra un mensaje para informar al usuario
-                    MessageBox.Show("los datos del cliente fueron actualizados correctamente", "ACTUALIZADO!", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    //mostrar_client_admin(); //se actualioza la vista del DGV
-                    mostrar_busqueda();
-                    limpiar(); // se limpian los textbox
+                        string mensaje = string.Empty;
+                        CapaEntidad.Cliente cli = new CapaEntidad.Cliente()
+                        {
+                            id_cliente = Convert.ToInt32(id), 
+                            nombre = txt_user_nombre.Text,
+                            apellido = txt_user_apellido.Text,
+                            dni = txt_user_dni.Text,
+                            email = txt_user_email.Text,
+                            telefono = txt_user_tel.Text,
+                            direccion = txt_user_adress.Text,
+                            fecha_nac = Convert.ToDateTime(dtp_user_date_birth.Text),
+                            estado = Convert.ToBoolean(combo_estado.Text)
+                        };
+
+                        bool resultado = new cn_clientes().update_cliente(cli, out mensaje);
+                        if (resultado)
+                        {
+                            MessageBox.Show("los datos del cliente fueron actualizados correctamente",
+                                "ACTUALIZADO!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            this.mostrar_busqueda();
+                            this.limpiar();
+                        }
+                        else {
+                            MessageBox.Show(mensaje,"ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            this.mostrar_busqueda();
+                            this.limpiar();
+                        }
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
                 else
                 {
-                    limpiar();
+                    this.limpiar();
                 }
             }
         }
@@ -367,12 +383,32 @@ namespace ProyectoTallerII
                              MessageBoxIcon.Question,
                              MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
-                objetoCN.eliminar_cliente_admin(id);
-                MessageBox.Show("Cliente Eliminado correctamente", "ELIMINADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                //mostrar_client_admin(); //se actualioza la vista del DGV
-                mostrar_busqueda();
+                try
+                {
+                    string mensaje = string.Empty;
+                    CapaEntidad.Cliente cli = new CapaEntidad.Cliente() {
+                        id_cliente = Convert.ToInt32(id)
+                    };
 
-                limpiar();
+                    bool respeusta = new cn_clientes().delete_cliente(cli, out mensaje);
+
+                    if (respeusta) {
+                        MessageBox.Show("Cliente Eliminado correctamente", "ELIMINADO!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        //mostrar_client_admin(); //se actualioza la vista del DGV
+                        this.mostrar_busqueda();
+                        this.limpiar();
+                    }
+                    else
+                    {
+                        MessageBox.Show(mensaje, "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    
+                }
+                catch(Exception ex) { 
+                
+                }
+                
             }
             else
             {

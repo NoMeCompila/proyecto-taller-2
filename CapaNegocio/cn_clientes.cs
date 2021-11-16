@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 using CapaDatos;
+using CapaEntidad;
 
 namespace CapaNegocio
 {
@@ -13,8 +14,8 @@ namespace CapaNegocio
     {
         //instancia de un objeto cd_clientes creado previamente 
         private cd_clientes objetoCD = new cd_clientes();
-
-        //*************************|-----------------------------------------------|*************************
+        private cd_clientes cdCliente = new cd_clientes(); 
+         //*************************|-----------------------------------------------|*************************
         //*************************|--FUNCIONES PARA MAENJAR EL CRUD  DE CLIENTES--|*************************
         //*************************|-----------------------------------------------|*************************
 
@@ -76,5 +77,31 @@ namespace CapaNegocio
         {
             objetoCD.eliminar_cliente_admin(Convert.ToInt32(id_cliente));
         }
+
+
+
+
+
+
+
+
+
+        public int registrar_cliente(CapaEntidad.Cliente cli, out string mensaje){
+            return cdCliente.registrar_cliente(cli ,out  mensaje);
+        }
+
+
+        public bool update_cliente(CapaEntidad.Cliente cli, out string mensaje){
+            return cdCliente.update_cliente(cli, out mensaje);
+        }
+
+        public bool delete_cliente(CapaEntidad.Cliente cli, out string mensaje){
+            return cdCliente.delete_cliente(cli, out mensaje);
+        }
+
+
+
+
+
     }
 }

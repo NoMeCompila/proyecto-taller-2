@@ -582,6 +582,7 @@ namespace ProyectoTallerII
             txt_user_tel.Text = dgv_usuarios.CurrentRow.Cells["teléfono"].Value.ToString();
             txt_user_adress.Text = dgv_usuarios.CurrentRow.Cells["dirección"].Value.ToString();
             dtp_user_date_birth.Text = dgv_usuarios.CurrentRow.Cells["fecha nacimiento"].Value.ToString();
+            combo_estado.Text = dgv_usuarios.CurrentRow.Cells["estado"].Value.ToString();
             id = dgv_usuarios.CurrentRow.Cells["id"].Value.ToString();
 
             btn_user_agregar.Enabled = false;
@@ -673,13 +674,18 @@ namespace ProyectoTallerII
                 "us.telefono AS TELÉFONO, " +
                 "us.direccion AS DIRECCIÓN, " +
                 "us.fecha_nac AS " +
-                "'FECHA NACIMIENTO' " +
-                "FROM Usuario us INNER JOIN Perfil per ON us.id_perfil = per.id_perfil", ref resultados, "Usuario");
+                "'FECHA NACIMIENTO'," +
+                "us.estado AS ESTADO  FROM Usuario us INNER JOIN Perfil per ON us.id_perfil = per.id_perfil", ref resultados, "Usuario");
             //probando buscador
             this.filtro = ((DataTable)resultados.Tables["Usuario"]).DefaultView;
 
             //igualamos el datagridview al resultado del filtro
             this.dgv_usuarios.DataSource = filtro;
+        }
+
+        private void txt_buscar_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

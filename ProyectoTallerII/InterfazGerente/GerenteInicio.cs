@@ -26,5 +26,10 @@ namespace ProyectoTallerII
         {
 
         }
+
+        private void Form_home_gerente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

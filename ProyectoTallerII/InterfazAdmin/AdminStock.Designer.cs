@@ -1326,7 +1326,7 @@ namespace ProyectoTallerII
             this.dtg_stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtg_stock.EnableHeadersVisualStyles = false;
             this.dtg_stock.GridColor = System.Drawing.Color.GreenYellow;
-            this.dtg_stock.Location = new System.Drawing.Point(0, 373);
+            this.dtg_stock.Location = new System.Drawing.Point(0, 334);
             this.dtg_stock.Name = "dtg_stock";
             this.dtg_stock.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -1345,7 +1345,7 @@ namespace ProyectoTallerII
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Yellow;
             this.dtg_stock.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtg_stock.Size = new System.Drawing.Size(803, 154);
+            this.dtg_stock.Size = new System.Drawing.Size(803, 193);
             this.dtg_stock.TabIndex = 25;
             this.dtg_stock.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtg_stock_CellClick);
             // 

@@ -175,16 +175,7 @@ alter table Ventas
 go
 -- TODO:transaccion para registrar una venta
 -- Intentando pasar un parámetro con valores de 
--- tabla con 8 columnas cuando el tipo de tabla 
--- definida por el usuario correspondiente requiere 9 columnas.
 
-
-/*
-'Error al convertir el tipo de datos nvarchar a numeric.
-Los datos para el parámetro con valores de tabla '@detalle_tabla' 
-no se ajustan al tipo de tabla del parámetro. El error de SQL Server es: 8114, estado: 5
-Se terminó la instrucción.'
-*/
 CREATE PROC sp_registro(
 @id_vendedor int,
 @id_cliente int,
@@ -214,15 +205,12 @@ AS
 				INSERT INTO Ventas(id_vendedor,id_cliente,total,fecha,
 				vendedor_dni,cliente_dni,cliente_tel,cliente_email,cliente_fullname,
 				importe,vuelto,vendedor_nombre,vendedor_tel,nro_correlativo)
-				
-				
+								
 				VALUES(@id_vendedor,@id_cliente,@total,@fecha,
 				@vendedor_dni,@cliente_dni, @cliente_tel,@cliente_email,@cliente_fullname,
 				@importe,@vuelto,@vendedor_nombre,@vendedor_tel,@nro_correlativo)
 
 				SET @id_venta = SCOPE_IDENTITY()
-				
-
 
 				INSERT INTO VentaDetalle(id_venta, id_producto,cantidad,precio,sub_total,
 					cod_prod, nombre_prod, marca, material, Kilates)
@@ -255,4 +243,43 @@ GO
 ALTER TABLE Ventas ALTER COLUMN cliente_dni varchar(100);  
 GO  
 
-select * from Ventas
+select * from VentaDetalle
+
+-- TODO: CONSULTA PARA VER CABECERA DE FACTURA
+select
+	v.nro_correlativo as 'nro factura',
+	v.id_venta,
+	v.fecha  as fecha,
+	u.dni as 'vendedor dni',
+	CONCAT(u.nombre, ' ', u.apellido)  as 'vendedor nombre',
+	u.dni as 'vendedor dni',	
+	c.id_cliente as 'id cliente', 
+	c.dni as 'cliente dni',
+	c.telefono as 'cliente tel.',
+	CONCAT(c.nombre, ' ', c.apellido)  as 'cliente nombre',
+	c.email as 'cliente correo',
+	v.total as total,
+	v.importe as importe,
+	v.vuelto as vuelto
+from 
+	Ventas  v inner join 
+	Usuario u on v.id_vendedor = u.id_usuario inner join 
+	Cliente c on c.id_cliente = v.id_cliente
+
+
+-- TODO: CONSULTA PARA VER DETALLE DE FACTURA
+
+select 
+	p.id_producto as 'ID producto',
+	p.cod_producto as 'Cod producto',
+	p.nombre as nombre,
+	p.marca as marca,
+	p.material as material,
+	p.gema as kilates,
+	p.precio_venta as precio,
+	vd.cantidad as cantidad,
+	vd.sub_total as subtotal
+from VentaDetalle vd inner join Producto p 
+on vd.id_producto = p.id_producto
+
+SELECT * from Ventas

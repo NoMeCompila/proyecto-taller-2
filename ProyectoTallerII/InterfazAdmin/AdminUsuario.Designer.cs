@@ -34,7 +34,6 @@ namespace ProyectoTallerII
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -73,12 +72,12 @@ namespace ProyectoTallerII
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.lbl_user_title = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnl_buscador = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btn_user_elimiar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dtp_user_date_birth = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.lbl_user_date_birth = new Bunifu.UI.WinForms.BunifuLabel();
             this.txt_user_dni = new Bunifu.UI.WinForms.BunifuTextBox();
@@ -94,6 +93,9 @@ namespace ProyectoTallerII
             this.btn_user_agregar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txt_user_contraseña = new Bunifu.UI.WinForms.BunifuTextBox();
             this.dgv_usuarios = new System.Windows.Forms.DataGridView();
+            this.btn_user_elimiar = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.combo_estado = new System.Windows.Forms.ComboBox();
             this.pnl_buscador.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuarios)).BeginInit();
@@ -217,6 +219,7 @@ namespace ProyectoTallerII
             this.txt_buscar.TextPlaceholder = "Buscar...";
             this.txt_buscar.UseSystemPasswordChar = false;
             this.txt_buscar.WordWrap = true;
+            this.txt_buscar.TextChanged += new System.EventHandler(this.txt_buscar_TextChanged);
             this.txt_buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyUp);
             // 
             // bunifuPanel1
@@ -230,6 +233,8 @@ namespace ProyectoTallerII
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.bunifuLabel1);
+            this.bunifuPanel1.Controls.Add(this.combo_estado);
             this.bunifuPanel1.Controls.Add(this.btn_user_elimiar);
             this.bunifuPanel1.Controls.Add(this.dtp_user_date_birth);
             this.bunifuPanel1.Controls.Add(this.lbl_user_date_birth);
@@ -245,104 +250,12 @@ namespace ProyectoTallerII
             this.bunifuPanel1.Controls.Add(this.txt_user_email);
             this.bunifuPanel1.Controls.Add(this.btn_user_agregar);
             this.bunifuPanel1.Controls.Add(this.txt_user_contraseña);
-            this.bunifuPanel1.Location = new System.Drawing.Point(39, 126);
+            this.bunifuPanel1.Location = new System.Drawing.Point(46, 120);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(715, 231);
+            this.bunifuPanel1.Size = new System.Drawing.Size(715, 252);
             this.bunifuPanel1.TabIndex = 15;
             this.bunifuPanel1.Click += new System.EventHandler(this.bunifuPanel1_Click);
-            // 
-            // btn_user_elimiar
-            // 
-            this.btn_user_elimiar.AllowAnimations = true;
-            this.btn_user_elimiar.AllowMouseEffects = true;
-            this.btn_user_elimiar.AllowToggling = false;
-            this.btn_user_elimiar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btn_user_elimiar.AnimationSpeed = 200;
-            this.btn_user_elimiar.AutoGenerateColors = false;
-            this.btn_user_elimiar.AutoRoundBorders = false;
-            this.btn_user_elimiar.AutoSizeLeftIcon = true;
-            this.btn_user_elimiar.AutoSizeRightIcon = true;
-            this.btn_user_elimiar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_user_elimiar.BackColor1 = System.Drawing.Color.BlueViolet;
-            this.btn_user_elimiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_user_elimiar.BackgroundImage")));
-            this.btn_user_elimiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btn_user_elimiar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_user_elimiar.ButtonText = "Eliminar";
-            this.btn_user_elimiar.ButtonTextMarginLeft = 0;
-            this.btn_user_elimiar.ColorContrastOnClick = 45;
-            this.btn_user_elimiar.ColorContrastOnHover = 45;
-            this.btn_user_elimiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btn_user_elimiar.CustomizableEdges = borderEdges1;
-            this.btn_user_elimiar.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_user_elimiar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_user_elimiar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_user_elimiar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_user_elimiar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btn_user_elimiar.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_user_elimiar.ForeColor = System.Drawing.Color.White;
-            this.btn_user_elimiar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_user_elimiar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_user_elimiar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btn_user_elimiar.IconMarginLeft = 11;
-            this.btn_user_elimiar.IconPadding = 10;
-            this.btn_user_elimiar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_user_elimiar.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_user_elimiar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btn_user_elimiar.IconSize = 25;
-            this.btn_user_elimiar.IdleBorderColor = System.Drawing.Color.Magenta;
-            this.btn_user_elimiar.IdleBorderRadius = 20;
-            this.btn_user_elimiar.IdleBorderThickness = 3;
-            this.btn_user_elimiar.IdleFillColor = System.Drawing.Color.BlueViolet;
-            this.btn_user_elimiar.IdleIconLeftImage = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
-            this.btn_user_elimiar.IdleIconRightImage = null;
-            this.btn_user_elimiar.IndicateFocus = false;
-            this.btn_user_elimiar.Location = new System.Drawing.Point(528, 103);
-            this.btn_user_elimiar.Name = "btn_user_elimiar";
-            this.btn_user_elimiar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_user_elimiar.OnDisabledState.BorderRadius = 20;
-            this.btn_user_elimiar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_user_elimiar.OnDisabledState.BorderThickness = 3;
-            this.btn_user_elimiar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_user_elimiar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_user_elimiar.OnDisabledState.IconLeftImage = null;
-            this.btn_user_elimiar.OnDisabledState.IconRightImage = null;
-            this.btn_user_elimiar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btn_user_elimiar.onHoverState.BorderRadius = 20;
-            this.btn_user_elimiar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_user_elimiar.onHoverState.BorderThickness = 3;
-            this.btn_user_elimiar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.btn_user_elimiar.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_user_elimiar.onHoverState.IconLeftImage = null;
-            this.btn_user_elimiar.onHoverState.IconRightImage = null;
-            this.btn_user_elimiar.OnIdleState.BorderColor = System.Drawing.Color.Magenta;
-            this.btn_user_elimiar.OnIdleState.BorderRadius = 20;
-            this.btn_user_elimiar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_user_elimiar.OnIdleState.BorderThickness = 3;
-            this.btn_user_elimiar.OnIdleState.FillColor = System.Drawing.Color.BlueViolet;
-            this.btn_user_elimiar.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btn_user_elimiar.OnIdleState.IconLeftImage = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
-            this.btn_user_elimiar.OnIdleState.IconRightImage = null;
-            this.btn_user_elimiar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_user_elimiar.OnPressedState.BorderRadius = 20;
-            this.btn_user_elimiar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_user_elimiar.OnPressedState.BorderThickness = 3;
-            this.btn_user_elimiar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_user_elimiar.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btn_user_elimiar.OnPressedState.IconLeftImage = null;
-            this.btn_user_elimiar.OnPressedState.IconRightImage = null;
-            this.btn_user_elimiar.Size = new System.Drawing.Size(150, 39);
-            this.btn_user_elimiar.TabIndex = 25;
-            this.btn_user_elimiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_user_elimiar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_user_elimiar.TextMarginLeft = 0;
-            this.btn_user_elimiar.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btn_user_elimiar.UseDefaultRadiusAndThickness = true;
-            this.btn_user_elimiar.Click += new System.EventHandler(this.btn_user_elimiar_Click);
             // 
             // dtp_user_date_birth
             // 
@@ -1340,7 +1253,7 @@ namespace ProyectoTallerII
             this.dgv_usuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuarios.EnableHeadersVisualStyles = false;
             this.dgv_usuarios.GridColor = System.Drawing.Color.GreenYellow;
-            this.dgv_usuarios.Location = new System.Drawing.Point(29, 349);
+            this.dgv_usuarios.Location = new System.Drawing.Point(0, 344);
             this.dgv_usuarios.Name = "dgv_usuarios";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
@@ -1358,9 +1271,134 @@ namespace ProyectoTallerII
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DeepSkyBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Yellow;
             this.dgv_usuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_usuarios.Size = new System.Drawing.Size(741, 177);
+            this.dgv_usuarios.Size = new System.Drawing.Size(802, 183);
             this.dgv_usuarios.TabIndex = 24;
             this.dgv_usuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuarios_CellClick);
+            // 
+            // btn_user_elimiar
+            // 
+            this.btn_user_elimiar.AllowAnimations = true;
+            this.btn_user_elimiar.AllowMouseEffects = true;
+            this.btn_user_elimiar.AllowToggling = false;
+            this.btn_user_elimiar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btn_user_elimiar.AnimationSpeed = 200;
+            this.btn_user_elimiar.AutoGenerateColors = false;
+            this.btn_user_elimiar.AutoRoundBorders = false;
+            this.btn_user_elimiar.AutoSizeLeftIcon = true;
+            this.btn_user_elimiar.AutoSizeRightIcon = true;
+            this.btn_user_elimiar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_user_elimiar.BackColor1 = System.Drawing.Color.BlueViolet;
+            this.btn_user_elimiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_user_elimiar.BackgroundImage")));
+            this.btn_user_elimiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btn_user_elimiar.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_user_elimiar.ButtonText = "Eliminar";
+            this.btn_user_elimiar.ButtonTextMarginLeft = 0;
+            this.btn_user_elimiar.ColorContrastOnClick = 45;
+            this.btn_user_elimiar.ColorContrastOnHover = 45;
+            this.btn_user_elimiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btn_user_elimiar.CustomizableEdges = borderEdges1;
+            this.btn_user_elimiar.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_user_elimiar.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn_user_elimiar.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_user_elimiar.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_user_elimiar.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btn_user_elimiar.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_user_elimiar.ForeColor = System.Drawing.Color.White;
+            this.btn_user_elimiar.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_user_elimiar.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_user_elimiar.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btn_user_elimiar.IconMarginLeft = 11;
+            this.btn_user_elimiar.IconPadding = 10;
+            this.btn_user_elimiar.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_user_elimiar.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btn_user_elimiar.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btn_user_elimiar.IconSize = 25;
+            this.btn_user_elimiar.IdleBorderColor = System.Drawing.Color.Magenta;
+            this.btn_user_elimiar.IdleBorderRadius = 20;
+            this.btn_user_elimiar.IdleBorderThickness = 3;
+            this.btn_user_elimiar.IdleFillColor = System.Drawing.Color.BlueViolet;
+            this.btn_user_elimiar.IdleIconLeftImage = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
+            this.btn_user_elimiar.IdleIconRightImage = null;
+            this.btn_user_elimiar.IndicateFocus = false;
+            this.btn_user_elimiar.Location = new System.Drawing.Point(528, 103);
+            this.btn_user_elimiar.Name = "btn_user_elimiar";
+            this.btn_user_elimiar.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btn_user_elimiar.OnDisabledState.BorderRadius = 20;
+            this.btn_user_elimiar.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_user_elimiar.OnDisabledState.BorderThickness = 3;
+            this.btn_user_elimiar.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btn_user_elimiar.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btn_user_elimiar.OnDisabledState.IconLeftImage = null;
+            this.btn_user_elimiar.OnDisabledState.IconRightImage = null;
+            this.btn_user_elimiar.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btn_user_elimiar.onHoverState.BorderRadius = 20;
+            this.btn_user_elimiar.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_user_elimiar.onHoverState.BorderThickness = 3;
+            this.btn_user_elimiar.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btn_user_elimiar.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btn_user_elimiar.onHoverState.IconLeftImage = null;
+            this.btn_user_elimiar.onHoverState.IconRightImage = null;
+            this.btn_user_elimiar.OnIdleState.BorderColor = System.Drawing.Color.Magenta;
+            this.btn_user_elimiar.OnIdleState.BorderRadius = 20;
+            this.btn_user_elimiar.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_user_elimiar.OnIdleState.BorderThickness = 3;
+            this.btn_user_elimiar.OnIdleState.FillColor = System.Drawing.Color.BlueViolet;
+            this.btn_user_elimiar.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btn_user_elimiar.OnIdleState.IconLeftImage = global::ProyectoTallerII.Properties.Resources.remove_ico__1_;
+            this.btn_user_elimiar.OnIdleState.IconRightImage = null;
+            this.btn_user_elimiar.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btn_user_elimiar.OnPressedState.BorderRadius = 20;
+            this.btn_user_elimiar.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btn_user_elimiar.OnPressedState.BorderThickness = 3;
+            this.btn_user_elimiar.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btn_user_elimiar.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btn_user_elimiar.OnPressedState.IconLeftImage = null;
+            this.btn_user_elimiar.OnPressedState.IconRightImage = null;
+            this.btn_user_elimiar.Size = new System.Drawing.Size(150, 39);
+            this.btn_user_elimiar.TabIndex = 25;
+            this.btn_user_elimiar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_user_elimiar.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_user_elimiar.TextMarginLeft = 0;
+            this.btn_user_elimiar.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btn_user_elimiar.UseDefaultRadiusAndThickness = true;
+            this.btn_user_elimiar.Click += new System.EventHandler(this.btn_user_elimiar_Click);
+            // 
+            // bunifuLabel1
+            // 
+            this.bunifuLabel1.AllowParentOverrides = false;
+            this.bunifuLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.bunifuLabel1.AutoEllipsis = false;
+            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
+            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel1.Location = new System.Drawing.Point(224, 231);
+            this.bunifuLabel1.Name = "bunifuLabel1";
+            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(46, 21);
+            this.bunifuLabel1.TabIndex = 28;
+            this.bunifuLabel1.Text = "Activo:";
+            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // combo_estado
+            // 
+            this.combo_estado.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.combo_estado.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.combo_estado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.combo_estado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.combo_estado.FormattingEnabled = true;
+            this.combo_estado.Items.AddRange(new object[] {
+            "True",
+            "False"});
+            this.combo_estado.Location = new System.Drawing.Point(313, 224);
+            this.combo_estado.Name = "combo_estado";
+            this.combo_estado.Size = new System.Drawing.Size(109, 28);
+            this.combo_estado.TabIndex = 27;
+            this.combo_estado.Text = "seleccionar";
             // 
             // Form_usuarios
             // 
@@ -1406,5 +1444,7 @@ namespace ProyectoTallerII
         private Bunifu.UI.WinForms.BunifuLabel lbl_user_date_birth;
         private System.Windows.Forms.DataGridView dgv_usuarios;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_user_elimiar;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private System.Windows.Forms.ComboBox combo_estado;
     }
 }

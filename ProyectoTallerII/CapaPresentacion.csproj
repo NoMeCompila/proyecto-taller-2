@@ -231,6 +231,12 @@
     <Compile Include="InterfazVendedor\VendedorCliente.Designer.cs">
       <DependentUpon>VendedorCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfazVendedor\VendedorHistorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazVendedor\VendedorHistorial.Designer.cs">
+      <DependentUpon>VendedorHistorial.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfazVendedor\VendedorFacturacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -301,6 +307,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>JoyeriaDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="JoyeriaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JoyeriaDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Login\LoginUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +346,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazVendedor\VendedorCliente.resx">
       <DependentUpon>VendedorCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfazVendedor\VendedorHistorial.resx">
+      <DependentUpon>VendedorHistorial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfazVendedor\VendedorFacturacion.resx">
       <DependentUpon>VendedorFacturacion.cs</DependentUpon>
@@ -401,6 +415,17 @@
     </None>
     <None Include="JoyeriaDataSet1.xss">
       <DependentUpon>JoyeriaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="JoyeriaDataSet2.xsc">
+      <DependentUpon>JoyeriaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="JoyeriaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JoyeriaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="JoyeriaDataSet2.xss">
+      <DependentUpon>JoyeriaDataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -609,6 +634,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logout-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdfbLANCO.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

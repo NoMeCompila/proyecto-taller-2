@@ -35,5 +35,18 @@ namespace CapaNegocio
         {
             return objeto_venta.Registrar(obj, DetalleVenta, out mensaje);
         }
+
+
+        public Ventas GetVenta(string nro)
+        {
+            Ventas vta = objeto_venta.GetVenta(nro);
+            if(vta.id_venta != 0 )
+            {
+                List<ventas_detalle> detalle_venta = objeto_venta.getDetalle(vta.id_venta);
+                vta.ventas_Detalles = detalle_venta;
+            }
+
+            return vta;
+        }
     }
 }

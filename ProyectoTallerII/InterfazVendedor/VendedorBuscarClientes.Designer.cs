@@ -41,8 +41,8 @@ namespace ProyectoTallerII
             this.dataG_usuarios = new System.Windows.Forms.DataGridView();
             this.pnl_gerente_auditoria = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.txt_buscar = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataG_usuarios)).BeginInit();
             this.pnl_gerente_auditoria.SuspendLayout();
             this.SuspendLayout();
@@ -142,21 +142,6 @@ namespace ProyectoTallerII
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::ProyectoTallerII.Properties.Resources.search_1__2_;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(217, 56);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(43, 37);
-            this.button1.TabIndex = 13;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // txt_buscar
             // 
             this.txt_buscar.AcceptsReturn = false;
@@ -233,6 +218,21 @@ namespace ProyectoTallerII
             this.txt_buscar.WordWrap = true;
             this.txt_buscar.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_buscar_KeyUp);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.BlueViolet;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::ProyectoTallerII.Properties.Resources.search_1__2_;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(217, 56);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(43, 37);
+            this.button1.TabIndex = 13;
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // VendedorBuscarClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,9 +257,9 @@ namespace ProyectoTallerII
 
         private Bunifu.UI.WinForms.BunifuLabel lbl_clientes;
         private Bunifu.UI.WinForms.BunifuPanel pnl_gerente_auditoria;
-        private System.Windows.Forms.Button button1;
         private Bunifu.UI.WinForms.BunifuTextBox txt_buscar;
         private System.Windows.Forms.DataGridView dataG_usuarios;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
+        private System.Windows.Forms.Button button1;
     }
 }

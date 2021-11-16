@@ -208,5 +208,10 @@ namespace ProyectoTallerII
         {
             this.CargarNombre();
         }
+
+        private void btn_hventas_Click(object sender, EventArgs e)
+        {
+            open_child_form(new VendedorHistorial()); 
+        }
     }
 }

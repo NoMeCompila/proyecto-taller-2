@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
+using CapaEntidad;
 
 
 namespace CapaDatos
@@ -101,23 +102,38 @@ namespace CapaDatos
             comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
         }
 
+        
+
+
+
+
+
+
+
+
         public void actualizar_cliente_admin(string nombre, string apellido, string dni, 
             string email, string tel, string direccion, DateTime fecha_nac,bool estado, int id_cliente)
         {
-            comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
-            comando_clientes.CommandText = "sp_actualizar_cliente_admin"; // se ejecuta el procedimiento almacenado para insertar
-            comando_clientes.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato SP
-            comando_clientes.Parameters.AddWithValue("@nombre", nombre);
-            comando_clientes.Parameters.AddWithValue("@apellido", apellido);
-            comando_clientes.Parameters.AddWithValue("@dni", dni);
-            comando_clientes.Parameters.AddWithValue("@email", email);
-            comando_clientes.Parameters.AddWithValue("@tel", tel);
-            comando_clientes.Parameters.AddWithValue("@direccion", direccion);
-            comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
-            comando_clientes.Parameters.AddWithValue("@estado", estado);
-            comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
-            comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
-            comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+            try { 
+                comando_clientes.Connection = connection.abrir_conexion(); // se abre la conexion
+                comando_clientes.CommandText = "sp_actualizar_cliente_admin"; // se ejecuta el procedimiento almacenado para insertar
+                comando_clientes.CommandType = CommandType.StoredProcedure; // se especifica que se espera un tipo de dato SP
+                comando_clientes.Parameters.AddWithValue("@nombre", nombre);
+                comando_clientes.Parameters.AddWithValue("@apellido", apellido);
+                comando_clientes.Parameters.AddWithValue("@dni", dni);
+                comando_clientes.Parameters.AddWithValue("@email", email);
+                comando_clientes.Parameters.AddWithValue("@tel", tel);
+                comando_clientes.Parameters.AddWithValue("@direccion", direccion);
+                comando_clientes.Parameters.AddWithValue("@fecha_nac", fecha_nac);
+                comando_clientes.Parameters.AddWithValue("@estado", estado);
+                comando_clientes.Parameters.AddWithValue("@id_cliente", id_cliente);
+                comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
+                comando_clientes.Parameters.Clear(); //IMPORTANTE limpiar parametros cada vez que se hace una consulta
+            }
+            catch (Exception ex)
+            {
+                comando_clientes.Parameters.Clear();
+            }
         }
 
 
@@ -145,6 +161,139 @@ namespace CapaDatos
             comando_clientes.ExecuteNonQuery(); // se ejecuta la consulta
             comando_clientes.Parameters.Clear(); //limpiar los aprametros de sql command
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //agregar cliente 2.0
+        public int registrar_cliente(Cliente cli, out string mensaje)
+        {
+            int id_nuevo_cliente = 0;
+            mensaje = string.Empty;
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection("Server = DESKTOP-C7M4JOU; " +
+                  "Database = JOYERIA; Integrated Security = true"))
+                {
+                    SqlCommand cmd = new SqlCommand("sp_registrar_cliente", conexion);
+                    cmd.Parameters.AddWithValue("nombre", cli.nombre);
+
+                    cmd.Parameters.AddWithValue("apellido", cli.apellido);
+                    cmd.Parameters.AddWithValue("dni", cli.dni);
+                    cmd.Parameters.AddWithValue("email", cli.email);
+                    cmd.Parameters.AddWithValue("tel", cli.telefono);
+                    cmd.Parameters.AddWithValue("direccion", cli.direccion);
+                    cmd.Parameters.AddWithValue("fecha_nac", cli.fecha_nac);
+                    cmd.Parameters.AddWithValue("estado", cli.estado);
+                    cmd.Parameters.Add("resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+                    
+
+                    id_nuevo_cliente = Convert.ToInt32(cmd.Parameters["resultado"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+
+                    comando_clientes.Parameters.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                id_nuevo_cliente = 0;
+                mensaje = ex.Message;
+
+
+            }
+            return id_nuevo_cliente;
+        }
+
+
+        //actualziar cliente 2.0
+        public bool update_cliente(Cliente cli, out string mensaje)
+        {
+            bool respeusta = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection("Server = DESKTOP-C7M4JOU; " +
+                  "Database = JOYERIA; Integrated Security = true"))
+                {
+                    SqlCommand cmd = new SqlCommand("sp_update_cliente", conexion);
+                    cmd.Parameters.AddWithValue("id_cliente", cli.id_cliente);
+                    cmd.Parameters.AddWithValue("nombre", cli.nombre);
+                    cmd.Parameters.AddWithValue("apellido", cli.apellido);
+                    cmd.Parameters.AddWithValue("dni", cli.dni);
+                    cmd.Parameters.AddWithValue("email", cli.email);
+                    cmd.Parameters.AddWithValue("tel", cli.telefono);
+                    cmd.Parameters.AddWithValue("direccion", cli.direccion);
+                    cmd.Parameters.AddWithValue("fecha_nac", cli.fecha_nac);
+                    cmd.Parameters.AddWithValue("estado", cli.estado);
+                    cmd.Parameters.Add("resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+
+                    respeusta = Convert.ToBoolean(cmd.Parameters["resultado"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+                    comando_clientes.Parameters.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                respeusta = false;
+                mensaje = ex.Message;
+            }
+            return respeusta;
+        }
+
+        //eoliminar cliente 2.0
+        public bool delete_cliente(Cliente cli, out string mensaje)
+        {
+            bool respeusta = false;
+            mensaje = string.Empty;
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection("Server = DESKTOP-C7M4JOU; " +
+                  "Database = JOYERIA; Integrated Security = true"))
+                {
+                    SqlCommand cmd = new SqlCommand("sp_delete_cliente", conexion);
+                    cmd.Parameters.AddWithValue("id_cliente", cli.id_cliente);
+                    cmd.Parameters.Add("resultado", SqlDbType.Int).Direction = ParameterDirection.Output;
+                    cmd.Parameters.Add("mensaje", SqlDbType.VarChar, 100).Direction = ParameterDirection.Output;
+
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conexion.Open();
+                    cmd.ExecuteNonQuery();
+
+                    respeusta = Convert.ToBoolean(cmd.Parameters["resultado"].Value);
+                    mensaje = cmd.Parameters["mensaje"].Value.ToString();
+
+                    cmd.Parameters.Clear();
+                }
+            }
+            catch (Exception ex)
+            {
+                respeusta = false;
+                mensaje = ex.Message;
+            }
+            return respeusta;
+        }
+
 
     }
 }
